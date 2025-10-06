@@ -600,36 +600,74 @@
     </div>
 
     <!-- Learning Tools -->
-    <div class="mt-20" id="tools">
-  <h4 class="text-xl font-semibold mb-8 text-center text-gradient">Learning Tools & Platforms</h4>
-  <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-    
-    <!-- GoHighLevel -->
-    <div class="tool-card reveal bg-gray-700 p-6 rounded-xl shadow-md transition transform hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-400/40 flex flex-col items-center justify-center">
-      <img src="https://logo.clearbit.com/gohighlevel.com" alt="GoHighLevel Logo" class="w-90 h-90 mb-3" />
- 
-          
-      <p class="font-semibold">GoHighLevel</p>
-    </div>
-    
-    <!-- Zapier -->
-    <div class="tool-card reveal bg-gray-700 p-6 rounded-xl shadow-md transition transform hover:-translate-y-2 hover:shadow-xl hover:shadow-orange-400/40 flex flex-col items-center justify-center">
-      <img src="https://cdn.worldvectorlogo.com/logos/zapier-2.svg" 
-           class="w-90 h-90 mb-3" 
-           alt="Zapier Logo">
-      <p class="font-semibold">Zapier</p>
-    </div>
-    
-    <!-- Monday.com -->
-    <div class="tool-card reveal bg-gray-700 p-6 rounded-xl shadow-md transition transform hover:-translate-y-2 hover:shadow-xl hover:shadow-green-400/40">
-      <img src="https://cdn.worldvectorlogo.com/logos/monday-1.svg" 
-           class="w-90 h-90 mx-auto mb-3" 
-           alt="Monday.com Logo">
-      <p class="font-semibold">Monday.com</p>
+    <!-- Add SwiperJS CDN -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<div class="mt-20" id="tools">
+  <h4 class="text-xl font-semibold mb-8 text-center text-gradient">
+    Learning Tools & Platforms
+  </h4>
+
+  <!-- Swiper Container -->
+  <div class="swiper">
+    <div class="swiper-wrapper">
+
+      <!-- GoHighLevel -->
+      <div class="swiper-slide">
+        <div class="tool-card reveal bg-gray-700 p-6 rounded-xl shadow-md transition transform hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-400/40 flex flex-col items-center justify-center">
+          <img src="https://logo.clearbit.com/gohighlevel.com" alt="GoHighLevel Logo" class="w-32 h-32 mb-3" />
+          <p class="font-semibold">GoHighLevel</p>
+        </div>
+      </div>
+
+      <!-- Zapier -->
+      <div class="swiper-slide">
+        <div class="tool-card reveal bg-gray-700 p-6 rounded-xl shadow-md transition transform hover:-translate-y-2 hover:shadow-xl hover:shadow-orange-400/40 flex flex-col items-center justify-center">
+          <img src="https://cdn.worldvectorlogo.com/logos/zapier-2.svg" class="w-32 h-32 mb-3" alt="Zapier Logo" />
+          <p class="font-semibold">Zapier</p>
+        </div>
+      </div>
+
+      <!-- Monday.com -->
+      <div class="swiper-slide">
+        <div class="tool-card reveal bg-gray-700 p-6 rounded-xl shadow-md transition transform hover:-translate-y-2 hover:shadow-xl hover:shadow-green-400/40 flex flex-col items-center justify-center">
+          <img src="https://cdn.worldvectorlogo.com/logos/monday-1.svg" class="w-32 h-32 mb-3" alt="Monday.com Logo" />
+          <p class="font-semibold">Monday.com</p>
+        </div>
+      </div>
+
     </div>
 
+    <!-- Pagination + Navigation (optional) -->
+    <div class="swiper-pagination mt-6"></div>
   </div>
 </div>
+
+<script>
+  // SwiperJS Initialization
+  const swiper = new Swiper('.swiper', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      640: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 },
+    },
+  });
+</script>
+
 
     </div>
   </div>
