@@ -600,73 +600,80 @@
     </div>
 
     <!-- Learning Tools -->
-    <!-- Add SwiperJS CDN -->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ <!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
 
-<div class="mt-20" id="tools">
-  <h4 class="text-xl font-semibold mb-8 text-center text-gradient">
-    Learning Tools & Platforms
-  </h4>
+<section class="relative mt-20" id="tools">
+  <!-- Background Blur -->
+  <div class="absolute top-0 right-0 w-72 h-72 bg-blue-200 dark:bg-blue-900 rounded-full blur-3xl opacity-30 translate-x-1/2 -translate-y-1/2"></div>
 
-  <!-- Swiper Container -->
-  <div class="swiper">
-    <div class="swiper-wrapper">
+  <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+    <h4 class="text-xl font-semibold mb-8 text-center text-gradient">Learning Tools & Platforms</h4>
 
-      <!-- GoHighLevel -->
-      <div class="swiper-slide">
-        <div class="tool-card reveal bg-gray-700 p-6 rounded-xl shadow-md transition transform hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-400/40 flex flex-col items-center justify-center">
-          <img src="https://logo.clearbit.com/gohighlevel.com" alt="GoHighLevel Logo" class="w-32 h-32 mb-3" />
-          <p class="font-semibold">GoHighLevel</p>
+    <!-- Carousel Wrapper -->
+    <div id="carousel-tools" class="overflow-hidden">
+      <div id="carousel-inner-tools" class="flex transition-transform duration-700 ease-in-out">
+        
+        <!-- Slide 1 -->
+        <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700 hover:shadow-blue-400/40 hover:-translate-y-2 transition">
+          <img src="https://logo.clearbit.com/gohighlevel.com" alt="GoHighLevel Logo" class="w-24 h-24 mb-3" />
+          <p class="font-semibold text-white">GoHighLevel</p>
         </div>
-      </div>
 
-      <!-- Zapier -->
-      <div class="swiper-slide">
-        <div class="tool-card reveal bg-gray-700 p-6 rounded-xl shadow-md transition transform hover:-translate-y-2 hover:shadow-xl hover:shadow-orange-400/40 flex flex-col items-center justify-center">
-          <img src="https://cdn.worldvectorlogo.com/logos/zapier-2.svg" class="w-32 h-32 mb-3" alt="Zapier Logo" />
-          <p class="font-semibold">Zapier</p>
+        <!-- Slide 2 -->
+        <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700 hover:shadow-orange-400/40 hover:-translate-y-2 transition">
+          <img src="https://cdn.worldvectorlogo.com/logos/zapier-2.svg" alt="Zapier Logo" class="w-24 h-24 mb-3" />
+          <p class="font-semibold text-white">Zapier</p>
         </div>
-      </div>
 
-      <!-- Monday.com -->
-      <div class="swiper-slide">
-        <div class="tool-card reveal bg-gray-700 p-6 rounded-xl shadow-md transition transform hover:-translate-y-2 hover:shadow-xl hover:shadow-green-400/40 flex flex-col items-center justify-center">
-          <img src="https://cdn.worldvectorlogo.com/logos/monday-1.svg" class="w-32 h-32 mb-3" alt="Monday.com Logo" />
-          <p class="font-semibold">Monday.com</p>
+        <!-- Slide 3 -->
+        <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700 hover:shadow-green-400/40 hover:-translate-y-2 transition">
+          <img src="https://cdn.worldvectorlogo.com/logos/monday-1.svg" alt="Monday.com Logo" class="w-24 h-24 mb-3" />
+          <p class="font-semibold text-white">Monday.com</p>
         </div>
-      </div>
 
+      </div>
     </div>
 
-    <!-- Pagination + Navigation (optional) -->
-    <div class="swiper-pagination mt-6"></div>
+    <!-- Carousel Dots -->
+    <div class="flex justify-center mt-8 space-x-2" id="carousel-dots-tools">
+      <button class="w-3 h-3 rounded-full bg-blue-300" data-index="0"></button>
+      <button class="w-3 h-3 rounded-full bg-blue-100" data-index="1"></button>
+      <button class="w-3 h-3 rounded-full bg-blue-100" data-index="2"></button>
+    </div>
   </div>
-</div>
+</section>
 
 <script>
-  // SwiperJS Initialization
-  const swiper = new Swiper('.swiper', {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    loop: true,
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    breakpoints: {
-      640: { slidesPerView: 2 },
-      1024: { slidesPerView: 3 },
-    },
+document.addEventListener("DOMContentLoaded", () => {
+  const inner = document.getElementById("carousel-inner-tools");
+  const dots = document.querySelectorAll("#carousel-dots-tools button");
+  let currentIndex = 0;
+  const totalSlides = inner.children.length;
+
+  function updateCarousel(index) {
+    inner.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("bg-blue-300", i === index);
+      dot.classList.toggle("bg-blue-100", i !== index);
+    });
+  }
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      currentIndex = i;
+      updateCarousel(i);
+    });
   });
+
+  // Auto slide
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateCarousel(currentIndex);
+  }, 2500);
+});
 </script>
+
 
 
     </div>
