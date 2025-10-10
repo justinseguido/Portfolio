@@ -643,131 +643,144 @@ Designed to give business owners real-time visibility, improve team productivity
     </div>
 
     <!-- Learning Tools -->
- <script src="https://cdn.tailwindcss.com"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synchronized Carousels</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .text-gradient {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900">
+    <section class="relative mt-20" id="tools">
+        <!-- Background Blur -->
+        <div class="absolute top-0 right-0 w-72 h-72 bg-blue-200 dark:bg-blue-900 rounded-full blur-3xl opacity-30 translate-x-1/2 -translate-y-1/2"></div>
 
-<section class="relative mt-20" id="tools">
-  <!-- Background Blur -->
-  <div class="absolute top-0 right-0 w-72 h-72 bg-blue-200 dark:bg-blue-900 rounded-full blur-3xl opacity-30 translate-x-1/2 -translate-y-1/2"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+            <h4 class="text-xl font-semibold mb-8 text-center text-gradient">Learning Tools & Platforms</h4>
 
-  <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
-    <h4 class="text-xl font-semibold mb-8 text-center text-gradient">Learning Tools & Platforms</h4>
+            <!-- Two Carousels -->
+            <div class="flex flex-col items-center space-y-10">
 
-    <!-- Two Carousels -->
-    <div class="flex flex-col items-center space-y-10">
+                <!-- Normal Carousel -->
+                <div id="carousel-tools-top" class="overflow-hidden w-full">
+                    <div id="carousel-inner-tools-top" class="flex transition-transform duration-700 ease-in-out">
+                        <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
+                            <img src="https://logo.clearbit.com/gohighlevel.com" class="w-12 h-12 mb-3" />
+                            <p class="font-semibold text-white">GoHighLevel</p>
+                        </div>
+                        <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
+                            <img src="https://cdn.worldvectorlogo.com/logos/zapier-2.svg" class="w-12 h-12 mb-3" />
+                            <p class="font-semibold text-white">Zapier</p>
+                        </div>
+                        <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
+                            <img src="https://cdn.worldvectorlogo.com/logos/monday-1.svg" class="w-12 h-12 mb-3" />
+                            <p class="font-semibold text-white">Monday.com</p>
+                        </div>
+                        <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Google_Workspace_Logo.svg/1024px-Google_Workspace_Logo.svg.png" class="w-12 h-12 mb-3" />
+                            <p class="font-semibold text-white">Google Workspace</p>
+                        </div>
+                        <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
+                            <img src="https://cdn.worldvectorlogo.com/logos/slack-new-logo.svg" class="w-12 h-12 mb-3" />
+                            <p class="font-semibold text-white">Slack</p>
+                        </div>
+                        <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
+                            <img src="https://cdn.worldvectorlogo.com/logos/calendly-1.svg" class="w-12 h-12 mb-3" />
+                            <p class="font-semibold text-white">Calendly</p>
+                        </div>
+                    </div>
+                </div>
 
-      <!-- Normal Carousel -->
-      <div id="carousel-tools-top" class="overflow-hidden w-full">
-        <div id="carousel-inner-tools-top" class="flex transition-transform duration-700 ease-in-out">
-          <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
-            <img src="https://logo.clearbit.com/gohighlevel.com" class="w-12 h-12 mb-3" />
-            <p class="font-semibold text-white">GoHighLevel</p>
-          </div>
-          <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
-            <img src="https://cdn.worldvectorlogo.com/logos/zapier-2.svg" class="w-12 h-12 mb-3" />
-            <p class="font-semibold text-white">Zapier</p>
-          </div>
-          <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
-            <img src="https://cdn.worldvectorlogo.com/logos/monday-1.svg" class="w-12 h-12 mb-3" />
-            <p class="font-semibold text-white">Monday.com</p>
-          </div>
-          <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
-            <img src="assets/googleworkspace.jpg" class="w-12 h-12 mb-3" />
-            <p class="font-semibold text-white">Google Workspace</p>
-          </div>
-          <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
-            <img src="assets/slack.jpg" class="w-12 h-12 mb-3" />
-            <p class="font-semibold text-white">Slack</p>
-          </div>
-          <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
-            <img src="assets/calendly.jpg" class="w-12 h-12 mb-3" />
-            <p class="font-semibold text-white">Calendly</p>
-          </div>
+                <!-- Reversed Carousel -->
+                <div id="carousel-tools-bottom" class="overflow-hidden w-full">
+                    <div id="carousel-inner-tools-bottom" class="flex transition-transform duration-700 ease-in-out">
+                        <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
+                            <img src="https://cdn.worldvectorlogo.com/logos/make-1.svg" class="w-12 h-12 mb-3" />
+                            <p class="font-semibold text-white">Make(Integromat)</p>
+                        </div>
+                        <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
+                            <img src="https://cdn.worldvectorlogo.com/logos/notion-logo-1.svg" class="w-12 h-12 mb-3" />
+                            <p class="font-semibold text-white">Notion</p>
+                        </div>
+                        <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
+                            <img src="https://cdn.worldvectorlogo.com/logos/airtable.svg" class="w-12 h-12 mb-3" />
+                            <p class="font-semibold text-white">Airtable</p>
+                        </div>
+                        <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
+                            <img src="https://cdn.worldvectorlogo.com/logos/n8n-1.svg" class="w-12 h-12 mb-3" />
+                            <p class="font-semibold text-white">N8N</p>
+                        </div>
+                        <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
+                            <img src="https://cdn.worldvectorlogo.com/logos/zapier-2.svg" class="w-12 h-12 mb-3" />
+                            <p class="font-semibold text-white">Zapier</p>
+                        </div>
+                        <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
+                            <img src="https://logo.clearbit.com/gohighlevel.com" class="w-12 h-12 mb-3" />
+                            <p class="font-semibold text-white">GoHighLevel</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Dots (shared) -->
+            <div class="flex justify-center mt-8 space-x-2" id="carousel-dots-tools">
+                <button class="w-3 h-3 rounded-full bg-blue-300" data-index="0"></button>
+                <button class="w-3 h-3 rounded-full bg-blue-100" data-index="1"></button>
+                <button class="w-3 h-3 rounded-full bg-blue-100" data-index="2"></button>
+                <button class="w-3 h-3 rounded-full bg-blue-100" data-index="3"></button>
+                <button class="w-3 h-3 rounded-full bg-blue-100" data-index="4"></button>
+                <button class="w-3 h-3 rounded-full bg-blue-100" data-index="5"></button>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <!-- Reversed Carousel -->
-      <div id="carousel-tools-bottom" class="overflow-hidden w-full">
-        <div id="carousel-inner-tools-bottom" class="flex transition-transform duration-700 ease-in-out">
-          <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
-            <img src="assets/Make (or Integromat)_ What It Is and Why You Should Be Using Workflow Automation.jpg
-" class="w-12 h-12 mb-3" />
-            <p class="font-semibold text-white">Make(Integromat)</p>
-          </div>
-          <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
-            <img src="assets/Notion Logo _ SVG _ Real Company _ Alphabet, Letter N Logo.jpg" class="w-12 h-12 mb-3" />
-            <p class="font-semibold text-white">Notion</p>
-          </div>
-          <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
-            <img src="assets/Top 5 des outils pour optimiser son temps, ses projets et son organisation - Epionea.jpg" class="w-12 h-12 mb-3" />
-            <p class="font-semibold text-white">Airtable</p>
-          </div>
-          <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
-            <img src="assets/n8n Logo Icon - PNG Logo Vector Brand Downloads (SVG, EPS).jpg" class="w-12 h-12 mb-3" />
-            <p class="font-semibold text-white">N8N</p>
-          </div>
-          <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
-            <img src="https://cdn.worldvectorlogo.com/logos/zapier-2.svg" class="w-12 h-12 mb-3" />
-            <p class="font-semibold text-white">Zapier</p>
-          </div>
-          <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
-            <img src="https://logo.clearbit.com/gohighlevel.com" class="w-12 h-12 mb-3" />
-            <p class="font-semibold text-white">GoHighLevel</p>
-          </div>
-        </div>
-      </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const top = document.getElementById("carousel-inner-tools-top");
+            const bottom = document.getElementById("carousel-inner-tools-bottom");
+            const dots = document.querySelectorAll("#carousel-dots-tools button");
+            let currentIndex = 0;
+            const total = top.children.length;
 
-    </div>
+            function update(index) {
+                // Top carousel moves left (normal direction)
+                top.style.transform = `translateX(-${index * 100}%)`;
+                
+                // Bottom carousel moves right (opposite direction)
+                // We use (total - 1 - index) to reverse the direction
+                bottom.style.transform = `translateX(-${(total - 1 - index) * 100}%)`;
+                
+                // Update dots
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle("bg-blue-300", i === index);
+                    dot.classList.toggle("bg-blue-100", i !== index);
+                });
+            }
 
-    <!-- Dots (shared) -->
-    <div class="flex justify-center mt-8 space-x-2" id="carousel-dots-tools">
-      <button class="w-3 h-3 rounded-full bg-blue-300" data-index="0"></button>
-      <button class="w-3 h-3 rounded-full bg-blue-100" data-index="1"></button>
-      <button class="w-3 h-3 rounded-full bg-blue-100" data-index="2"></button>
-      <button class="w-3 h-3 rounded-full bg-blue-100" data-index="3"></button>
-      <button class="w-3 h-3 rounded-full bg-blue-100" data-index="4"></button>
-      <button class="w-3 h-3 rounded-full bg-blue-100" data-index="5"></button>
-      <button class="w-3 h-3 rounded-full bg-blue-300" data-index="5"></button>
-      <button class="w-3 h-3 rounded-full bg-blue-100" data-index="4"></button>
-      <button class="w-3 h-3 rounded-full bg-blue-100" data-index="3"></button>
-      <button class="w-3 h-3 rounded-full bg-blue-100" data-index="2"></button>
-      <button class="w-3 h-3 rounded-full bg-blue-100" data-index="1"></button>
-      <button class="w-3 h-3 rounded-full bg-blue-100" data-index="0"></button>
-    </div>
-  </div>
-</section>
+            dots.forEach((dot, i) => {
+                dot.addEventListener("click", () => {
+                    currentIndex = i;
+                    update(i);
+                });
+            });
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const top = document.getElementById("carousel-inner-tools-top");
-  const bottom = document.getElementById("carousel-inner-tools-bottom");
-  const dots = document.querySelectorAll("#carousel-dots-tools button");
-  let currentIndex = 0;
-  const total = top.children.length;
-
-  function update(index) {
-    top.style.transform = `translateX(-${index * 100}%)`;
-    bottom.style.transform = `translateX(${index * 100}%)`; // reverse direction
-    dots.forEach((dot, i) => {
-      dot.classList.toggle("bg-blue-300", i === index);
-      dot.classList.toggle("bg-blue-100", i !== index);
-    });
-  }
-
-  dots.forEach((dot, i) => {
-    dot.addEventListener("click", () => {
-      currentIndex = i;
-      update(i);
-    });
-  });
-
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % total;
-    update(currentIndex);
-  }, 2500);
-});
-</script>
-
-
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % total;
+                update(currentIndex);
+            }, 2500);
+        });
+    </script>
+</body>
+</html>
 
 <!-- Contact Section -->
 <section id="contact" class="py-24 relative overflow-hidden bg-gray-50 dark:bg-gray-950">
