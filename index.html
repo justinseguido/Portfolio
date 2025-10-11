@@ -3,88 +3,129 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Justine Seguido Portfolio</title>
+    <title>Justine Seguido | GoHighLevel Specialist</title>
     
-    <!-- Meta Description (SEO) -->
-  <meta name="description" content="Justine Seguido - GoHighLevel Specialist helping businesses grow with funnels, automation, and client success systems. View my projects, services, and portfolio.">
-
-  <!-- Keywords (SEO - optional but less important for Google) -->
-  <meta name="keywords" content="GoHighLevel Specialist, Funnels, Automation, CRM, Lead Generation, Digital Marketing, Portfolio">
-
-  <!-- Author -->
-  <meta name="author" content="Justine Seguido">
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://yourdomain.com/" />
-  <meta property="og:title" content="Justine Seguido | GoHighLevel Specialist" />
-  <meta property="og:description" content="Helping businesses automate, scale, and grow with GoHighLevel funnels, automation, and CRM solutions." />
-  <meta property="og:image" content="https://yourdomain.com/preview.jpg" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://yourdomain.com/" />
-  <meta name="twitter:title" content="Justine Seguido | GoHighLevel Specialist" />
-  <meta name="twitter:description" content="Helping businesses automate, scale, and grow with GoHighLevel funnels, automation, and CRM solutions." />
-  <meta name="twitter:image" content="https://yourdomain.com/preview.jpg" />
-    <!-- Tailwind CDN -->
+    <meta name="description" content="GoHighLevel Specialist specializing in automation, funnels, and CRM solutions. Portfolio-building rates available for early clients.">
+    <meta name="keywords" content="GoHighLevel Specialist, Funnels, Automation, CRM, Lead Generation, Digital Marketing, Portfolio">
+    <meta name="author" content="Justine Seguido">
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Justine Seguido | GoHighLevel Specialist" />
+    <meta property="og:description" content="Helping businesses automate, scale, and grow with GoHighLevel funnels, automation, and CRM solutions." />
+    
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <!-- AOS (Scroll Animations) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
     <style>
       .text-gradient {
         background: linear-gradient(to right, #3b82f6, #8b5cf6);
         -webkit-background-clip: text;
-         background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
       }
       .gradient-bg {
         background: linear-gradient(to right, #3b82f6, #8b5cf6);
       }
-      /* Glassmorphism */
       .glass {
         background: rgba(255, 255, 255, 0.2);
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
         border: 1px solid rgba(255, 255, 255, 0.3);
       }
-      /* Dark mode custom overrides */
       .dark .glass {
         background: rgba(20, 20, 20, 0.6);
         border: 1px solid rgba(255, 255, 255, 0.1);
       }
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-12px); }
+      }
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+      @keyframes pulse-glow {
+        0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
+        50% { box-shadow: 0 0 40px rgba(139, 92, 246, 0.8); }
+      }
+      .pulse-glow {
+        animation: pulse-glow 2s ease-in-out infinite;
+      }
+      .skill-bar { 
+        height: 6px; 
+        border-radius: 10px; 
+        background: #e5e7eb; 
+        overflow: hidden; 
+      }
+      .skill-progress { 
+        height: 100%; 
+        border-radius: 10px; 
+        background: linear-gradient(90deg, #2563eb 0%, #7e22ce 100%); 
+        width: 0; 
+        transition: width 1.5s ease-in-out; 
+      }
+      .reveal { 
+        opacity: 0; 
+        transform: translateY(40px); 
+        transition: all 0.8s ease; 
+      }
+      .reveal-visible { 
+        opacity: 1; 
+        transform: translateY(0); 
+      }
+      .badge-special {
+        background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+        animation: badge-pulse 2s ease-in-out infinite;
+      }
+      @keyframes badge-pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+      }
+      .project-card {
+        transition: all 0.3s ease;
+      }
+      .project-card:hover {
+        transform: translateY(-8px);
+      }
+      .project-badge {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        color: white;
+        font-size: 0.75rem;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+        z-index: 10;
+      }
     </style>
   </head>
+  
   <body class="antialiased text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+    
     <!-- Header -->
     <header class="sticky top-0 z-50 glass shadow-sm transition-all">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center py-4">
-          <!-- Logo -->
           <div class="flex-shrink-0 flex items-center">
             <span class="text-xl font-bold text-gradient">Justine Seguido</span>
           </div>
-
-          <!-- Desktop Nav -->
           <nav class="hidden md:flex space-x-8">
             <a href="#services" class="relative font-medium hover:text-blue-500 transition">Services</a>
             <a href="#projects" class="relative font-medium hover:text-blue-500 transition">Projects</a>
             <a href="#about" class="relative font-medium hover:text-blue-500 transition">About</a>
             <a href="#contact" class="relative font-medium hover:text-blue-500 transition">Contact</a>
           </nav>
-
-          <!-- CTA + Dark Mode (Desktop) -->
           <div class="hidden md:flex items-center space-x-4">
-            <a href="#contact" class="gradient-bg text-white px-5 py-2 rounded-lg shadow hover:shadow-lg transition">
-              Let’s Work Together
+            <a href="#contact" class="gradient-bg text-white px-5 py-2 rounded-lg shadow hover:shadow-lg transition pulse-glow">
+              Get Started
             </a>
             <button id="theme-toggle" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700">
               <i class="fas fa-moon text-gray-800 dark:text-yellow-400"></i>
             </button>
           </div>
-
-          <!-- Mobile Menu Button -->
           <div class="md:hidden flex items-center space-x-3">
             <button id="theme-toggle-mobile" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700">
               <i class="fas fa-moon text-gray-800 dark:text-yellow-400"></i>
@@ -95,8 +136,6 @@
           </div>
         </div>
       </div>
-
-      <!-- Mobile menu -->
       <div class="hidden glass py-6 px-6 border-t transition-all duration-300 md:hidden" id="mobile-menu">
         <div class="flex flex-col space-y-4 text-lg">
           <a href="#services" class="hover:text-blue-500 transition">Services</a>
@@ -107,1007 +146,625 @@
       </div>
     </header>
 
-    <!-- Content Sections -->
-    
     <!-- Hero Section -->
-<section class="relative bg-gradient-to-r from-blue-600 via-indigo-700 to-purple-700 text-white overflow-hidden">
-  <!-- Decorative blur blob -->
-  <div class="absolute -top-20 -left-20 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
-  <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl"></div>
+    <section class="relative bg-gradient-to-r from-blue-600 via-indigo-700 to-purple-700 text-white overflow-hidden">
+      <div class="absolute -top-20 -left-20 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl"></div>
 
-  <div class="relative max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-28 pb-24 grid lg:grid-cols-2 gap-12 items-center">
-    <!-- Text Content -->
-    <div data-aos="fade-right">
-      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
-        Hi, I'm
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-200">Justine Seguido</span>
-        <span class="inline-block animate-bounce">👋</span>
-      </h1>
-      <p class="mt-6 text-lg md:text-2xl max-w-xl opacity-90">
-        GoHighLevel Specialist helping businesses grow with Funnels, Automation & Client Success
-      </p>
-      <div class="mt-10 flex flex-wrap gap-4">
-        <a
-          href="#contact"
-          class="bg-white text-blue-600 font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition duration-300"
-        >
-          Let’s Work Together
-        </a>
-        <a
-          href="#projects"
-          class="border-2 border-white text-white font-semibold py-3 px-8 rounded-full hover:bg-white hover:text-blue-600 transition duration-300"
-        >
-          View My Work
-        </a>
-      </div>
-    </div>
-
-    <!-- Floating Image -->
-    <div class="relative flex justify-center lg:justify-end" data-aos="fade-left">
-      <img
-        src="https://storage.googleapis.com/msgsndr/F7EP0WrjfbsiGA8XQf9i/media/689cb1241f951e183c7122bd.png"
-        alt="Mockup Dashboard"
-        class="rounded-2xl shadow-2xl animate-float transform hover:scale-105 transition duration-500"
-      />
-    </div>
-  </div>
-</section>
-
-<!-- Floating Animation -->
-<style>
-  @keyframes float {
-    0% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-12px);
-    }
-    100% {
-      transform: translateY(0px);
-    }
-  }
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-</style>
-
-<!-- Stats Section -->
-<section class="py-20 relative overflow-hidden bg-white dark:bg-gray-900">
-  <!-- Decorative Blur Shape -->
-  <div class="absolute top-0 right-0 w-72 h-72 bg-blue-200 dark:bg-blue-900 rounded-full blur-3xl opacity-30 translate-x-1/2 -translate-y-1/2"></div>
-
-  <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
-    <!-- Carousel Wrapper -->
-    <div id="carousel" class="overflow-hidden">
-      <div id="carousel-inner" class="flex transition-transform duration-700 ease-in-out">
-        <!-- Slide -->
-        <div
-          class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-50 dark:bg-gray-800 hover:shadow-xl transition transform hover:-translate-y-2"
-        >
-          <div class="text-4xl font-extrabold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-            7+
+      <div class="relative max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-28 pb-24 grid lg:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <div class="inline-block mb-4 badge-special text-gray-900 font-bold py-2 px-6 rounded-full shadow-lg">
+            🎯 Portfolio Builder Special - Limited Spots!
           </div>
-          <p class="mt-2 text-gray-600 dark:text-gray-300">Projects Completed</p>
-        </div>
-        <div
-          class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-50 dark:bg-gray-800 hover:shadow-xl transition transform hover:-translate-y-2"
-        >
-          <div class="text-4xl font-extrabold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-            3+
+          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+            GoHighLevel Automation That
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-200"> Saves You 10+ Hours/Week</span>
+            <span class="inline-block animate-bounce">⚡</span>
+          </h1>
+          <p class="mt-6 text-lg md:text-xl max-w-xl opacity-90">
+            Specialized in building automation systems, high-converting funnels, and CRM solutions. <strong>Now accepting 3 clients/month</strong> at portfolio-building rates.
+          </p>
+          <div class="mt-10 flex flex-wrap gap-4">
+            <a href="#contact" class="bg-white text-blue-600 font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition duration-300">
+              Book Free Consultation
+            </a>
+            <a href="#projects" class="border-2 border-white text-white font-semibold py-3 px-8 rounded-full hover:bg-white hover:text-blue-600 transition duration-300">
+              View Demo Projects
+            </a>
           </div>
-          <p class="mt-2 text-gray-600 dark:text-gray-300">Industries Served</p>
-        </div>
-        <div
-          class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-50 dark:bg-gray-800 hover:shadow-xl transition transform hover:-translate-y-2"
-        >
-          <div class="text-4xl font-extrabold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-            98%
-          </div>
-          <p class="mt-2 text-gray-600 dark:text-gray-300">Client Satisfaction</p>
-        </div>
-        <div
-          class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-50 dark:bg-gray-800 hover:shadow-xl transition transform hover:-translate-y-2"
-        >
-          <div class="text-4xl font-extrabold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-            2+
-          </div>
-          <p class="mt-2 text-gray-600 dark:text-gray-300">Months Experience</p>
-        </div>
-      </div>
-    </div>
-    <!-- Carousel Dots -->
-    <div class="flex justify-center mt-8 space-x-2" id="carousel-dots">
-      <button class="w-3 h-3 rounded-full bg-blue-300" data-index="0"></button>
-      <button class="w-3 h-3 rounded-full bg-blue-100" data-index="1"></button>
-      <button class="w-3 h-3 rounded-full bg-blue-100" data-index="2"></button>
-      <button class="w-3 h-3 rounded-full bg-blue-100" data-index="3"></button>
-    </div>
-  </div>
-
-  <!-- Services Section -->
-<section id="services" class="py-20 relative overflow-hidden bg-white/70 dark:bg-gray-900/70 backdrop-blur-xl">
-  <!-- Decorative Blur -->
-  <div class="absolute inset-0 -z-10">
-    <div class="absolute top-10 left-20 w-64 h-64 bg-indigo-300 dark:bg-indigo-800 rounded-full blur-3xl opacity-30"></div>
-    <div class="absolute bottom-10 right-20 w-72 h-72 bg-blue-300 dark:bg-blue-800 rounded-full blur-3xl opacity-30"></div>
-  </div>
-
-  <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
-    <div class="text-center mb-16" data-aos="fade-up">
-      <h2 class="text-4xl md:text-5xl font-bold mb-4">
-        My 
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">
-          Services
-        </span>
-      </h2>
-      <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-        Custom GoHighLevel solutions to help businesses grow with automation, funnels, and client success systems.
-      </p>
-    </div>
-
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-      
-      <!-- Service Card -->
-      <div class="bg-white/60 dark:bg-gray-800/60 rounded-2xl p-8 shadow-md hover:shadow-2xl transition transform hover:-translate-y-2 backdrop-blur-xl"
-           data-aos="fade-up" data-aos-delay="100">
-        <div class="w-16 h-16 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center mb-6 overflow-hidden">
-          <img src="https://cdn-icons-png.flaticon.com/512/3596/3596095.png" alt="Funnel Building" class="w-10 h-10 object-contain">
-        </div>
-        <h3 class="text-xl font-semibold mb-3">Funnel Building</h3>
-        <p class="text-gray-600 dark:text-gray-300 text-sm">High-converting funnels tailored for lead generation, sales, and client onboarding.</p>
-      </div>
-
-      <div class="bg-white/60 dark:bg-gray-800/60 rounded-2xl p-8 shadow-md hover:shadow-2xl transition transform hover:-translate-y-2 backdrop-blur-xl"
-           data-aos="fade-up" data-aos-delay="200">
-        <div class="w-16 h-16 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center mb-6 overflow-hidden">
-          <img src="https://cdn-icons-png.flaticon.com/512/4712/4712035.png" alt="Automation" class="w-10 h-10 object-contain">
-        </div>
-        <h3 class="text-xl font-semibold mb-3">Automation Setup</h3>
-        <p class="text-gray-600 dark:text-gray-300 text-sm">Save time with smart automations for follow-ups, nurturing, and client management.</p>
-      </div>
-
-      <div class="bg-white/60 dark:bg-gray-800/60 rounded-2xl p-8 shadow-md hover:shadow-2xl transition transform hover:-translate-y-2 backdrop-blur-xl"
-           data-aos="fade-up" data-aos-delay="300">
-        <div class="w-16 h-16 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center mb-6 overflow-hidden">
-          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Lead Gen" class="w-10 h-10 object-contain">
-        </div>
-        <h3 class="text-xl font-semibold mb-3">Lead Generation</h3>
-        <p class="text-gray-600 dark:text-gray-300 text-sm">Optimized campaigns and funnels to capture more leads and maximize conversions.</p>
-      </div>
-
-      <div class="bg-white/60 dark:bg-gray-800/60 rounded-2xl p-8 shadow-md hover:shadow-2xl transition transform hover:-translate-y-2 backdrop-blur-xl"
-           data-aos="fade-up" data-aos-delay="400">
-        <div class="w-16 h-16 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center mb-6 overflow-hidden">
-          <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png" alt="Analytics" class="w-10 h-10 object-contain">
-        </div>
-        <h3 class="text-xl font-semibold mb-3">Analytics & Reporting</h3>
-        <p class="text-gray-600 dark:text-gray-300 text-sm">Custom dashboards and reports so you can track performance with ease.</p>
-      </div>
-
-      
-
-      <div class="bg-white/60 dark:bg-gray-800/60 rounded-2xl p-8 shadow-md hover:shadow-2xl transition transform hover:-translate-y-2 backdrop-blur-xl"
-           data-aos="fade-up" data-aos-delay="600">
-        <div class="w-16 h-16 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center mb-6 overflow-hidden">
-          <img src="https://cdn-icons-png.flaticon.com/512/2721/2721296.png" alt="Custom Development" class="w-10 h-10 object-contain">
-        </div>
-        <h3 class="text-xl font-semibold mb-3">Custom Development</h3>
-        <p class="text-gray-600 dark:text-gray-300 text-sm">Tailored solutions and integrations to make GoHighLevel work exactly how you need.</p>
-      </div>
-
-      <div class="bg-white/60 dark:bg-gray-800/60 rounded-2xl p-8 shadow-md hover:shadow-2xl transition transform hover:-translate-y-2 backdrop-blur-xl"
-           data-aos="fade-up" data-aos-delay="600">
-        <div class="w-16 h-16 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center mb-6 overflow-hidden">
-          <img src="assets/icons8-management-100.png" alt="Crm lead tracker" class="w-10 h-10 object-contain">
-        </div>
-        <h3 class="text-xl font-semibold mb-3">🧩 CRM & Lead Tracker System</h3>
-        <p class="text-gray-600 dark:text-gray-300 text-sm">A complete client and lead management system built with GoHighLevel and Airtable.
-Centralizes all client data, deals, and follow-ups while automating lead syncing, pipeline updates, and reminders using n8n and APIs.
-Designed to give business owners real-time visibility, improve team productivity, and simplify their entire sales workflow.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Projects Section -->
-<section id="projects" class="py-20 relative overflow-hidden bg-gray-50/70 dark:bg-gray-900/70 backdrop-blur-xl">
-  <!-- Decorative Blur -->
-  <div class="absolute inset-0 -z-10">
-    <div class="absolute top-20 left-10 w-64 h-64 bg-blue-300 dark:bg-blue-800 rounded-full blur-3xl opacity-30"></div>
-    <div class="absolute bottom-10 right-10 w-72 h-72 bg-indigo-300 dark:bg-indigo-800 rounded-full blur-3xl opacity-30"></div>
-  </div>
-
-  <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
-    <!-- Section Heading -->
-    <div class="text-center mb-16" data-aos="fade-up">
-      <h2 class="text-4xl md:text-5xl font-bold mb-4">
-        Featured 
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">
-          Projects
-        </span>
-      </h2>
-      <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-        A selection of GoHighLevel solutions I’ve built for clients across different industries.
-      </p>
-    </div>
-
-    <!-- Project Grid -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      
-      <!-- Project Card -->
-      <div class="bg-white/60 dark:bg-gray-800/60 rounded-2xl shadow-md hover:shadow-2xl transition transform hover:-translate-y-2 p-6 backdrop-blur-xl"
-           data-aos="fade-up" data-aos-delay="100">
-        <div class="w-20 h-20 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center mb-4">
-          <img src="https://storage.googleapis.com/msgsndr/F7EP0WrjfbsiGA8XQf9i/media/68c81ebc4f724e43d43210d8.png" alt="Real Estate Funnel" class="w-12 h-12 object-contain drop-shadow-md transition-transform duration-300 hover:scale-110">
-        </div>
-        <h3 class="font-semibold text-lg mb-2">Real Estate Funnel</h3>
-        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
-          Complete funnel with calendar booking, automated reminders, and lead tracking.
-        </p>
-        <a href="#contact" class="text-blue-600 dark:text-blue-400 font-medium hover:underline block mb-2">Learn More →</a>
-        <a href="https://realstate.sapphirecarwash.com" target="_blank" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
-          View Project
-        </a>
-      </div>
-
-      <!-- Car Wash Website -->
-      <div class="bg-white/60 dark:bg-gray-800/60 rounded-2xl shadow-md hover:shadow-2xl transition transform hover:-translate-y-2 p-6 backdrop-blur-xl"
-           data-aos="fade-up" data-aos-delay="200">
-        <div class="w-20 h-20 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center mb-4">
-          <img src="https://storage.googleapis.com/msgsndr/F7EP0WrjfbsiGA8XQf9i/media/68c81ebcb376d9cb43e87daa.png" alt="Car Wash Website" class="w-12 h-12 object-contain drop-shadow-md transition-transform duration-300 hover:scale-110">
-        </div>
-        <h3 class="font-semibold text-lg mb-2">Car Wash Website</h3>
-        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
-          Responsive business website with booking, service showcase, and SEO optimization.
-        </p>
-        <a href="#contact" class="text-blue-600 dark:text-blue-400 font-medium hover:underline block mb-2">Learn More →</a>
-        <a href="https://www.sapphirecarwash.com" target="_blank" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
-          View Project
-        </a>
-      </div>
-
-      <!-- Gym Booking Funnel -->
-      <div class="bg-white/60 dark:bg-gray-800/60 rounded-2xl shadow-md hover:shadow-2xl transition transform hover:-translate-y-2 p-6 backdrop-blur-xl"
-           data-aos="fade-up" data-aos-delay="300">
-        <div class="w-20 h-20 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center mb-4">
-          <img src="https://storage.googleapis.com/msgsndr/F7EP0WrjfbsiGA8XQf9i/media/68c81ebc4f724e2b163210d9.png" alt="Gym Booking Funnel" class="w-12 h-12 object-contain drop-shadow-md transition-transform duration-300 hover:scale-110">
-        </div>
-        <h3 class="font-semibold text-lg mb-2">Gym Booking Funnel</h3>
-        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
-          Streamlined booking funnel with recurring sessions, reminders, and upsells.
-        </p>
-        <a href="#contact" class="text-blue-600 dark:text-blue-400 font-medium hover:underline block mb-2">Learn More →</a>
-        <a href="https://gymbooking.sapphirecarwash.com" target="_blank" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
-          View Project
-        </a>
-      </div>
-
-      <!-- Voice Coaching Platform -->
-      <div class="bg-white/60 dark:bg-gray-800/60 rounded-2xl shadow-md hover:shadow-2xl transition transform hover:-translate-y-2 p-6 backdrop-blur-xl"
-           data-aos="fade-up" data-aos-delay="300">
-        <div class="w-20 h-20 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center mb-4">
-          <img src="./assets/voice-coaching.png" alt="voice coach" class="w-12 h-12 object-contain drop-shadow-md transition-transform duration-300 hover:scale-110">
-        </div>
-        <h3 class="font-semibold text-lg mb-2">Voice Coaching Platform</h3>
-        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
-          Coaching platform and client tracking.
-        </p>
-        <a href="#contact" class="text-blue-600 dark:text-blue-400 font-medium hover:underline block mb-2">Learn More →</a>
-        <a href="https://calculator.sapphirecarwash.com" target="_blank" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
-          View Project
-        </a>
-      </div>
-
-      <!-- Lead Gen Funnel -->
-      <div class="bg-white/60 dark:bg-gray-800/60 rounded-2xl shadow-md hover:shadow-2xl transition transform hover:-translate-y-2 p-6 backdrop-blur-xl"
-           data-aos="fade-up" data-aos-delay="300">
-        <div class="w-20 h-20 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center mb-4">
-          <img src="./assets/Lead-Gen.png" alt="Lead Gen Funnel" class="w-12 h-12 object-contain drop-shadow-md transition-transform duration-300 hover:scale-110">
-        </div>
-        <h3 class="font-semibold text-lg mb-2">Lead Gen Funnel</h3>
-        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
-          Lead generation with form, email nurturing, and CRM sync
-        </p>
-        <a href="#contact" class="text-blue-600 dark:text-blue-400 font-medium hover:underline block mb-2">Learn More →</a>
-        <a href="https://marketing.sapphirecarwash.com" target="_blank" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
-          View Project
-        </a>
-      </div>
-
-      <!-- AI Chat Widget -->
-      <div class="bg-white/60 dark:bg-gray-800/60 rounded-2xl shadow-md hover:shadow-2xl transition transform hover:-translate-y-2 p-6 backdrop-blur-xl"
-           data-aos="fade-up" data-aos-delay="300">
-        <div class="w-20 h-20 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center mb-4">
-          <img src="./assets/AI-Chat-Widget.png" alt="Ai Chat Widget" class="w-12 h-12 object-contain drop-shadow-md transition-transform duration-300 hover:scale-110">
-        </div>
-        <h3 class="font-semibold text-lg mb-2">AI Chat Widget Setup</h3>
-        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
-          AI chat integration to capture and qualify leads 24/7.
-        </p>
-        <a href="#contact" class="text-blue-600 dark:text-blue-400 font-medium hover:underline block mb-2">Learn More →</a>
-        <a href="https://aiassistant.sapphirecarwash.com" target="_blank" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
-          View Project
-        </a>
-      </div>
-
-      <!-- E-commerce Funnel -->
-      <div class="bg-white/60 dark:bg-gray-800/60 rounded-2xl shadow-md hover:shadow-2xl transition transform hover:-translate-y-2 p-6 backdrop-blur-xl"
-           data-aos="fade-up" data-aos-delay="300">
-        <div class="w-20 h-20 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center mb-4">
-          <img src="./assets/E-commerce.png" alt="E-commerce" class="w-12 h-12 object-contain drop-shadow-md transition-transform duration-300 hover:scale-110">
-        </div>
-        <h3 class="font-semibold text-lg mb-2">E-Commerce Funnel</h3>
-        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
-         High-converting funnel with product showcase, upsells, checkout, and order tracking.
-        </p>
-        <a href="#contact" class="text-blue-600 dark:text-blue-400 font-medium hover:underline block mb-2">Learn More →</a>
-        <a href="https://grow.sapphirecarwash.com" target="_blank" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
-          View Project
-        </a>
-      </div>
-
-      <!-- Funnel Expert Setup -->
-      <div class="bg-white/60 dark:bg-gray-800/60 rounded-2xl shadow-md hover:shadow-2xl transition transform hover:-translate-y-2 p-6 backdrop-blur-xl"
-           data-aos="fade-up" data-aos-delay="300">
-        <div class="w-20 h-20 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center mb-4">
-          <img src="./assets/funnel-expert.png" alt="Funnel Expert" class="w-12 h-12 object-contain drop-shadow-md transition-transform duration-300 hover:scale-110">
-        </div>
-        <h3 class="font-semibold text-lg mb-2">Funnel Expert Setup</h3>
-        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
-          Custom funnel strategy with optimized lead capture, automations.
-        </p>
-        <a href="#contact" class="text-blue-600 dark:text-blue-400 font-medium hover:underline block mb-2">Learn More →</a>
-        <a href="https://funnel.sapphirecarwash.com" target="_blank" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
-          View Project
-        </a>
-      </div>
-
-       <!-- Client&Lead Tracker -->
-      <div class="bg-white/60 dark:bg-gray-800/60 rounded-2xl shadow-md hover:shadow-2xl transition transform hover:-translate-y-2 p-6 backdrop-blur-xl"
-           data-aos="fade-up" data-aos-delay="300">
-        <div class="w-20 h-20 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center mb-4">
-          <img src="assets/Client&Lead Tracker.png" alt="Client&Lead Tracker" class="w-12 h-12 object-contain drop-shadow-md transition-transform duration-300 hover:scale-110">
-        </div>
-        <h3 class="font-semibold text-lg mb-2">🚀 Client & Lead Tracker with GoHighLevel Integration</h3>
-        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
-          Developed an Airtable-based client & lead tracker integrated with GoHighLevel to centralize data, deals, and follow-ups. Automated lead syncing, pipeline updates, and KPI dashboards using n8n and APIs to boost productivity and streamline CRM workflows.
-        </p>
-        <a href="#contact" class="text-blue-600 dark:text-blue-400 font-medium hover:underline block mb-2">Learn More →</a>
-        <a href="https://airtable.com/appJrX1Z1H2mvWHHg/pagDVSZa63ctQAo1K" target="_blank" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
-          View Project
-        </a>
-      </div>
-
-       <!-- GHL Crm tracker -->
-      <div class="bg-white/60 dark:bg-gray-800/60 rounded-2xl shadow-md hover:shadow-2xl transition transform hover:-translate-y-2 p-6 backdrop-blur-xl"
-           data-aos="fade-up" data-aos-delay="300">
-        <div class="w-20 h-20 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center mb-4">
-          <img src="assets/tracker.png" alt="ghl crm tracker" class="w-12 h-12 object-contain drop-shadow-md transition-transform duration-300 hover:scale-110">
-        </div>
-        <h3 class="font-semibold text-lg mb-2">🚀 GoHighLevel Crm & Tracker</h3>
-        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
-          Built a GoHighLevel CRM & Tracker to centralize client management, automate follow-ups, and track deals with real-time performance insights.
-        </p>
-        <a href="#contact" class="text-blue-600 dark:text-blue-400 font-medium hover:underline block mb-2">Learn More →</a>
-        <a href="https://airtable.com/appstWSTBVo3KuefA/pagBL70EZlTs3Y6tO" target="_blank" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
-          View Project
-        </a>
-      </div>
-
-      <!-- Repeat the same upgrade for the rest of the project cards -->
-      <!-- Tip: stagger the animations with data-aos-delay="400" "500" etc -->
-      
-    </div>
-  </div>
-</section>
-
-<!-- About Section -->
-
-<section class="py-16 md:py-24 relative overflow-hidden" id="about">
-  <!-- Floating Shapes -->
-  <div class="floating-shape w-64 h-64 -top-32 -left-32 animate-float"></div>
-  <div class="floating-shape w-40 h-40 bottom-10 right-20 animate-float" style="animation-delay: 2s;"></div>
-  <div class="floating-shape w-24 h-24 top-1/2 left-1/4 animate-float" style="animation-delay: 4s;"></div>
-
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <!-- Title -->
-    <div class="text-center mb-12">
-      <h2 class="text-4xl md:text-5xl font-bold mb-4">About <span class="text-gradient">Me</span></h2>
-      <div class="w-24 h-1 gradient-bg rounded-full mx-auto"></div>
-    </div>
-
-    <!-- About Content -->
-    <div class="flex flex-col lg:flex-row items-center gap-10">
-      <!-- Profile Image -->
-      <div class="lg:w-2/5 flex justify-center">
-        <div class="relative">
-          <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-8 border-white shadow-2xl">
-            <img src="https://storage.googleapis.com/msgsndr/F7EP0WrjfbsiGA8XQf9i/media/689cb1241f951e183c7122bd.png" alt="Justine Seguido" class="w-full h-full object-cover">
-          </div>
-          <div class="absolute -bottom-4 -right-4 gradient-bg text-white py-2 px-6 rounded-full shadow-lg animate-bounce">
-            <span class="font-semibold">GHL Specialist</span>
-          </div>
-          <div class="absolute -top-4 -left-4 w-16 h-16 gradient-bg rounded-full flex items-center justify-center text-white text-2xl shadow-lg animate-pulse">
-            <i class="fas fa-rocket"></i>
-          </div>
-        </div>
-      </div>
-
-      <!-- About Text -->
-      <div class="lg:w-3/5">
-        <h3 class="text-2xl md:text-3xl font-bold mb-6">Hi, I'm Justine Seguido</h3>
-        <p class="text-gray-600 mb-6 text-lg">I'm a GoHighLevel Specialist learning to help businesses automate, grow, and scale with smart funnels and systems. Although I’m just starting out, I’m actively sharpening my skills and building projects across different industries.</p>
-        <p class="text-gray-600 mb-8 text-lg">My approach combines technical expertise with strategic thinking to create solutions that not only look great but deliver measurable results.</p>
-
-        <!-- Skills -->
-        <div class="mb-8">
-          <h4 class="text-xl font-semibold mb-4 text-gradient">My Skills</h4>
-          <div class="space-y-4">
-            <div>
-              <div class="flex justify-between mb-2">
-                <span class="font-medium">Funnel Design & Development</span>
-                <span class="text-primary font-semibold">95%</span>
-              </div>
-              <div class="skill-bar"><div class="skill-progress animate-skill" data-width="95%"></div></div>
+          <div class="mt-8 flex items-center gap-4 text-sm opacity-90">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-check-circle text-green-300"></i>
+              <span>Fast turnaround</span>
             </div>
-            <div>
-              <div class="flex justify-between mb-2">
-                <span class="font-medium">Workflow Automation</span>
-                <span class="text-primary font-semibold">90%</span>
-              </div>
-              <div class="skill-bar"><div class="skill-progress animate-skill" data-width="90%"></div></div>
+            <div class="flex items-center gap-2">
+              <i class="fas fa-check-circle text-green-300"></i>
+              <span>Personalized attention</span>
             </div>
-            <div>
-              <div class="flex justify-between mb-2">
-                <span class="font-medium">GoHighLevel Integration</span>
-                <span class="text-primary font-semibold">92%</span>
-              </div>
-              <div class="skill-bar"><div class="skill-progress animate-skill" data-width="92%"></div></div>
+            <div class="flex items-center gap-2">
+              <i class="fas fa-check-circle text-green-300"></i>
+              <span>50% off rates</span>
             </div>
           </div>
         </div>
 
-        <!-- Buttons -->
-        <div class="flex flex-wrap gap-4">
-          <a href="#contact" class="gradient-bg text-white font-semibold py-3 px-6 rounded-lg flex items-center shadow-md hover:scale-105 hover:shadow-xl transition transform">
-            <i class="fas fa-paper-plane mr-2"></i> Let's Work Together
-          </a>
-          <a href="#projects" class="border border-primary text-primary font-semibold py-3 px-6 rounded-lg flex items-center hover:bg-primary hover:text-white transition-colors transform hover:scale-105">
-            <i class="fas fa-briefcase mr-2"></i> View My Work
-          </a>
+        <div class="relative flex justify-center lg:justify-end" data-aos="fade-left">
+          <img src="https://storage.googleapis.com/msgsndr/F7EP0WrjfbsiGA8XQf9i/media/689cb1241f951e183c7122bd.png" alt="Dashboard Preview" class="rounded-2xl shadow-2xl animate-float transform hover:scale-105 transition duration-500" />
         </div>
       </div>
-    </div>
-
-    <!-- Industries -->
-    <div class="mt-16" id="industries">
-      <h4 class="text-xl font-semibold mb-8 text-center text-gradient">Industries I've Worked With</h4>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-stretch">
-        <div class="industry-card reveal bg-gray-700 p-6 rounded-xl shadow-md text-center hover:scale-105 hover:shadow-xl transition flex flex-col items-center justify-between h-full">
-          <img src="./assets/RealEstate.jpg" class="w-full h-auto max-h-48 object-cover rounded-md mb-3" alt="Real Estate">
-          <p class="font-semibold">Real Estate</p>
-        </div>
-        <div class="industry-card reveal bg-gray-700 p-6 rounded-xl shadow-md text-center hover:scale-105 hover:shadow-xl transition flex flex-col items-center justify-between h-full">
-          <img src="./assets/Pin-on-Crossfit-addiction.jpg" class="w-full h-auto max-h-48 object-cover rounded-md mb-3" alt="Fitness">
-          <p class="font-semibold">Fitness</p>
-        </div>
-        <div class="industry-card reveal bg-gray-700 p-6 rounded-xl shadow-md text-center hover:scale-105 hover:shadow-xl transition flex flex-col items-center justify-between h-full">
-          <img src="./assets/Carwash.jpg" class="w-full h-auto max-h-48 object-cover rounded-md mb-3" alt="Automotive">
-          <p class="font-semibold">Automotive</p>
-        </div>
-        <div class="industry-card reveal bg-gray-700 p-6 rounded-xl shadow-md text-center hover:scale-105 hover:shadow-xl transition flex flex-col items-center justify-between h-full">
-          <img src="./assets/download.jpg" class="w-full h-auto max-h-48 object-cover rounded-md mb-3" alt="Business">
-          <p class="font-semibold">Business</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Timeline -->
-    <div class="mt-20" id="timeline">
-      <h4 class="text-xl font-semibold mb-12 text-center text-gradient">My Journey</h4>
-      <div class="relative">
-        <!-- Vertical Line -->
-        <div class="absolute top-0 bottom-0 left-6 w-1 gradient-bg rounded-full"></div>
-        <!-- Steps -->
-        <div class="space-y-12">
-          <div class="relative pl-16 reveal">
-            <div class="absolute left-0 top-0 w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white shadow-lg">
-              <i class="fas fa-rocket"></i>
-            </div>
-            <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-xl transition">
-              <h5 class="font-bold text-lg mb-2">July 2025 — Getting Started</h5>
-              <p class="text-gray-600 dark:text-gray-300">Began my journey into GoHighLevel, diving into funnels, workflows, and integrations.</p>
-            </div>
-          </div>
-          <div class="relative pl-16 reveal">
-            <div class="absolute left-0 top-0 w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white shadow-lg">
-              <i class="fas fa-tools"></i>
-            </div>
-            <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-xl transition">
-              <h5 class="font-bold text-lg mb-2">Now — Hands-On Growth</h5>
-              <p class="text-gray-600 dark:text-gray-300">Actively building projects, experimenting with setups, and sharpening my skills through practice.</p>
-            </div>
-          </div>
-          <div class="relative pl-16 reveal">
-            <div class="absolute left-0 top-0 w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white shadow-lg">
-              <i class="fas fa-bullseye"></i>
-            </div>
-            <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-xl transition">
-              <h5 class="font-bold text-lg mb-2">Next — Ready for Clients</h5>
-              <p class="text-gray-600 dark:text-gray-300">Preparing to collaborate with businesses, bringing fresh solutions in funnels, automation, and websites.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Learning Tools -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Synchronized Carousels</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .text-gradient {
-            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    </style>
-</head>
-<body class="bg-gray-100 dark:bg-gray-900">
-    <section class="relative mt-20" id="tools">
-        <!-- Background Blur -->
-        <div class="absolute top-0 right-0 w-72 h-72 bg-blue-200 dark:bg-blue-900 rounded-full blur-3xl opacity-30 translate-x-1/2 -translate-y-1/2"></div>
-
-        <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
-            <h4 class="text-xl font-semibold mb-8 text-center text-gradient">Learning Tools & Platforms</h4>
-
-            <!-- Two Carousels -->
-            <div class="flex flex-col items-center space-y-10">
-
-                <!-- Normal Carousel -->
-                <div id="carousel-tools-top" class="overflow-hidden w-full">
-                    <div id="carousel-inner-tools-top" class="flex transition-transform duration-700 ease-in-out">
-                        <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
-                            <img src="https://logo.clearbit.com/gohighlevel.com" class="w-12 h-12 mb-3" />
-                            <p class="font-semibold text-white">GoHighLevel</p>
-                        </div>
-                        <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
-                            <img src="https://cdn.worldvectorlogo.com/logos/zapier-2.svg" class="w-12 h-12 mb-3" />
-                            <p class="font-semibold text-white">Zapier</p>
-                        </div>
-                        <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
-                            <img src="https://cdn.worldvectorlogo.com/logos/monday-1.svg" class="w-12 h-12 mb-3" />
-                            <p class="font-semibold text-white">Monday.com</p>
-                        </div>
-                        <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
-                            <img src="assets/googleworkspace.jpg" class="w-12 h-12 mb-3" />
-                            <p class="font-semibold text-white">Google Workspace</p>
-                        </div>
-                        <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
-                            <img src="assets/slack.jpg" class="w-12 h-12 mb-3" />
-                            <p class="font-semibold text-white">Slack</p>
-                        </div>
-                        <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
-                            <img src="assets/calendly.jpg" class="w-12 h-12 mb-3" />
-                            <p class="font-semibold text-white">Calendly</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Reversed Carousel -->
-                <div id="carousel-tools-bottom" class="overflow-hidden w-full">
-                    <div id="carousel-inner-tools-bottom" class="flex transition-transform duration-700 ease-in-out">
-                        <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
-                            <img src="assets/Make (or Integromat)_ What It Is and Why You Should Be Using Workflow Automation.jpg
-" class="w-12 h-12 mb-3" />
-                            <p class="font-semibold text-white">Make(Integromat)</p>
-                        </div>
-                        <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
-                            <img src="assets/Notion Logo _ SVG _ Real Company _ Alphabet, Letter N Logo.jpg" class="w-12 h-12 mb-3" />
-                            <p class="font-semibold text-white">Notion</p>
-                        </div>
-                        <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
-                            <img src="assets/Top 5 des outils pour optimiser son temps, ses projets et son organisation - Epionea.jpg" class="w-12 h-12 mb-3" />
-                            <p class="font-semibold text-white">Airtable</p>
-                        </div>
-                        <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
-                            <img src="assets/n8n Logo Icon - PNG Logo Vector Brand Downloads (SVG, EPS).jpg" class="w-12 h-12 mb-3" />
-                            <p class="font-semibold text-white">N8N</p>
-                        </div>
-                        <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
-                            <img src="https://cdn.worldvectorlogo.com/logos/zapier-2.svg" class="w-12 h-12 mb-3" />
-                            <p class="font-semibold text-white">Zapier</p>
-                        </div>
-                        <div class="min-w-full flex flex-col items-center justify-center p-6 rounded-2xl shadow-md bg-gray-700">
-                            <img src="https://logo.clearbit.com/gohighlevel.com" class="w-12 h-12 mb-3" />
-                            <p class="font-semibold text-white">GoHighLevel</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Dots (shared) -->
-            <div class="flex justify-center mt-8 space-x-2" id="carousel-dots-tools">
-                <button class="w-3 h-3 rounded-full bg-blue-300" data-index="0"></button>
-                <button class="w-3 h-3 rounded-full bg-blue-100" data-index="1"></button>
-                <button class="w-3 h-3 rounded-full bg-blue-100" data-index="2"></button>
-                <button class="w-3 h-3 rounded-full bg-blue-100" data-index="3"></button>
-                <button class="w-3 h-3 rounded-full bg-blue-100" data-index="4"></button>
-                <button class="w-3 h-3 rounded-full bg-blue-100" data-index="5"></button>
-            </div>
-        </div>
     </section>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const top = document.getElementById("carousel-inner-tools-top");
-            const bottom = document.getElementById("carousel-inner-tools-bottom");
-            const dots = document.querySelectorAll("#carousel-dots-tools button");
-            let currentIndex = 0;
-            const total = top.children.length;
-
-            function update(index) {
-                // Top carousel moves left (normal direction)
-                top.style.transform = `translateX(-${index * 100}%)`;
-                
-                // Bottom carousel moves right (opposite direction)
-                // We use (total - 1 - index) to reverse the direction
-                bottom.style.transform = `translateX(-${(total - 1 - index) * 100}%)`;
-                
-                // Update dots
-                dots.forEach((dot, i) => {
-                    dot.classList.toggle("bg-blue-300", i === index);
-                    dot.classList.toggle("bg-blue-100", i !== index);
-                });
-            }
-
-            dots.forEach((dot, i) => {
-                dot.addEventListener("click", () => {
-                    currentIndex = i;
-                    update(i);
-                });
-            });
-
-            setInterval(() => {
-                currentIndex = (currentIndex + 1) % total;
-                update(currentIndex);
-            }, 2500);
-        });
-    </script>
-</body>
-</html>
-
-<!-- Contact Section -->
-<section id="contact" class="py-24 relative overflow-hidden bg-gray-50 dark:bg-gray-950">
-  <!-- Decorative Background -->
-  <div class="absolute inset-0 -z-10">
-    <div class="absolute top-20 left-10 w-80 h-80 bg-blue-300 dark:bg-blue-800 rounded-full blur-3xl opacity-20"></div>
-    <div class="absolute bottom-10 right-10 w-96 h-96 bg-indigo-400 dark:bg-indigo-900 rounded-full blur-3xl opacity-20"></div>
-    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/asfalt-light.png')] dark:opacity-5 opacity-10"></div>
-  </div>
-
-  <div class="max-w-5xl mx-auto px-6 md:px-12">
-    <!-- Header -->
-    <div class="text-center mb-14">
-      <h2 class="text-4xl md:text-5xl font-bold mb-4">
-        Get In <span class="text-gradient">Touch</span>
-      </h2>
-      <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-        Let’s discuss your project and explore how I can help with GoHighLevel solutions.
-      </p>
-    </div>
-
-    <!-- Form Card -->
-    <div class="backdrop-blur-lg bg-white/70 dark:bg-gray-900/70 rounded-3xl shadow-2xl p-10 md:p-14 reveal">
-      <form action="https://formspree.io/f/mvgbylry" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        
-        <!-- Name -->
-        <div class="relative">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name</label>
-          <input type="text" name="name" placeholder="Your name" 
-            class="w-full rounded-2xl border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 pl-12 pr-4 py-3 focus:border-indigo-500 focus:ring focus:ring-indigo-200 dark:focus:ring-indigo-700 transition shadow-sm">
-          <i class="fas fa-user absolute left-4 top-11 text-gray-400"></i>
+    <!-- Stats Section -->
+    <section class="py-20 relative overflow-hidden bg-white dark:bg-gray-900">
+      <div class="absolute top-0 right-0 w-72 h-72 bg-blue-200 dark:bg-blue-900 rounded-full blur-3xl opacity-30 translate-x-1/2 -translate-y-1/2"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div class="text-center p-6 rounded-2xl shadow-md bg-gray-50 dark:bg-gray-800 hover:shadow-xl transition transform hover:-translate-y-2" data-aos="fade-up">
+            <div class="text-4xl font-extrabold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">10+</div>
+            <p class="mt-2 text-gray-600 dark:text-gray-300">Demo Projects Built</p>
+          </div>
+          <div class="text-center p-6 rounded-2xl shadow-md bg-gray-50 dark:bg-gray-800 hover:shadow-xl transition transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+            <div class="text-4xl font-extrabold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">4+</div>
+            <p class="mt-2 text-gray-600 dark:text-gray-300">Industries Covered</p>
+          </div>
+          <div class="text-center p-6 rounded-2xl shadow-md bg-gray-50 dark:bg-gray-800 hover:shadow-xl transition transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+            <div class="text-4xl font-extrabold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">10+</div>
+            <p class="mt-2 text-gray-600 dark:text-gray-300">Hours Saved/Week</p>
+          </div>
+          <div class="text-center p-6 rounded-2xl shadow-md bg-gray-50 dark:bg-gray-800 hover:shadow-xl transition transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+            <div class="text-4xl font-extrabold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">3</div>
+            <p class="mt-2 text-gray-600 dark:text-gray-300">Spots Available</p>
+          </div>
         </div>
-        
-        <!-- Email -->
-        <div class="relative">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email</label>
-          <input type="email" name="email" placeholder="you@example.com"
-            class="w-full rounded-2xl border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 pl-12 pr-4 py-3 focus:border-indigo-500 focus:ring focus:ring-indigo-200 dark:focus:ring-indigo-700 transition shadow-sm">
-          <i class="fas fa-envelope absolute left-4 top-11 text-gray-400"></i>
-        </div>
-        
-        <!-- Message -->
-        <div class="md:col-span-2 relative">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message</label>
-          <textarea name="message" rows="6" placeholder="Tell me about your project..."
-            class="w-full rounded-2xl border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 pl-12 pr-4 py-3 focus:border-indigo-500 focus:ring focus:ring-indigo-200 dark:focus:ring-indigo-700 transition shadow-sm"></textarea>
-          <i class="fas fa-comment-dots absolute left-4 top-12 text-gray-400"></i>
-        </div>
+      </div>
+    </section>
 
-        <!-- Button -->
-        <div class="md:col-span-2 text-center mt-4">
-          <button type="submit" 
-            class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold py-3 px-12 rounded-full shadow-lg hover:shadow-indigo-500/40 hover:scale-105 transition duration-300">
-            <i class="fas fa-paper-plane mr-2"></i> Send Message
-          </button>
-        </div>
-      </form>
-
-     <!-- Social Links -->
-<!-- Social Links -->
-<div class="mt-10 flex justify-center gap-6">
-  <!-- LinkedIn -->
-  <a href="https://www.linkedin.com/in/justine-seguido-1ba3b4132" target="_blank"
-     class="w-10 h-10 rounded-full bg-[#0077B5] flex items-center justify-center shadow hover:scale-110 hover:shadow-lg transition">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" class="w-5 h-5 invert">
-  </a>
-
-  
-
-  <!-- Facebook -->
-  <a href="https://web.facebook.com/justin.babiano" target="_blank"
-     class="w-10 h-10 rounded-full bg-[#1877F2] flex items-center justify-center shadow hover:scale-110 hover:shadow-lg transition">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" class="w-5 h-5 invert">
-  </a>
-
-  
-
- 
-</div>
-
-
-
-    </div>
-  </div>
-</section>
-
-<footer class="relative bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-700 text-white py-16 overflow-hidden">
-  <!-- Decorative Background -->
-  <div class="absolute inset-0 -z-10">
-    <div class="absolute -top-10 -left-10 w-40 h-40 bg-blue-400 rounded-full blur-3xl opacity-20"></div>
-    <div class="absolute bottom-0 right-0 w-56 h-56 bg-purple-500 rounded-full blur-3xl opacity-20"></div>
-  </div>
-
-  <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16">
-      
-      <!-- Branding -->
-      <div>
-  <h3 class="text-2xl font-bold mb-2">Justine Seguido</h3>
-  <p class="opacity-80 mb-6">GoHighLevel Specialist helping businesses automate, scale, and grow.</p>
-
-  <!-- Social Links -->
-  <div class="flex space-x-4">
-    <!-- Facebook -->
-    <a href="https://web.facebook.com/justin.babiano" target="_blank"
-       class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white transition shadow-lg">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"
-           alt="Facebook" class="w-5 h-5 invert hover:invert-0" />
-    </a>
-
-    <!-- LinkedIn -->
-    <a href="https://www.linkedin.com/in/justine-seguido-1ba3b4132" target="_blank"
-       class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white transition shadow-lg">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
-           alt="LinkedIn" class="w-5 h-5 invert hover:invert-0" />
-    </a>
-
-    
-  </div>
-</div>
-
-      <!-- Quick Links -->
-      <div>
-        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-        <ul class="space-y-2 opacity-90">
-          <li><a href="#about" class="hover:text-yellow-300 transition">About</a></li>
-          <li><a href="#projects" class="hover:text-yellow-300 transition">Projects</a></li>
-          <li><a href="#industries" class="hover:text-yellow-300 transition">Industries</a></li>
-          <li><a href="#contact" class="hover:text-yellow-300 transition">Contact</a></li>
-        </ul>
+    <!-- Services Section -->
+    <section id="services" class="py-20 relative overflow-hidden bg-white/70 dark:bg-gray-900/70 backdrop-blur-xl">
+      <div class="absolute inset-0 -z-10">
+        <div class="absolute top-10 left-20 w-64 h-64 bg-indigo-300 dark:bg-indigo-800 rounded-full blur-3xl opacity-30"></div>
+        <div class="absolute bottom-10 right-20 w-72 h-72 bg-blue-300 dark:bg-blue-800 rounded-full blur-3xl opacity-30"></div>
       </div>
 
-      <!-- Contact Info -->
-      <div>
-        <h4 class="text-lg font-semibold mb-4">Get In Touch</h4>
-        <ul class="space-y-3 opacity-90">
-          <li class="flex items-center space-x-3">
-            <i class="fas fa-envelope text-yellow-300"></i>
-            <a href="mailto:jbseguido@gmail.com" class="hover:underline">jbseguido@gmail.com</a>
-          </li>
-          <li class="flex items-center space-x-3">
-            <i class="fas fa-phone-alt text-yellow-300"></i>
-            <span>+63 995 554 1058</span>
-          </li>
-          <li class="flex items-center space-x-3">
-            <i class="fas fa-map-marker-alt text-yellow-300"></i>
-            <span>Philippines</span>
-          </li>
-        </ul>
+      <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            What I <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">Build</span>
+          </h2>
+          <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Proven GoHighLevel solutions that save time, increase conversions, and streamline your business operations.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div class="bg-white/60 dark:bg-gray-800/60 rounded-2xl p-8 shadow-md hover:shadow-2xl transition transform hover:-translate-y-2 backdrop-blur-xl" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-16 h-16 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center mb-6">
+              <i class="fas fa-funnel-dollar text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">High-Converting Funnels</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm">Lead generation, sales, and onboarding funnels that convert visitors into paying customers.</p>
+          </div>
+
+          <div class="bg-white/60 dark:bg-gray-800/60 rounded-2xl p-8 shadow-md hover:shadow-2xl transition transform hover:-translate-y-2 backdrop-blur-xl" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-16 h-16 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center mb-6">
+              <i class="fas fa-robot text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Smart Automation</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm">Automated follow-ups, nurture sequences, and client management that run on autopilot.</p>
+          </div>
+
+          <div class="bg-white/60 dark:bg-gray-800/60 rounded-2xl p-8 shadow-md hover:shadow-2xl transition transform hover:-translate-y-2 backdrop-blur-xl" data-aos="fade-up" data-aos-delay="300">
+            <div class="w-16 h-16 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center mb-6">
+              <i class="fas fa-chart-line text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Lead Generation Systems</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm">Optimized campaigns designed to capture quality leads and maximize your ROI.</p>
+          </div>
+
+          <div class="bg-white/60 dark:bg-gray-800/60 rounded-2xl p-8 shadow-md hover:shadow-2xl transition transform hover:-translate-y-2 backdrop-blur-xl" data-aos="fade-up" data-aos-delay="400">
+            <div class="w-16 h-16 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center mb-6">
+              <i class="fas fa-chart-pie text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Analytics & Dashboards</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm">Custom reporting dashboards to track performance and make data-driven decisions.</p>
+          </div>
+
+          <div class="bg-white/60 dark:bg-gray-800/60 rounded-2xl p-8 shadow-md hover:shadow-2xl transition transform hover:-translate-y-2 backdrop-blur-xl" data-aos="fade-up" data-aos-delay="500">
+            <div class="w-16 h-16 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center mb-6">
+              <i class="fas fa-puzzle-piece text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Custom Integrations</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm">Seamless integrations with your existing tools and workflows.</p>
+          </div>
+
+          <div class="bg-white/60 dark:bg-gray-800/60 rounded-2xl p-8 shadow-md hover:shadow-2xl transition transform hover:-translate-y-2 backdrop-blur-xl" data-aos="fade-up" data-aos-delay="600">
+            <div class="w-16 h-16 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center mb-6">
+              <i class="fas fa-database text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">CRM & Lead Tracker</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm">Complete client management system with automated syncing, pipeline tracking, and real-time insights.</p>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Bottom -->
-    <div class="mt-12 border-t border-white/20 pt-6 text-center text-sm opacity-80">
-      © 2025 Justine Seguido. All Rights Reserved.
-    </div>
-  </div>
-</footer>
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 relative overflow-hidden bg-gray-50/70 dark:bg-gray-900/70 backdrop-blur-xl">
+      <div class="absolute inset-0 -z-10">
+        <div class="absolute top-20 left-10 w-64 h-64 bg-blue-300 dark:bg-blue-800 rounded-full blur-3xl opacity-30"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-indigo-300 dark:bg-indigo-800 rounded-full blur-3xl opacity-30"></div>
+      </div>
 
+      <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            Demo <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">Projects</span>
+          </h2>
+          <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Functional demonstrations across multiple industries. Each project showcases real automation workflows you can implement in your business.
+          </p>
+        </div>
 
-<style>
-  .text-gradient {
-    background: linear-gradient(135deg, #2563eb 0%, #7e22ce 100%);
-    -webkit-background-clip: text;
-     background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="project-card relative bg-white/60 dark:bg-gray-800/60 rounded-2xl shadow-md hover:shadow-2xl transition p-6 backdrop-blur-xl" data-aos="fade-up" data-aos-delay="100">
+            <span class="project-badge">Demo</span>
+            <div class="w-20 h-20 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center mb-4">
+              <i class="fas fa-home text-white text-3xl"></i>
+            </div>
+            <h3 class="font-semibold text-lg mb-2">Real Estate Funnel</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+              Complete funnel with calendar booking, automated reminders, and lead tracking system.
+            </p>
+            <div class="mb-4 text-xs text-gray-500">
+              <strong>Potential ROI:</strong> Save 5+ hours/week on follow-ups
+            </div>
+            <a href="https://realstate.sapphirecarwash.com" target="_blank" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
+              View Live Demo →
+            </a>
+          </div>
 
-  /* Scroll reveal */
-  .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s ease; }
-  .reveal.reveal-visible { opacity: 1; transform: translateY(0); }
-</style>
+          <div class="project-card relative bg-white/60 dark:bg-gray-800/60 rounded-2xl shadow-md hover:shadow-2xl transition p-6 backdrop-blur-xl" data-aos="fade-up" data-aos-delay="200">
+            <span class="project-badge">Demo</span>
+            <div class="w-20 h-20 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center mb-4">
+              <i class="fas fa-car text-white text-3xl"></i>
+            </div>
+            <h3 class="font-semibold text-lg mb-2">Car Wash Website</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+              Responsive website with online booking, service showcase, and SEO optimization.
+            </p>
+            <div class="mb-4 text-xs text-gray-500">
+              <strong>Potential ROI:</strong> Increase bookings by 30-40%
+            </div>
+            <a href="https://www.sapphirecarwash.com" target="_blank" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
+              View Live Demo →
+            </a>
+          </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('reveal-visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
-    reveals.forEach(el => observer.observe(el));
-  });
-</script>
+          <div class="project-card relative bg-white/60 dark:bg-gray-800/60 rounded-2xl shadow-md hover:shadow-2xl transition p-6 backdrop-blur-xl" data-aos="fade-up" data-aos-delay="300">
+            <span class="project-badge">Demo</span>
+            <div class="w-20 h-20 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center mb-4">
+              <i class="fas fa-dumbbell text-white text-3xl"></i>
+            </div>
+            <h3 class="font-semibold text-lg mb-2">Gym Booking Funnel</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+              Streamlined booking with recurring sessions, automated reminders, and upsells.
+            </p>
+            <div class="mb-4 text-xs text-gray-500">
+              <strong>Potential ROI:</strong> Reduce no-shows by 60%
+            </div>
+            <a href="https://gymbooking.sapphirecarwash.com" target="_blank" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
+              View Live Demo →
+            </a>
+          </div>
 
-<style>
-  .gradient-bg { background: linear-gradient(135deg, #2563eb 0%, #7e22ce 100%); }
-  .text-gradient {
-    background: linear-gradient(135deg, #2563eb 0%, #7e22ce 100%);
-    -webkit-background-clip: text;
-     background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  /* Reveal animation */
-  .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s ease-out; }
-  .reveal.reveal-visible { opacity: 1; transform: translateY(0); }
-</style>
+          <div class="project-card relative bg-white/60 dark:bg-gray-800/60 rounded-2xl shadow-md hover:shadow-2xl transition p-6 backdrop-blur-xl" data-aos="fade-up" data-aos-delay="400">
+            <span class="project-badge">Demo</span>
+            <div class="w-20 h-20 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center mb-4">
+              <i class="fas fa-microphone text-white text-3xl"></i>
+            </div>
+            <h3 class="font-semibold text-lg mb-2">Voice Coaching Platform</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+              Coaching platform with client tracking and session management.
+            </p>
+            <div class="mb-4 text-xs text-gray-500">
+              <strong>Potential ROI:</strong> Automate client onboarding
+            </div>
+            <a href="https://calculator.sapphirecarwash.com" target="_blank" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
+              View Live Demo →
+            </a>
+          </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('reveal-visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
-    reveals.forEach(el => observer.observe(el));
-  });
-</script>
+          <div class="project-card relative bg-white/60 dark:bg-gray-800/60 rounded-2xl shadow-md hover:shadow-2xl transition p-6 backdrop-blur-xl" data-aos="fade-up" data-aos-delay="500">
+            <span class="project-badge">Demo</span>
+            <div class="w-20 h-20 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center mb-4">
+              <i class="fas fa-robot text-white text-3xl"></i>
+            </div>
+            <h3 class="font-semibold text-lg mb-2">AI Chat Widget</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+              AI-powered chat to capture and qualify leads 24/7 automatically.
+            </p>
+            <div class="mb-4 text-xs text-gray-500">
+              <strong>Potential ROI:</strong> Never miss a lead again
+            </div>
+            <a href="https://aiassistant.sapphirecarwash.com" target="_blank" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
+              View Live Demo →
+            </a>
+          </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Animate skill bars
-    const skillBars = document.querySelectorAll('.skill-progress');
-    const revealItems = document.querySelectorAll('.reveal');
+          <div class="project-card relative bg-white/60 dark:bg-gray-800/60 rounded-2xl shadow-md hover:shadow-2xl transition p-6 backdrop-blur-xl" data-aos="fade-up" data-aos-delay="600">
+            <span class="project-badge">Demo</span>
+            <div class="w-20 h-20 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center mb-4">
+              <i class="fas fa-database text-white text-3xl"></i>
+            </div>
+            <h3 class="font-semibold text-lg mb-2">CRM & Lead Tracker</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+              Airtable + GoHighLevel integration with automated syncing and KPI dashboards.
+            </p>
+            <div class="mb-4 text-xs text-gray-500">
+              <strong>Potential ROI:</strong> Save 10+ hours/week on CRM tasks
+            </div>
+            <a href="https://airtable.com/appJrX1Z1H2mvWHHg/pagDVSZa63ctQAo1K" target="_blank" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
+              View Live Demo →
+            </a>
+          </div>
+        </div>
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          if (entry.target.classList.contains('skill-progress')) {
-            const width = entry.target.getAttribute('data-width');
-            entry.target.style.width = width;
-          } else {
-            entry.target.classList.add('reveal-visible');
-          }
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.3 });
+        <div class="mt-12 text-center" data-aos="fade-up">
+          <p class="text-gray-600 dark:text-gray-300 mb-6">
+            These aren't just mockups — they're fully functional systems you can explore and implement in your business.
+          </p>
+          <a href="#contact" class="inline-block gradient-bg text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition duration-300 pulse-glow">
+            Get Your Custom Solution →
+          </a>
+        </div>
+      </div>
+    </section>
 
-    skillBars.forEach(bar => observer.observe(bar));
-    revealItems.forEach(item => observer.observe(item));
-  });
-</script>
+    <!-- About Section -->
+    <section class="py-16 md:py-24 relative overflow-hidden" id="about">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">About <span class="text-gradient">Me</span></h2>
+          <div class="w-24 h-1 gradient-bg rounded-full mx-auto"></div>
+        </div>
 
-<style>
-  .gradient-bg { background: linear-gradient(135deg, #2563eb 0%, #7e22ce 100%); }
-  .text-gradient {
-    background: linear-gradient(135deg, #2563eb 0%, #7e22ce 100%);
-    -webkit-background-clip: text;
-     background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .skill-bar { height: 6px; border-radius: 10px; background: #e5e7eb; overflow: hidden; }
-  .skill-progress { height: 100%; border-radius: 10px; background: linear-gradient(90deg, #2563eb 0%, #7e22ce 100%); width: 0; transition: width 1.5s ease-in-out; }
-  .floating-shape { position: absolute; border-radius: 50%; opacity: 0.1; background: linear-gradient(135deg, #2563eb 0%, #7e22ce 100%); z-index: 0; }
+        <div class="flex flex-col lg:flex-row items-center gap-10">
+          <div class="lg:w-2/5 flex justify-center" data-aos="fade-right">
+            <div class="relative">
+              <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-8 border-white shadow-2xl">
+                <img src="https://storage.googleapis.com/msgsndr/F7EP0WrjfbsiGA8XQf9i/media/689cb1241f951e183c7122bd.png" alt="Justine Seguido" class="w-full h-full object-cover">
+              </div>
+              <div class="absolute -bottom-4 -right-4 gradient-bg text-white py-2 px-6 rounded-full shadow-lg animate-bounce">
+                <span class="font-semibold">GHL Specialist</span>
+              </div>
+            </div>
+          </div>
 
-  /* Scroll reveal */
-  .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s ease-out; }
-  .reveal-visible { opacity: 1; transform: translateY(0); }
+          <div class="lg:w-3/5" data-aos="fade-left">
+            <h3 class="text-2xl md:text-3xl font-bold mb-6">Hi, I'm Justine Seguido</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-6 text-lg">
+              I specialize in GoHighLevel automation, funnels, and CRM solutions that help businesses save time and increase conversions. While I'm building my client portfolio, I'm offering <strong>50% off standard rates</strong> for the first 3 clients who book this month.
+            </p>
+            <p class="text-gray-600 dark:text-gray-300 mb-8 text-lg">
+              I've built 10+ functional demo projects across real estate, fitness, automotive, and business services. Each system is designed to deliver measurable results — from saving 10+ hours per week to reducing no-shows by 60%.
+            </p>
 
-  /* Add some variation */
-  .timeline-step.reveal { transform: translateX(-40px); }
-  .tool-card.reveal { transform: scale(0.9); }
-</style>
+            <div class="mb-8">
+              <h4 class="text-xl font-semibold mb-4 text-gradient">Core Expertise</h4>
+              <div class="space-y-4">
+                <div>
+                  <div class="flex justify-between mb-2">
+                    <span class="font-medium">Funnel Design & Development</span>
+                    <span class="text-blue-600 font-semibold">95%</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-progress animate-skill" data-width="95%"></div></div>
+                </div>
+                <div>
+                  <div class="flex justify-between mb-2">
+                    <span class="font-medium">Workflow Automation</span>
+                    <span class="text-blue-600 font-semibold">90%</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-progress animate-skill" data-width="90%"></div></div>
+                </div>
+                <div>
+                  <div class="flex justify-between mb-2">
+                    <span class="font-medium">GoHighLevel Integration</span>
+                    <span class="text-blue-600 font-semibold">92%</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-progress animate-skill" data-width="92%"></div></div>
+                </div>
+              </div>
+            </div>
 
+            <div class="flex flex-wrap gap-4">
+              <a href="#contact" class="gradient-bg text-white font-semibold py-3 px-6 rounded-lg flex items-center shadow-md hover:scale-105 hover:shadow-xl transition transform">
+                <i class="fas fa-calendar-check mr-2"></i> Book Free Consultation
+              </a>
+              <a href="#projects" class="border-2 border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400 font-semibold py-3 px-6 rounded-lg flex items-center hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 transition transform hover:scale-105">
+                <i class="fas fa-briefcase mr-2"></i> Explore Demos
+              </a>
+            </div>
+          </div>
+        </div>
 
+        <!-- Industries -->
+        <div class="mt-16" id="industries">
+          <h4 class="text-2xl font-semibold mb-8 text-center text-gradient">Demo Systems Built For</h4>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="reveal bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md text-center hover:scale-105 hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="100">
+              <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center">
+                <i class="fas fa-home text-white text-2xl"></i>
+              </div>
+              <p class="font-semibold">Real Estate</p>
+            </div>
+            <div class="reveal bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md text-center hover:scale-105 hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="200">
+              <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center">
+                <i class="fas fa-dumbbell text-white text-2xl"></i>
+              </div>
+              <p class="font-semibold">Fitness</p>
+            </div>
+            <div class="reveal bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md text-center hover:scale-105 hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="300">
+              <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center">
+                <i class="fas fa-car text-white text-2xl"></i>
+              </div>
+              <p class="font-semibold">Automotive</p>
+            </div>
+            <div class="reveal bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md text-center hover:scale-105 hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="400">
+              <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center">
+                <i class="fas fa-briefcase text-white text-2xl"></i>
+              </div>
+              <p class="font-semibold">Business</p>
+            </div>
+          </div>
+        </div>
 
-  <!-- Carousel Logic -->
-  <script>
-    const carouselInner = document.getElementById("carousel-inner");
-    const dots = document.querySelectorAll("#carousel-dots button");
-    const totalSlides = carouselInner.children.length;
-    let currentIndex = 0;
-    let interval;
+        <!-- Timeline -->
+        <div class="mt-20" id="timeline">
+          <h4 class="text-2xl font-semibold mb-12 text-center text-gradient">My Approach</h4>
+          <div class="relative">
+            <div class="absolute top-0 bottom-0 left-6 w-1 gradient-bg rounded-full"></div>
+            <div class="space-y-12">
+              <div class="relative pl-16 reveal" data-aos="fade-right">
+                <div class="absolute left-0 top-0 w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white shadow-lg">
+                  <i class="fas fa-rocket"></i>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-xl transition">
+                  <h5 class="font-bold text-lg mb-2">2024 — Specialized in GoHighLevel</h5>
+                  <p class="text-gray-600 dark:text-gray-300">Deep-dived into automation, funnels, and CRM integrations. Built 10+ functional demo systems across multiple industries.</p>
+                </div>
+              </div>
+              <div class="relative pl-16 reveal" data-aos="fade-right" data-aos-delay="100">
+                <div class="absolute left-0 top-0 w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white shadow-lg">
+                  <i class="fas fa-tools"></i>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-xl transition">
+                  <h5 class="font-bold text-lg mb-2">Now — Portfolio Builder Phase</h5>
+                  <p class="text-gray-600 dark:text-gray-300">Accepting 3 clients per month at 50% off rates. Fast turnaround, personalized attention, and proven systems ready to implement.</p>
+                </div>
+              </div>
+              <div class="relative pl-16 reveal" data-aos="fade-right" data-aos-delay="200">
+                <div class="absolute left-0 top-0 w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white shadow-lg">
+                  <i class="fas fa-bullseye"></i>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-xl transition">
+                  <h5 class="font-bold text-lg mb-2">Next — Scale & Testimonials</h5>
+                  <p class="text-gray-600 dark:text-gray-300">Building case studies with real results, expanding services, and helping more businesses automate their growth.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    function goToSlide(index) {
-      currentIndex = index;
-      carouselInner.style.transform = `translateX(-${index * 100}%)`;
-      dots.forEach((dot, i) => {
-        dot.classList.toggle("bg-blue-300", i === index);
-        dot.classList.toggle("bg-blue-100", i !== index);
-      });
-    }
+        <!-- Tools -->
+        <div class="mt-20" id="tools">
+          <h4 class="text-2xl font-semibold mb-8 text-center text-gradient">Tools & Platforms I Use</h4>
+          <div class="grid grid-cols-3 md:grid-cols-6 gap-6">
+            <div class="reveal bg-white dark:bg-gray-800 p-4 rounded-xl shadow-md text-center hover:scale-110 hover:shadow-xl transition" data-aos="zoom-in" data-aos-delay="100">
+              <i class="fas fa-rocket text-blue-600 text-3xl mb-2"></i>
+              <p class="text-sm font-semibold">GoHighLevel</p>
+            </div>
+            <div class="reveal bg-white dark:bg-gray-800 p-4 rounded-xl shadow-md text-center hover:scale-110 hover:shadow-xl transition" data-aos="zoom-in" data-aos-delay="150">
+              <i class="fas fa-bolt text-yellow-500 text-3xl mb-2"></i>
+              <p class="text-sm font-semibold">Zapier</p>
+            </div>
+            <div class="reveal bg-white dark:bg-gray-800 p-4 rounded-xl shadow-md text-center hover:scale-110 hover:shadow-xl transition" data-aos="zoom-in" data-aos-delay="200">
+              <i class="fas fa-table text-orange-500 text-3xl mb-2"></i>
+              <p class="text-sm font-semibold">Airtable</p>
+            </div>
+            <div class="reveal bg-white dark:bg-gray-800 p-4 rounded-xl shadow-md text-center hover:scale-110 hover:shadow-xl transition" data-aos="zoom-in" data-aos-delay="250">
+              <i class="fas fa-calendar text-blue-500 text-3xl mb-2"></i>
+              <p class="text-sm font-semibold">Calendly</p>
+            </div>
+            <div class="reveal bg-white dark:bg-gray-800 p-4 rounded-xl shadow-md text-center hover:scale-110 hover:shadow-xl transition" data-aos="zoom-in" data-aos-delay="300">
+              <i class="fas fa-project-diagram text-purple-600 text-3xl mb-2"></i>
+              <p class="text-sm font-semibold">n8n</p>
+            </div>
+            <div class="reveal bg-white dark:bg-gray-800 p-4 rounded-xl shadow-md text-center hover:scale-110 hover:shadow-xl transition" data-aos="zoom-in" data-aos-delay="350">
+              <i class="fas fa-cogs text-indigo-600 text-3xl mb-2"></i>
+              <p class="text-sm font-semibold">Make</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    function nextSlide() {
-      let nextIndex = (currentIndex + 1) % totalSlides;
-      goToSlide(nextIndex);
-    }
+    <!-- Social Proof / Value Proposition -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">
+          Why Work With Me During Portfolio Building Phase?
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8 mt-12">
+          <div class="bg-white/10 backdrop-blur-lg p-6 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-tag text-4xl mb-4"></i>
+            <h3 class="font-bold text-xl mb-2">50% Off Rates</h3>
+            <p class="text-sm opacity-90">Get premium automation setup at starter prices. First 3 clients only.</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur-lg p-6 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+            <i class="fas fa-bolt text-4xl mb-4"></i>
+            <h3 class="font-bold text-xl mb-2">Fast Turnaround</h3>
+            <p class="text-sm opacity-90">Dedicated focus means your project gets done quickly without cutting corners.</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur-lg p-6 rounded-xl" data-aos="fade-up" data-aos-delay="300">
+            <i class="fas fa-handshake text-4xl mb-4"></i>
+            <h3 class="font-bold text-xl mb-2">Personal Attention</h3>
+            <p class="text-sm opacity-90">You're not just another client. You get my full attention and custom solutions.</p>
+          </div>
+        </div>
+        <div class="mt-12" data-aos="fade-up">
+          <a href="#contact" class="inline-block bg-white text-blue-600 font-bold py-4 px-10 rounded-full shadow-xl hover:shadow-2xl hover:-translate-y-1 transition duration-300">
+            Claim Your Spot Now →
+          </a>
+          <p class="mt-4 text-sm opacity-90">Only 3 spots available at this rate</p>
+        </div>
+      </div>
+    </section>
 
-    function startAutoplay() {
-      interval = setInterval(nextSlide, 3000);
-    }
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 relative overflow-hidden bg-gray-50 dark:bg-gray-950">
+      <div class="absolute inset-0 -z-10">
+        <div class="absolute top-20 left-10 w-80 h-80 bg-blue-300 dark:bg-blue-800 rounded-full blur-3xl opacity-20"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-indigo-400 dark:bg-indigo-900 rounded-full blur-3xl opacity-20"></div>
+      </div>
 
-    function stopAutoplay() {
-      clearInterval(interval);
-    }
+      <div class="max-w-5xl mx-auto px-6 md:px-12">
+        <div class="text-center mb-14">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            Let's <span class="text-gradient">Connect</span>
+          </h2>
+          <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Ready to automate your business? Book a free 15-minute consultation or send me a message.
+          </p>
+        </div>
 
-    dots.forEach((dot) => {
-      dot.addEventListener("click", () => {
-        stopAutoplay();
-        goToSlide(Number(dot.dataset.index));
-        startAutoplay();
-      });
-    });
+        <div class="backdrop-blur-lg bg-white/70 dark:bg-gray-900/70 rounded-3xl shadow-2xl p-10 md:p-14 reveal">
+          <form action="https://formspree.io/f/mvgbylry" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="relative">
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name *</label>
+              <input type="text" name="name" placeholder="Your name" required
+                class="w-full rounded-2xl border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 pl-12 pr-4 py-3 focus:border-indigo-500 focus:ring focus:ring-indigo-200 dark:focus:ring-indigo-700 transition shadow-sm">
+              <i class="fas fa-user absolute left-4 top-11 text-gray-400"></i>
+            </div>
+            
+            <div class="relative">
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email *</label>
+              <input type="email" name="email" placeholder="you@example.com" required
+                class="w-full rounded-2xl border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 pl-12 pr-4 py-3 focus:border-indigo-500 focus:ring focus:ring-indigo-200 dark:focus:ring-indigo-700 transition shadow-sm">
+              <i class="fas fa-envelope absolute left-4 top-11 text-gray-400"></i>
+            </div>
+            
+            <div class="md:col-span-2 relative">
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Tell me about your project *</label>
+              <textarea name="message" rows="6" placeholder="What automation or funnel are you looking to build?" required
+                class="w-full rounded-2xl border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 pl-12 pr-4 py-3 focus:border-indigo-500 focus:ring focus:ring-indigo-200 dark:focus:ring-indigo-700 transition shadow-sm"></textarea>
+              <i class="fas fa-comment-dots absolute left-4 top-12 text-gray-400"></i>
+            </div>
 
-    goToSlide(0);
-    startAutoplay();
-  </script>
-</section>
+            <div class="md:col-span-2 text-center mt-4">
+              <button type="submit" 
+                class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold py-3 px-12 rounded-full shadow-lg hover:shadow-indigo-500/40 hover:scale-105 transition duration-300 pulse-glow">
+                <i class="fas fa-paper-plane mr-2"></i> Send Message
+              </button>
+            </div>
+          </form>
 
-<!-- AOS Init -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({ duration: 1000, once: true });
-</script>
+          <div class="mt-10 flex justify-center gap-6">
+            <a href="https://www.linkedin.com/in/justine-seguido-1ba3b4132" target="_blank"
+               class="w-12 h-12 rounded-full bg-[#0077B5] flex items-center justify-center shadow hover:scale-110 hover:shadow-lg transition">
+              <i class="fab fa-linkedin-in text-white text-xl"></i>
+            </a>
+            <a href="https://web.facebook.com/justin.babiano" target="_blank"
+               class="w-12 h-12 rounded-full bg-[#1877F2] flex items-center justify-center shadow hover:scale-110 hover:shadow-lg transition">
+              <i class="fab fa-facebook-f text-white text-xl"></i>
+            </a>
+            <a href="mailto:jbseguido@gmail.com"
+               class="w-12 h-12 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center shadow hover:scale-110 hover:shadow-lg transition">
+              <i class="fas fa-envelope text-white text-xl"></i>
+            </a>
+          </div>
 
+          <div class="mt-8 text-center">
+            <p class="text-gray-600 dark:text-gray-300 text-sm">
+              <i class="fas fa-clock mr-2"></i>
+              <strong>Prefer to schedule a call?</strong> Use <a href="https://calendly.com" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">Calendly</a> to book your free 15-min consultation
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-700 text-white py-16 overflow-hidden">
+      <div class="absolute inset-0 -z-10">
+        <div class="absolute -top-10 -left-10 w-40 h-40 bg-blue-400 rounded-full blur-3xl opacity-20"></div>
+        <div class="absolute bottom-0 right-0 w-56 h-56 bg-purple-500 rounded-full blur-3xl opacity-20"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16">
+          <div>
+            <h3 class="text-2xl font-bold mb-2">Justine Seguido</h3>
+            <p class="opacity-80 mb-6">GoHighLevel Specialist building automation systems that save time and increase revenue.</p>
+            <div class="flex space-x-4">
+              <a href="https://web.facebook.com/justin.babiano" target="_blank"
+                 class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white transition shadow-lg">
+                <i class="fab fa-facebook-f text-white"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/justine-seguido-1ba3b4132" target="_blank"
+                 class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white transition shadow-lg">
+                <i class="fab fa-linkedin-in text-white"></i>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2 opacity-90">
+              <li><a href="#about" class="hover:text-yellow-300 transition">About</a></li>
+              <li><a href="#services" class="hover:text-yellow-300 transition">Services</a></li>
+              <li><a href="#projects" class="hover:text-yellow-300 transition">Demo Projects</a></li>
+              <li><a href="#contact" class="hover:text-yellow-300 transition">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Get In Touch</h4>
+            <ul class="space-y-3 opacity-90">
+              <li class="flex items-center space-x-3">
+                <i class="fas fa-envelope text-yellow-300"></i>
+                <a href="mailto:jbseguido@gmail.com" class="hover:underline">jbseguido@gmail.com</a>
+              </li>
+              <li class="flex items-center space-x-3">
+                <i class="fas fa-phone-alt text-yellow-300"></i>
+                <span>+63 995 554 1058</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <i class="fas fa-map-marker-alt text-yellow-300"></i>
+                <span>Philippines</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-12 border-t border-white/20 pt-6 text-center text-sm opacity-80">
+          © 2025 Justine Seguido. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
 
     <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      // Mobile menu toggle
+      AOS.init({ duration: 1000, once: true });
+
+      // Mobile menu
       const menuButton = document.getElementById("mobile-menu-button");
       const menu = document.getElementById("mobile-menu");
       menuButton.addEventListener("click", () => {
         menu.classList.toggle("hidden");
       });
 
-      // Dark mode toggle
+      // Dark mode
       const themeToggles = [document.getElementById("theme-toggle"), document.getElementById("theme-toggle-mobile")];
       themeToggles.forEach((btn) =>
         btn.addEventListener("click", () => {
@@ -1116,12 +773,30 @@ Designed to give business owners real-time visibility, improve team productivity
         })
       );
 
-      // Load saved theme
       if (localStorage.getItem("theme") === "dark") {
         document.documentElement.classList.add("dark");
       }
+
+      // Skill bars animation
+      const skillBars = document.querySelectorAll('.skill-progress');
+      const revealItems = document.querySelectorAll('.reveal');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            if (entry.target.classList.contains('skill-progress')) {
+              const width = entry.target.getAttribute('data-width');
+              entry.target.style.width = width;
+            } else {
+              entry.target.classList.add('reveal-visible');
+            }
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+
+      skillBars.forEach(bar => observer.observe(bar));
+      revealItems.forEach(item => observer.observe(item));
     </script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init({ duration: 1000, once: true });</script>
   </body>
 </html>
