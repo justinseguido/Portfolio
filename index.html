@@ -102,6 +102,33 @@
         box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
         z-index: 10;
       }
+      
+    .text-gradient {
+      background: linear-gradient(to right, #3b82f6, #8b5cf6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gradient-bg {
+      background: linear-gradient(to right, #3b82f6, #8b5cf6);
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .dark .glass {
+      background: rgba(20, 20, 20, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .pulse-glow {
+      animation: pulse-glow 2s ease-in-out infinite;
+    }
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
+      50% { box-shadow: 0 0 40px rgba(139, 92, 246, 0.8); }
+    }
+  
     </style>
   </head>
   
@@ -622,62 +649,11 @@
       </div>
     </section>
 
-    <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Justine Seguido | GoHighLevel Specialist</title>
-  
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  
-  <style>
-    .text-gradient {
-      background: linear-gradient(to right, #3b82f6, #8b5cf6);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .gradient-bg {
-      background: linear-gradient(to right, #3b82f6, #8b5cf6);
-    }
-    .glass {
-      background: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-    }
-    .dark .glass {
-      background: rgba(20, 20, 20, 0.6);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    .pulse-glow {
-      animation: pulse-glow 2s ease-in-out infinite;
-    }
-    @keyframes pulse-glow {
-      0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
-      50% { box-shadow: 0 0 40px rgba(139, 92, 246, 0.8); }
-    }
-  </style>
-</head>
 
-<body class="antialiased text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+
+
   
-  <!-- Header -->
-  <header class="sticky top-0 z-50 glass shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center py-4">
-        <span class="text-xl font-bold text-gradient">Justine Seguido</span>
-        <nav class="hidden md:flex space-x-8">
-          <a href="#contact" class="font-medium hover:text-blue-500 transition">Contact</a>
-        </nav>
-        <a href="#contact" class="gradient-bg text-white px-5 py-2 rounded-lg shadow hover:shadow-lg transition pulse-glow">
-          Get Started
-        </a>
-      </div>
-    </div>
-  </header>
+
 
   <!-- Contact Section -->
   <section id="contact" class="py-24 min-h-screen bg-gray-50 dark:bg-gray-950">
@@ -999,8 +975,7 @@
   <script>
     AOS.init({ duration: 1000, once: true });
   </script>
-</body>
-</html>
+
  
 
     <!-- Footer -->
