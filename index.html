@@ -17,9 +17,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <script src="src/booking.js"></script>
-  <script src="https://assets.calendly.com/assets/external/widget.js"></script>
+ 
     
     <style>
       .text-gradient {
@@ -624,186 +622,385 @@
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-24 relative overflow-hidden bg-gray-50 dark:bg-gray-950">
-      <div class="absolute inset-0 -z-10">
-        <div class="absolute top-20 left-10 w-80 h-80 bg-blue-300 dark:bg-blue-800 rounded-full blur-3xl opacity-20"></div>
-        <div class="absolute bottom-10 right-10 w-96 h-96 bg-indigo-400 dark:bg-indigo-900 rounded-full blur-3xl opacity-20"></div>
+    <!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Justine Seguido | GoHighLevel Specialist</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <style>
+    .text-gradient {
+      background: linear-gradient(to right, #3b82f6, #8b5cf6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gradient-bg {
+      background: linear-gradient(to right, #3b82f6, #8b5cf6);
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .dark .glass {
+      background: rgba(20, 20, 20, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .pulse-glow {
+      animation: pulse-glow 2s ease-in-out infinite;
+    }
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
+      50% { box-shadow: 0 0 40px rgba(139, 92, 246, 0.8); }
+    }
+  </style>
+</head>
+
+<body class="antialiased text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+  
+  <!-- Header -->
+  <header class="sticky top-0 z-50 glass shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-4">
+        <span class="text-xl font-bold text-gradient">Justine Seguido</span>
+        <nav class="hidden md:flex space-x-8">
+          <a href="#contact" class="font-medium hover:text-blue-500 transition">Contact</a>
+        </nav>
+        <a href="#contact" class="gradient-bg text-white px-5 py-2 rounded-lg shadow hover:shadow-lg transition pulse-glow">
+          Get Started
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 min-h-screen bg-gray-50 dark:bg-gray-950">
+    <div class="max-w-4xl mx-auto px-6 md:px-12">
+      <div class="text-center mb-14">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">
+          Book Your Free <span class="text-gradient">Consultation</span>
+        </h2>
+        <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          Tell me about your project and schedule a time to chat. Simple 2-step process.
+        </p>
       </div>
 
-      <div class="max-w-4xl mx-auto px-6 md:px-12">
-        <div class="text-center mb-14">
-          <h2 class="text-4xl md:text-5xl font-bold mb-4">
-            Book Your Free <span class="text-gradient">Consultation</span>
-          </h2>
-          <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Tell me about your project and schedule a time to chat. Simple 2-step process.
+      <!-- Progress Steps -->
+      <div class="flex justify-center items-center mb-12">
+        <div class="flex items-center space-x-4">
+          <div id="step1-indicator" class="flex items-center">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center text-white font-bold shadow-lg">
+              1
+            </div>
+            <span class="ml-3 font-semibold text-gray-700 dark:text-gray-300">Fill Details</span>
+          </div>
+          <div class="w-16 h-1 bg-gray-300 dark:bg-gray-700"></div>
+          <div id="step2-indicator" class="flex items-center opacity-50">
+            <div class="w-10 h-10 rounded-full bg-gray-300 dark:bg-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-400 font-bold">
+              2
+            </div>
+            <span class="ml-3 font-semibold text-gray-500">Pick Time</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 1: Contact Form -->
+      <div id="step1-form" class="backdrop-blur-lg bg-white/70 dark:bg-gray-900/70 rounded-3xl shadow-2xl p-8 md:p-12">
+        <div class="mb-8 text-center">
+          <div class="inline-block bg-blue-100 dark:bg-blue-900/30 rounded-full px-4 py-2 mb-4">
+            <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm">Step 1 of 2</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-2">Tell Me About Your Project</h3>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">Just a few quick details so I can prepare for our call</p>
+        </div>
+
+        <form id="bookingForm" class="space-y-6">
+          <div class="relative">
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name *</label>
+            <input type="text" id="userName" name="name" placeholder="Your full name" required
+              class="w-full rounded-2xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 pl-12 pr-4 py-3 focus:border-indigo-500 focus:ring focus:ring-indigo-200 transition shadow-sm">
+            <i class="fas fa-user absolute left-4 top-11 text-gray-400"></i>
+          </div>
+          
+          <div class="relative">
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email *</label>
+            <input type="email" id="userEmail" name="email" placeholder="you@example.com" required
+              class="w-full rounded-2xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 pl-12 pr-4 py-3 focus:border-indigo-500 focus:ring focus:ring-indigo-200 transition shadow-sm">
+            <i class="fas fa-envelope absolute left-4 top-11 text-gray-400"></i>
+          </div>
+
+          <div class="relative">
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Phone *</label>
+            <input type="tel" id="userPhone" name="phone" placeholder="+63 XXX XXX XXXX" required
+              class="w-full rounded-2xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 pl-12 pr-4 py-3 focus:border-indigo-500 focus:ring focus:ring-indigo-200 transition shadow-sm">
+            <i class="fas fa-phone absolute left-4 top-11 text-gray-400"></i>
+          </div>
+
+          <div class="relative">
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">What do you need help with? *</label>
+            <select id="projectType" name="projectType" required
+              class="w-full rounded-2xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 pl-12 pr-4 py-3 focus:border-indigo-500 focus:ring focus:ring-indigo-200 transition shadow-sm">
+              <option value="">Select a service...</option>
+              <option value="funnel">Sales/Lead Generation Funnel</option>
+              <option value="automation">Workflow Automation</option>
+              <option value="crm">CRM & Lead Tracking</option>
+              <option value="website">Website Setup</option>
+              <option value="integration">Custom Integration</option>
+              <option value="other">Other / Not Sure Yet</option>
+            </select>
+            <i class="fas fa-briefcase absolute left-4 top-11 text-gray-400"></i>
+          </div>
+          
+          <div class="relative">
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Brief description of your project *</label>
+            <textarea id="userMessage" name="message" rows="4" placeholder="Tell me what you're looking to accomplish..." required
+              class="w-full rounded-2xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 pl-12 pr-4 py-3 focus:border-indigo-500 focus:ring focus:ring-indigo-200 transition shadow-sm"></textarea>
+            <i class="fas fa-comment-dots absolute left-4 top-12 text-gray-400"></i>
+          </div>
+
+          <button type="submit" 
+            class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold py-4 px-8 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition duration-300 pulse-glow">
+            <i class="fas fa-calendar-check mr-2"></i> Continue to Schedule Appointment
+          </button>
+        </form>
+
+        <div class="mt-8 pt-8 border-t border-gray-300 dark:border-gray-700">
+          <p class="text-center text-sm text-gray-600 dark:text-gray-300 mb-4">Or connect with me directly:</p>
+          <div class="flex justify-center gap-4">
+            <a href="https://www.linkedin.com/in/justine-seguido-1ba3b4132" target="_blank"
+               class="w-10 h-10 rounded-full bg-[#0077B5] flex items-center justify-center shadow hover:scale-110 transition">
+              <i class="fab fa-linkedin-in text-white"></i>
+            </a>
+            <a href="https://web.facebook.com/justin.babiano" target="_blank"
+               class="w-10 h-10 rounded-full bg-[#1877F2] flex items-center justify-center shadow hover:scale-110 transition">
+              <i class="fab fa-facebook-f text-white"></i>
+            </a>
+            <a href="mailto:jbseguido@gmail.com"
+               class="w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center shadow hover:scale-110 transition">
+              <i class="fas fa-envelope text-white"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2: Calendar -->
+      <div id="step2-calendar" class="hidden backdrop-blur-lg bg-white/70 dark:bg-gray-900/70 rounded-3xl shadow-2xl p-8 md:p-12">
+        <div class="mb-8 text-center">
+          <div class="inline-block bg-green-100 dark:bg-green-900/30 rounded-full px-4 py-2 mb-4">
+            <span class="text-green-600 dark:text-green-400 font-semibold text-sm">Step 2 of 2</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-2">Pick Your Preferred Time</h3>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">Choose a convenient time for our 30-minute consultation</p>
+          
+          <div class="mt-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl p-4 max-w-md mx-auto">
+            <p class="text-sm text-gray-700 dark:text-gray-300">
+              <strong class="text-blue-600 dark:text-blue-400" id="displayName"></strong> — Thanks! Now select a time below:
+            </p>
+          </div>
+        </div>
+
+        <!-- Calendly Embed -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/jbseguido/30min" style="min-width:320px;height:700px;"></div>
+        
+        <!-- Continue Button -->
+        <div class="mt-8 text-center">
+          <div class="bg-green-50 dark:bg-green-900/20 rounded-xl p-6 mb-4">
+            <p class="text-gray-700 dark:text-gray-300 mb-4">
+              <i class="fas fa-check-circle text-green-500 mr-2"></i>
+              <strong>Booking Complete?</strong> Click below to continue
+            </p>
+            <button id="continueButton" class="bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition duration-300">
+              <i class="fas fa-arrow-right mr-2"></i> Continue to Confirmation
+            </button>
+          </div>
+        </div>
+        
+        <!-- Back Button -->
+        <div class="mt-6 text-center">
+          <button id="backButton" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 transition">
+            <i class="fas fa-arrow-left mr-2"></i> Go Back to Edit Details
+          </button>
+        </div>
+      </div>
+
+      <!-- Thank You Page -->
+      <div id="thankYouPage" class="hidden backdrop-blur-lg bg-white/70 dark:bg-gray-900/70 rounded-3xl shadow-2xl p-8 md:p-12 text-center">
+        <div class="mb-8">
+          <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-r from-green-400 to-emerald-500 flex items-center justify-center shadow-lg animate-bounce">
+            <i class="fas fa-check text-white text-4xl"></i>
+          </div>
+          
+          <div class="inline-block bg-green-100 dark:bg-green-900/30 rounded-full px-4 py-2 mb-4">
+            <span class="text-green-600 dark:text-green-400 font-semibold text-sm">✓ Booking Confirmed</span>
+          </div>
+          
+          <h3 class="text-3xl md:text-4xl font-bold mb-4">You're All Set!</h3>
+          <p class="text-gray-600 dark:text-gray-300 text-lg max-w-2xl mx-auto mb-8">
+            Thanks for booking, <strong class="text-blue-600 dark:text-blue-400" id="thankYouName"></strong>! I've received your consultation request and sent a confirmation to <strong id="thankYouEmail"></strong>.
           </p>
         </div>
 
-        <!-- Progress Steps -->
-        <div class="flex justify-center items-center mb-12" data-aos="fade-up">
-          <div class="flex items-center space-x-4">
-            <div id="step1-indicator" class="flex items-center">
-              <div class="w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center text-white font-bold shadow-lg">
-                1
+        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl p-6 mb-8 max-w-2xl mx-auto">
+          <h4 class="font-bold text-xl mb-4 text-gray-800 dark:text-gray-200">What Happens Next?</h4>
+          <div class="space-y-4 text-left">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center flex-shrink-0">
+                <span class="text-white font-bold">1</span>
               </div>
-              <span class="ml-3 font-semibold text-gray-700 dark:text-gray-300">Fill Details</span>
+              <div>
+                <p class="font-semibold text-gray-800 dark:text-gray-200">Check Your Email</p>
+                <p class="text-sm text-gray-600 dark:text-gray-300">You'll receive a calendar invite with meeting details and a Zoom link.</p>
+              </div>
             </div>
-            <div class="w-16 h-1 bg-gray-300 dark:bg-gray-700"></div>
-            <div id="step2-indicator" class="flex items-center opacity-50">
-              <div class="w-10 h-10 rounded-full bg-gray-300 dark:bg-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-400 font-bold">
-                2
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center flex-shrink-0">
+                <span class="text-white font-bold">2</span>
               </div>
-              <span class="ml-3 font-semibold text-gray-500 dark:text-gray-500">Pick Time</span>
+              <div>
+                <p class="font-semibold text-gray-800 dark:text-gray-200">I'll Review Your Project</p>
+                <p class="text-sm text-gray-600 dark:text-gray-300">Before our call, I'll look over the details you shared to prepare specific recommendations.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center flex-shrink-0">
+                <span class="text-white font-bold">3</span>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-800 dark:text-gray-200">30-Minute Discovery Call</p>
+                <p class="text-sm text-gray-600 dark:text-gray-300">We'll discuss your needs, explore solutions, and see if we're a good fit to work together.</p>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Step 1: Contact Form -->
-        <div id="step1-form" class="backdrop-blur-lg bg-white/70 dark:bg-gray-900/70 rounded-3xl shadow-2xl p-8 md:p-12 reveal">
-          <div class="mb-8 text-center">
-            <div class="inline-block bg-blue-100 dark:bg-blue-900/30 rounded-full px-4 py-2 mb-4">
-              <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm">Step 1 of 2</span>
-            </div>
-            <h3 class="text-2xl font-bold mb-2">Tell Me About Your Project</h3>
-            <p class="text-gray-600 dark:text-gray-300 text-sm">Just a few quick details so I can prepare for our call</p>
-          </div>
-
-          <form id="bookingForm" class="space-y-6">
-            <div class="relative">
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name *</label>
-              <input type="text" id="userName" name="name" placeholder="Your full name" required
-                class="w-full rounded-2xl border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 pl-12 pr-4 py-3 focus:border-indigo-500 focus:ring focus:ring-indigo-200 dark:focus:ring-indigo-700 transition shadow-sm">
-              <i class="fas fa-user absolute left-4 top-11 text-gray-400"></i>
-            </div>
-            
-            <div class="relative">
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email *</label>
-              <input type="email" id="userEmail" name="email" placeholder="you@example.com" required
-                class="w-full rounded-2xl border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 pl-12 pr-4 py-3 focus:border-indigo-500 focus:ring focus:ring-indigo-200 dark:focus:ring-indigo-700 transition shadow-sm">
-              <i class="fas fa-envelope absolute left-4 top-11 text-gray-400"></i>
-            </div>
-
-            <div class="relative">
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Phone *</label>
-              <input type="tel" id="userPhone" name="phone" placeholder="+63 XXX XXX XXXX" required
-                class="w-full rounded-2xl border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 pl-12 pr-4 py-3 focus:border-indigo-500 focus:ring focus:ring-indigo-200 dark:focus:ring-indigo-700 transition shadow-sm">
-              <i class="fas fa-phone absolute left-4 top-11 text-gray-400"></i>
-            </div>
-
-            <div class="relative">
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">What do you need help with? *</label>
-              <select id="projectType" name="projectType" required
-                class="w-full rounded-2xl border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 pl-12 pr-4 py-3 focus:border-indigo-500 focus:ring focus:ring-indigo-200 dark:focus:ring-indigo-700 transition shadow-sm">
-                <option value="">Select a service...</option>
-                <option value="funnel">Sales/Lead Generation Funnel</option>
-                <option value="automation">Workflow Automation</option>
-                <option value="crm">CRM & Lead Tracking</option>
-                <option value="website">Website Setup</option>
-                <option value="integration">Custom Integration</option>
-                <option value="other">Other / Not Sure Yet</option>
-              </select>
-              <i class="fas fa-briefcase absolute left-4 top-11 text-gray-400"></i>
-            </div>
-            
-            <div class="relative">
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Brief description of your project *</label>
-              <textarea id="userMessage" name="message" rows="4" placeholder="Tell me what you're looking to accomplish..." required
-                class="w-full rounded-2xl border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 pl-12 pr-4 py-3 focus:border-indigo-500 focus:ring focus:ring-indigo-200 dark:focus:ring-indigo-700 transition shadow-sm"></textarea>
-              <i class="fas fa-comment-dots absolute left-4 top-12 text-gray-400"></i>
-            </div>
-
-            <button type="submit" 
-              class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold py-4 px-8 rounded-full shadow-lg hover:shadow-indigo-500/40 hover:scale-105 transition duration-300 pulse-glow">
-              <i class="fas fa-calendar-check mr-2"></i> Continue to Schedule Appointment
-            </button>
-
-            <p class="text-center text-xs text-gray-500 dark:text-gray-400">
-              Your information is secure and will only be used to contact you about your project
-            </p>
-          </form>
-
-          <div class="mt-8 pt-8 border-t border-gray-300 dark:border-gray-700">
-            <p class="text-center text-sm text-gray-600 dark:text-gray-300 mb-4">Or connect with me directly:</p>
-            <div class="flex justify-center gap-4">
-              <a href="https://www.linkedin.com/in/justine-seguido-1ba3b4132" target="_blank"
-                 class="w-10 h-10 rounded-full bg-[#0077B5] flex items-center justify-center shadow hover:scale-110 hover:shadow-lg transition">
-                <i class="fab fa-linkedin-in text-white"></i>
-              </a>
-              <a href="https://web.facebook.com/justin.babiano" target="_blank"
-                 class="w-10 h-10 rounded-full bg-[#1877F2] flex items-center justify-center shadow hover:scale-110 hover:shadow-lg transition">
-                <i class="fab fa-facebook-f text-white"></i>
-              </a>
-              <a href="mailto:jbseguido@gmail.com"
-                 class="w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center shadow hover:scale-110 hover:shadow-lg transition">
-                <i class="fas fa-envelope text-white"></i>
-              </a>
-            </div>
-          </div>
+        <div class="mt-8">
+          <button id="bookAnotherButton" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 transition text-sm">
+            <i class="fas fa-arrow-left mr-2"></i> Book Another Time Slot
+          </button>
         </div>
-
-   <!-- Step 1: Booking Form -->
-  <section id="step1-form" class="p-8 md:p-12 backdrop-blur-lg bg-white/70 dark:bg-gray-900/70 rounded-3xl shadow-2xl">
-    <h2 class="text-2xl font-bold mb-4 text-center">Step 1 of 2 — Enter Your Details</h2>
-    <form id="bookingForm" class="space-y-4 max-w-xl mx-auto">
-      <input id="userName" type="text" required placeholder="Your Name" class="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-500">
-      <input id="userEmail" type="email" required placeholder="Your Email" class="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-500">
-      <input id="userPhone" type="tel" placeholder="Your Phone (optional)" class="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-500">
-      <select id="projectType" class="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-500">
-        <option value="">Select Project Type</option>
-        <option>Web App</option>
-        <option>Portfolio</option>
-        <option>Landing Page</option>
-        <option>Other</option>
-      </select>
-      <textarea id="userMessage" placeholder="Briefly describe your project..." class="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-500"></textarea>
-
-      <button type="submit" class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition">
-        Continue to Calendar
-      </button>
-    </form>
-  </section>
-
-  <!-- Step 2: Calendar -->
-  <section id="step2-calendar" class="hidden p-8 md:p-12 backdrop-blur-lg bg-white/70 dark:bg-gray-900/70 rounded-3xl shadow-2xl">
-    <div class="text-center mb-6">
-      <span class="inline-block bg-green-100 dark:bg-green-900/30 rounded-full px-4 py-2 text-green-600 dark:text-green-400 font-semibold text-sm mb-4">Step 2 of 2</span>
-      <h3 class="text-2xl font-bold">Pick Your Preferred Time</h3>
-      <p class="text-gray-600 dark:text-gray-300 text-sm">Choose a convenient time for our 15-minute consultation.</p>
-      <div class="mt-4 bg-blue-50 dark:bg-blue-900/20 rounded-xl p-4 max-w-md mx-auto">
-        <p class="text-sm text-gray-700 dark:text-gray-300">
-          <strong class="text-blue-600 dark:text-blue-400" id="displayName"></strong> — thanks! Now select a time below.
-        </p>
       </div>
     </div>
-
-    <div class="calendly-inline-widget" data-url="https://calendly.com/jbseguido/30min" style="min-width:320px;height:700px;"></div>
-
-    <div class="mt-8 text-center">
-      <button id="continueButton" class="bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:-translate-y-1 transition">
-        Continue to Confirmation
-      </button>
-      <button id="backButton" class="mt-4 block mx-auto text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200">
-        <i class="fas fa-arrow-left mr-2"></i> Go Back
-      </button>
-    </div>
   </section>
 
-  <!-- Thank You -->
-  <section id="thankYouPage" class="hidden p-8 md:p-12 backdrop-blur-lg bg-white/70 dark:bg-gray-900/70 rounded-3xl shadow-2xl text-center">
-    <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-r from-green-400 to-emerald-500 flex items-center justify-center shadow-lg animate-bounce">
-      <i class="fas fa-check text-white text-4xl"></i>
-    </div>
-    <h3 class="text-3xl font-bold mb-2">You're All Set!</h3>
-    <p class="text-gray-600 dark:text-gray-300 text-lg mb-6">
-      Thanks for booking, <strong class="text-blue-600 dark:text-blue-400" id="thankYouName"></strong>! A confirmation was sent to <strong id="thankYouEmail"></strong>.
-    </p>
-    <button id="bookAnotherButton" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 transition">
-      <i class="fas fa-arrow-left mr-2"></i> Book Another Time
-    </button>
-  </section>
+  <!-- Calendly Script -->
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
 
+  <script>
+    // Store user data globally
+    let userData = {};
+
+    // Booking Form Handler
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('userName').value;
+      const email = document.getElementById('userEmail').value;
+      const phone = document.getElementById('userPhone').value;
+      const projectType = document.getElementById('projectType').value;
+      const message = document.getElementById('userMessage').value;
+      
+      userData = { name, email, phone, projectType, message, timestamp: new Date().toISOString() };
+      
+      // Send to Formspree
+      fetch('https://formspree.io/f/mvgbylry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(userData)
+      }).catch(err => console.log('Form submission:', err));
+      
+      // Update progress indicators
+      document.getElementById('step1-indicator').classList.add('opacity-50');
+      document.getElementById('step2-indicator').classList.remove('opacity-50');
+      
+      const step2Circle = document.querySelector('#step2-indicator > div');
+      step2Circle.classList.remove('bg-gray-300', 'dark:bg-gray-700');
+      step2Circle.classList.add('bg-gradient-to-r', 'from-blue-600', 'to-indigo-600');
+      
+      const step2Text = step2Circle.nextElementSibling;
+      if (step2Text) {
+        step2Text.classList.remove('text-gray-500');
+        step2Text.classList.add('text-gray-700', 'dark:text-gray-300');
+      }
+      
+      // Display user's name
+      document.getElementById('displayName').textContent = name;
+      
+      // Update Calendly URL
+      const calendlyWidget = document.querySelector('.calendly-inline-widget');
+      const calendlyUrl = `https://calendly.com/jbseguido/30min?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&hide_gdpr_banner=1`;
+      calendlyWidget.setAttribute('data-url', calendlyUrl);
+      
+      // Hide form, show calendar
+      document.getElementById('step1-form').classList.add('hidden');
+      document.getElementById('step2-calendar').classList.remove('hidden');
+      
+      setTimeout(() => {
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    });
+    
+    // Back button
+    document.getElementById('backButton').addEventListener('click', function() {
+      document.getElementById('step1-form').classList.remove('hidden');
+      document.getElementById('step2-calendar').classList.add('hidden');
+      
+      document.getElementById('step1-indicator').classList.remove('opacity-50');
+      document.getElementById('step2-indicator').classList.add('opacity-50');
+      
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Continue button
+    document.getElementById('continueButton').addEventListener('click', function() {
+      document.getElementById('step2-calendar').classList.add('hidden');
+      document.getElementById('thankYouPage').classList.remove('hidden');
+      
+      document.getElementById('thankYouName').textContent = userData.name || 'there';
+      document.getElementById('thankYouEmail').textContent = userData.email || 'your email';
+      
+      setTimeout(() => {
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    });
+
+    // Book another
+    document.getElementById('bookAnotherButton').addEventListener('click', function() {
+      document.getElementById('bookingForm').reset();
+      document.getElementById('thankYouPage').classList.add('hidden');
+      document.getElementById('step1-form').classList.remove('hidden');
+      
+      document.getElementById('step1-indicator').classList.remove('opacity-50');
+      document.getElementById('step2-indicator').classList.add('opacity-50');
+      
+      const step2Circle = document.querySelector('#step2-indicator > div');
+      step2Circle.classList.remove('bg-gradient-to-r', 'from-blue-600', 'to-indigo-600');
+      step2Circle.classList.add('bg-gray-300', 'dark:bg-gray-700');
+      
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Automatic detection
+    window.addEventListener('message', function(e) {
+      if (e.data.event && e.data.event === 'calendly.event_scheduled') {
+        setTimeout(() => {
+          document.getElementById('continueButton').click();
+        }, 1000);
+      }
+    });
+  </script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+</body>
+</html>
  
 
     <!-- Footer -->
