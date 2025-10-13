@@ -17,6 +17,10 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <!-- SwiperJS CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
  
     
     <style>
@@ -669,6 +673,48 @@
           <li><strong>Feedback Automation:</strong> Post-tour surveys collect testimonials automatically.</li>
         </ul>
       </div>
+
+     <!-- Visual Preview Carousel -->
+<div class="mt-10">
+  <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Visual Preview</h3>
+  <p class="text-gray-700 dark:text-gray-300 mb-6">
+    A glimpse of the automation setup — from property tour booking pages to CRM workflows and follow-up sequences.
+  </p>
+
+  <!-- Swiper Container -->
+  <div class="swiper mySwiper rounded-2xl shadow-lg overflow-hidden">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <img src="images/realestate-1.png" alt="Property Tour Booking Page" 
+             class="w-full h-72 md:h-96 object-cover" />
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <img src="images/realestate-2.png" alt="CRM Workflow Dashboard" 
+             class="w-full h-72 md:h-96 object-cover" />
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <img src="images/realestate-3.png" alt="Automation Flow in GoHighLevel" 
+             class="w-full h-72 md:h-96 object-cover" />
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="swiper-slide">
+        <img src="images/realestate-4.png" alt="Lead Follow-Up Sequence" 
+             class="w-full h-72 md:h-96 object-cover" />
+      </div>
+    </div>
+
+    <!-- Pagination Dots -->
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+
 
       <!-- Results -->
       <div>
@@ -1354,6 +1400,31 @@
     });
   });
 </script>
+
+    <script>
+  const swiper = new Swiper(".mySwiper", {
+    effect: "fade",
+    fadeEffect: { crossFade: true },
+    loop: true,
+    grabCursor: true,
+    centeredSlides: true,
+    speed: 1000, // smoother transition
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
+  // Optional: Pause autoplay on hover
+  const swiperEl = document.querySelector(".mySwiper");
+  swiperEl.addEventListener("mouseenter", () => swiper.autoplay.stop());
+  swiperEl.addEventListener("mouseleave", () => swiper.autoplay.start());
+</script>
+
     
   </body>
 </html>
