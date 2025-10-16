@@ -107,135 +107,6 @@
         z-index: 10;
       }
 
-    /* === Adaptive Gradient Glow Card === */
-:root {
-  --card-bg-light: rgba(255, 255, 255, 0.85);
-  --card-bg-dark: rgba(20, 24, 35, 0.85);
-  --border-light: linear-gradient(135deg, #2563eb, #06b6d4); /* blue → cyan */
-  --border-dark: linear-gradient(135deg, #4f46e5, #06b6d4);  /* indigo → cyan */
-  --text-primary-light: #1e293b;
-  --text-primary-dark: #e2e8f0;
-  --text-secondary-light: #475569;
-  --text-secondary-dark: #cbd5e1;
-  --accent-light: #2563eb;
-  --accent-dark: #60a5fa;
-}
-
-/* core card */
-.project-card {
-  position: relative;
-  background: var(--card-bg-light);
-  border-radius: 20px;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  overflow: hidden;
-  transform-style: preserve-3d;
-  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  z-index: 0;
-}
-
-/* dark mode override */
-.dark .project-card {
-  background: var(--card-bg-dark);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-}
-
-/* gradient border */
-.project-card::before {
-  content: '';
-  position: absolute;
-  inset: -2px;
-  border-radius: 22px;
-  background: var(--border-light);
-  z-index: -2;
-  transition: all 0.6s ease;
-}
-
-.dark .project-card::before {
-  background: var(--border-dark);
-}
-
-/* glow blur layer */
-.project-card::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 20px;
-  background: var(--border-light);
-  filter: blur(20px);
-  z-index: -3;
-  transform: scale(0.95);
-  opacity: 0.6;
-  transition: filter 0.4s ease, opacity 0.4s ease;
-}
-
-.dark .project-card::after {
-  background: var(--border-dark);
-  opacity: 0.5;
-}
-
-/* hover tilt */
-.project-card:hover {
-  transform: translateY(-6px) rotateX(3deg) rotateY(-3deg);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-}
-
-.project-card:hover::before {
-  transform: rotate(-45deg) scale(1.05);
-}
-
-.project-card:hover::after {
-  filter: blur(26px);
-  opacity: 0.8;
-}
-
-/* text */
-.project-card h3 {
-  color: var(--text-primary-light);
-}
-
-.dark .project-card h3 {
-  color: var(--text-primary-dark);
-}
-
-.project-card p {
-  color: var(--text-secondary-light);
-}
-
-.dark .project-card p {
-  color: var(--text-secondary-dark);
-}
-
-.project-card strong {
-  color: var(--accent-light);
-}
-
-.dark .project-card strong {
-  color: var(--accent-dark);
-}
-
-/* badge */
-.project-badge {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background: linear-gradient(to right, #3b82f6, #06b6d4);
-  color: white;
-  font-size: 11px;
-  font-weight: bold;
-  padding: 4px 10px;
-  border-radius: 8px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-}
-
-/* mobile responsiveness */
-@media (max-width: 768px) {
-  .project-card:hover {
-    transform: translateY(-4px);
-  }
-}
 
       
     .text-gradient {
@@ -469,23 +340,15 @@
           </p>
         </div>
 
-      <!-- Projects Section (Updated Card Example) -->
-<div class="project-card" data-aos="fade-up" data-aos-delay="100">
-  <span class="project-badge">Demo</span>
-  <div class="w-20 h-20 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center mb-4">
-    <i class="fas fa-home text-white text-3xl"></i>
-  </div>
-  <h3 class="font-semibold text-lg mb-2">Real Estate Funnel</h3>
-  <p class="text-gray-300 text-sm mb-4">
-    Complete funnel with calendar booking, automated reminders, and lead tracking system.
-  </p>
-  <div class="mb-4 text-xs text-gray-400">
-    <strong>Potential ROI:</strong> Save 5+ hours/week on follow-ups
-  </div>
-  <a href="https://realstate.sapphirecarwash.com" target="_blank" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
-    View Live Demo →
-  </a>
-</div>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="project-card relative bg-white/60 dark:bg-gray-800/60 rounded-2xl shadow-md hover:shadow-2xl transition p-6 backdrop-blur-xl" data-aos="fade-up" data-aos-delay="100"> 
+      <span class="project-badge">Demo</span> 
+      <div class="w-20 h-20 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center mb-4"> <i class="fas fa-home text-white text-3xl"></i> 
+      </div> <h3 class="font-semibold text-lg mb-2">Real Estate Funnel</h3> 
+      <p class="text-gray-600 dark:text-gray-300 text-sm mb-4"> Complete funnel with calendar booking, automated reminders, and lead tracking system. </p> <div class="mb-4 text-xs text-gray-500"> 
+        <strong>Potential ROI:</strong> Save 5+ hours/week on follow-ups </div>
+      <a href="https://realstate.sapphirecarwash.com" target="_blank" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"> View Live Demo → </a> 
+    </div>
 
 
 
