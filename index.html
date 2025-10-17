@@ -135,94 +135,7 @@
       0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
       50% { box-shadow: 0 0 40px rgba(139, 92, 246, 0.8); }
     }
-     /* Base card styling */
-.project-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 0.75rem;
-  background: rgba(31, 41, 55, 0.6); /* dark translucent background */
-  width: 320px;
-  height: 200px;
-  margin: 2rem auto;
-  transition: transform 0.3s ease;
-  animation: pulseGlow 3s ease-in-out infinite;
-}
-
-/* Inner content container (optional) */
-.project-card-inner {
-  position: relative;
-  z-index: 3;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 1.25rem;
-}
-
-/* Glowing animated border */
-.project-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  padding: 2px;
-  border-radius: inherit;
-  background: linear-gradient(270deg, #ff7e5f, #feb47b, #ff7e5f);
-  background-size: 600% 600%;
-  animation: borderMove 6s linear infinite;
-  z-index: 1;
-}
-
-/* Mask inner area to keep glow only on edges */
-.project-card::after {
-  content: "";
-  position: absolute;
-  inset: 2px;
-  border-radius: calc(0.75rem - 2px);
-  background: rgba(31, 41, 55, 0.6);
-  z-index: 2;
-}
-
-/* Hover lift and stronger glow */
-.project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 25px rgba(255, 126, 95, 0.6);
-}
-
-/* Glowing pulse animation */
-@keyframes pulseGlow {
-  0% {
-    box-shadow: 0 0 10px rgba(255, 126, 95, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 20px rgba(255, 126, 95, 0.6);
-  }
-  100% {
-    box-shadow: 0 0 10px rgba(255, 126, 95, 0.3);
-  }
-}
-
-/* Gradient border animation */
-@keyframes borderMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Responsive design for mobile */
-@media (max-width: 600px) {
-  .project-card {
-    width: 90%;
-    height: 180px;
-  }
-}
-
+  
   
     </style>
   </head>
@@ -434,7 +347,7 @@
       <!-- Project 1 -->
       <div class="project-card relative bg-gray-800/60 p-6 rounded-xl text-white shadow-md transition backdrop-blur-xl" data-aos="fade-up" data-aos-delay="100"> 
         <span class="project-badge">Demo</span>
-        <div class="project-card-inner">
+       
         <div class="w-full h-40 overflow-hidden rounded-xl mb-4">
           <img src="assets/RealEstate.jpg" alt="Real Estate Funnel Preview" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-105" loading="lazy" />
         </div>
@@ -442,7 +355,7 @@
         <p class="text-sm text-gray-300">Complete funnel with calendar booking, automated reminders, and lead tracking system.</p> 
         <div class="mb-4 text-xs text-gray-500"><strong>Potential ROI:</strong> Save 5+ hours/week on follow-ups</div>
         <a href="https://realstate.sapphirecarwash.com" target="_blank" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">View Live Demo</a> 
-      </div></div>
+      </div>
 
       <!-- Project 2 -->
       <div class="project-card relative bg-gray-800/60 p-6 rounded-xl text-white shadow-md transition backdrop-blur-xl" data-aos="fade-up" data-aos-delay="100"> 
