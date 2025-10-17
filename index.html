@@ -135,6 +135,49 @@
       0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
       50% { box-shadow: 0 0 40px rgba(139, 92, 246, 0.8); }
     }
+      .project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.75rem; /* same as rounded-xl */
+    background: rgba(31, 41, 55, 0.6); /* matches bg-gray-800/60 */
+    transition: transform 0.3s ease;
+  }
+
+  /* Animated border */
+  .project-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    border-radius: inherit;
+    background: linear-gradient(270deg, #ff7e5f, #feb47b, #ff7e5f);
+    background-size: 300% 300%;
+    animation: borderMove 4s linear infinite;
+    mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  /* Move gradient around edges */
+  @keyframes borderMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /* Optional hover lift */
+  .project-card:hover {
+    transform: translateY(-4px);
+  }
   
     </style>
   </head>
