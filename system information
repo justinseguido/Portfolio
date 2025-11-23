@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>System Workflow Overview</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        p.intro {
+            text-align: center;
+            font-size: 16px;
+            opacity: 0.8;
+            margin-bottom: 40px;
+        }
+
+        .section-box {
+            background-color: #1e293b;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.2);
+        }
+
+        .section-box h2 {
+            margin-top: 0;
+            font-size: 24px;
+        }
+
+        .workflow-img {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 20px;
+            border: 1px solid #334155;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 10px 18px;
+            background-color: #3b82f6;
+            color: #fff;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-top: 20px;
+            font-size: 15px;
+        }
+
+        .back-btn:hover {
+            background-color: #2563eb;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 14px;
+            opacity: 0.6;
+            margin-top: 50px;
+            padding-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Automation Workflow Overview</h1>
+        <p class="intro">
+            Here's a detailed look at how your funnel and automation system operates behind the scenes —
+            from lead capture to reminders, follow-ups, and CRM tracking.
+        </p>
+
+        <!-- Section 1 -->
+        <div class="section-box">
+            <h2>🔄 Full System Flow</h2>
+            <p>
+                This workflow illustrates how a lead moves through your process. It includes:
+            </p>
+            <ul>
+                <li>Form submission or booking trigger</li>
+                <li>Automated confirmation messages</li>
+                <li>Calendar reminders and follow-ups</li>
+                <li>Pipeline movement automation</li>
+                <li>Tagging, segmentation, and conditional logic</li>
+            </ul>
+
+            <!-- Replace this with your automation image -->
+            <img src="/path-to-your-automation-image.png" 
+                 alt="Automation Workflow" 
+                 class="workflow-img">
+        </div>
+
+        <!-- Section 2 -->
+        <div class="section-box">
+            <h2>⚙️ What Happens Automatically</h2>
+            <p>
+                The automation handles multiple touchpoints to make sure leads don't slip away:
+            </p>
+            <ul>
+                <li>Instant email + SMS notifications</li>
+                <li>Missed-call text-back sequences</li>
+                <li>Pipeline status updates</li>
+                <li>Task creation for follow-ups</li>
+                <li>Internal alerts to the business owner</li>
+            </ul>
+        </div>
+
+        <!-- Back button -->
+        <a href="/your-main-page.html" class="back-btn">← Back to Funnels</a>
+
+        <footer>
+            © 2025 Your Portfolio · Automation Overview Page
+        </footer>
+
+    </div>
+
+</body>
+</html>
