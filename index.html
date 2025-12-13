@@ -4,92 +4,124 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Justine Seguido | HighLevel Certified Admin</title>
-    
-    <meta name="description" content="GoHighLevel Specialist specializing in automation, funnels, and CRM solutions. Portfolio-building rates available for early clients.">
-    <meta name="keywords" content="GoHighLevel Specialist, Funnels, Automation, CRM, Lead Generation, Digital Marketing, Portfolio">
-    <meta name="author" content="Justine Seguido">
-    
+
+    <meta
+      name="description"
+      content="GoHighLevel Specialist specializing in automation, funnels, and CRM solutions. Portfolio-building rates available for early clients."
+    />
+    <meta
+      name="keywords"
+      content="GoHighLevel Specialist, Funnels, Automation, CRM, Lead Generation, Digital Marketing, Portfolio"
+    />
+    <meta name="author" content="Justine Seguido" />
+
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Justine Seguido | GoHighLevel Specialist" />
-    <meta property="og:description" content="Helping businesses automate, scale, and grow with GoHighLevel funnels, automation, and CRM solutions." />
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
- <!-- SwiperJS CDN -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <meta
+      property="og:description"
+      content="Helping businesses automate, scale, and grow with GoHighLevel funnels, automation, and CRM solutions."
+    />
 
- 
-    
+    <!-- Tailwind (keep ONLY one Tailwind source) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
     <style>
+      /* ====== Shared Visual Utilities ====== */
       .text-gradient {
         background: linear-gradient(to right, #3b82f6, #8b5cf6);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
       }
+
       .gradient-bg {
-        background: linear-gradient(to right, #3b82f6, #8b5cf6);
+        background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
       }
+
       .glass {
         background: rgba(255, 255, 255, 0.2);
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
         border: 1px solid rgba(255, 255, 255, 0.3);
       }
+
       .dark .glass {
         background: rgba(20, 20, 20, 0.6);
         border: 1px solid rgba(255, 255, 255, 0.1);
       }
-      @keyframes float {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-12px); }
-      }
-      .animate-float {
-        animation: float 6s ease-in-out infinite;
-      }
+
       @keyframes pulse-glow {
-        0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
-        50% { box-shadow: 0 0 40px rgba(139, 92, 246, 0.8); }
+        0%,
+        100% {
+          box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+        }
+        50% {
+          box-shadow: 0 0 40px rgba(139, 92, 246, 0.8);
+        }
       }
+
       .pulse-glow {
         animation: pulse-glow 2s ease-in-out infinite;
       }
-      .skill-bar { 
-        height: 6px; 
-        border-radius: 10px; 
-        background: #e5e7eb; 
-        overflow: hidden; 
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-12px);
+        }
       }
-      .skill-progress { 
-        height: 100%; 
-        border-radius: 10px; 
-        background: linear-gradient(90deg, #2563eb 0%, #7e22ce 100%); 
-        width: 0; 
-        transition: width 1.5s ease-in-out; 
+
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
       }
-      .reveal { 
-        opacity: 0; 
-        transform: translateY(40px); 
-        transition: all 0.8s ease; 
+
+      /* Skill bars */
+      .skill-bar {
+        height: 6px;
+        border-radius: 10px;
+        background: #e5e7eb;
+        overflow: hidden;
       }
-      .reveal-visible { 
-        opacity: 1; 
-        transform: translateY(0); 
+
+      .skill-progress {
+        height: 100%;
+        border-radius: 10px;
+        background: linear-gradient(90deg, #2563eb 0%, #7e22ce 100%);
+        width: 0;
+        transition: width 1.5s ease-in-out;
       }
-      .badge-special {
-        background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-        animation: badge-pulse 2s ease-in-out infinite;
+
+      /* Reveal */
+      .reveal {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 0.8s ease;
       }
-      @keyframes badge-pulse {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.05); }
+
+      .reveal-visible {
+        opacity: 1;
+        transform: translateY(0);
       }
+
+      /* Project */
       .project-card {
         transition: all 0.3s ease;
-       
       }
       .project-card:hover {
         transform: translateY(-8px);
@@ -108,232 +140,204 @@
         z-index: 10;
       }
 
-
-      
-    .text-gradient {
-      background: linear-gradient(to right, #3b82f6, #8b5cf6);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .gradient-bg {
-      background: linear-gradient(to right, #3b82f6, #8b5cf6);
-    }
-    .glass {
-      background: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-    }
-    .dark .glass {
-      background: rgba(20, 20, 20, 0.6);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    .pulse-glow {
-      animation: pulse-glow 2s ease-in-out infinite;
-    }
-    @keyframes pulse-glow {
-      0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
-      50% { box-shadow: 0 0 40px rgba(139, 92, 246, 0.8); }
-    }
-  
-  
+      /* Mobile menu fade */
+      @media (max-width: 767px) {
+        #mobile-menu.animate-fade-in {
+          animation: fadein 0.35s;
+        }
+        @keyframes fadein {
+          from {
+            opacity: 0;
+            transform: translateY(-16px);
+          }
+          to {
+            opacity: 1;
+            transform: none;
+          }
+        }
+      }
     </style>
   </head>
-  
+
   <body class="antialiased text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
-    
-   <!-- Header -->
-<header class="sticky top-0 z-50 backdrop-blur-sm bg-white/80 dark:bg-gray-900/80 shadow transition-all">
-  <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-4" aria-label="Primary">
-    <!-- Logo/Brand -->
-    <a href="#" class="flex items-center text-xl font-extrabold bg-gradient-to-r from-purple-700 to-pink-500 bg-clip-text text-transparent drop-shadow" aria-label="Homepage">
-      Justine Seguido
-    </a>
-    <!-- Desktop Nav -->
-    <ul class="hidden md:flex items-center space-x-8 text-base font-medium">
-      <li><a href="#services" class="hover:text-blue-500 transition">Services</a></li>
-      <li><a href="#projects" class="hover:text-blue-500 transition">Projects</a></li>
-      <li><a href="#about" class="hover:text-blue-500 transition">About</a></li>
-      <li><a href="#contact" class="hover:text-blue-500 transition">Contact</a></li>
-    </ul>
-    <!-- Desktop Actions -->
-    <div class="hidden md:flex items-center space-x-4">
-      <a href="#contact" class="bg-gradient-to-r from-pink-500 to-purple-800 text-white px-6 py-2 rounded-full shadow hover:shadow-lg font-semibold transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-pink-400">
-        Get Started
-      </a>
-      <button id="theme-toggle" class="p-2 rounded-full bg-gray-100 dark:bg-gray-800 transition" title="Toggle theme">
-        <i class="fas fa-moon text-gray-800 dark:text-yellow-400"></i>
-      </button>
-    </div>
-    <!-- Mobile Hamburger + Theme -->
-    <div class="md:hidden flex items-center gap-2">
-      <button id="theme-toggle-mobile" class="p-2 rounded-full bg-gray-100 dark:bg-gray-800 transition" title="Toggle theme">
-        <i class="fas fa-moon text-gray-800 dark:text-yellow-400"></i>
-      </button>
-      <button type="button" id="mobile-menu-button" class="p-2 rounded-lg focus:outline-none hover:bg-pink-100/40 transition text-2xl text-pink-600" aria-label="Open navigation">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-  </nav>
-  <!-- Mobile Nav, collapses smoothly, ARIA for accessibility -->
-  <div id="mobile-menu" class="hidden md:hidden transition-all duration-300 bg-white/95 dark:bg-gray-900/95 px-6 border-t">
-    <ul class="flex flex-col space-y-4 py-6 text-lg font-semibold">
-      <li><a href="#services" class="hover:text-blue-500 transition">Services</a></li>
-      <li><a href="#projects" class="hover:text-blue-500 transition">Projects</a></li>
-      <li><a href="#about" class="hover:text-blue-500 transition">About</a></li>
-      <li><a href="#contact" class="hover:text-blue-500 transition">Contact</a></li>
-      <li>
-        <a href="#contact" class="bg-gradient-to-r from-pink-500 to-purple-800 text-white px-6 py-2 rounded-full shadow hover:shadow-lg font-semibold text-center transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-pink-400 inline-block w-full mt-3">
-          Get Started
+    <!-- Header -->
+    <header class="sticky top-0 z-50 backdrop-blur-sm bg-white/80 dark:bg-gray-900/80 shadow transition-all">
+      <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-4" aria-label="Primary">
+        <!-- Logo/Brand -->
+        <a
+          href="#"
+          class="flex items-center text-xl font-extrabold bg-gradient-to-r from-purple-700 to-pink-500 bg-clip-text text-transparent drop-shadow"
+          aria-label="Homepage"
+        >
+          Justine Seguido
         </a>
-      </li>
-    </ul>
-  </div>
-</header>
 
-<!-- Hero Section -->
-<section class="relative bg-gradient-to-br from-purple-700 via-fuchsia-700 to-pink-600 text-white overflow-hidden pb-10">
-  
-  <!-- Decorative blur balls -->
-  <div class="absolute -top-36 -left-24 w-[420px] h-[420px] bg-white/10 rounded-full blur-3xl"></div>
-  <div class="absolute bottom-0 right-0 w-[380px] h-[380px] bg-pink-400/20 rounded-full blur-3xl"></div>
+        <!-- Desktop Nav -->
+        <ul class="hidden md:flex items-center space-x-8 text-base font-medium">
+          <li><a href="#services" class="hover:text-blue-500 transition">Services</a></li>
+          <li><a href="#projects" class="hover:text-blue-500 transition">Projects</a></li>
+          <li><a href="#about" class="hover:text-blue-500 transition">About</a></li>
+          <li><a href="#contact" class="hover:text-blue-500 transition">Contact</a></li>
+        </ul>
 
-  <div class="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center px-6 md:px-12 lg:px-20 pt-32 pb-16">
-    <!-- Text/CTA -->
-    <div class="space-y-8" data-aos="fade-right">
-      <span class="inline-block bg-yellow-400 text-gray-900 font-bold py-2 px-7 rounded-full shadow-lg mb-5 text-base">
-        🔥 3 Client Spots Available • HighLevel Automation Buildouts
-      </span>
-      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
-        Automations Built For You That
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-purple-200">
-          Save 10–20 Hours Every Week
-        </span>
-      </h1>
-      <p class="text-lg md:text-xl opacity-90 leading-relaxed max-w-xl">
-        I design and build <strong>custom GoHighLevel automation systems</strong> that remove repetitive tasks,
-        streamline your operations, and free up your time—so you can focus on growth instead of busywork.<br><br>
-        I take on <strong>only 3 automation buildouts per month</strong> to ensure premium quality, speed, and performance.
-      </p>
-      <div class="flex flex-wrap gap-4 pt-2">
-        <a href="#contact" class="bg-white text-purple-700 font-semibold py-3 px-9 rounded-full shadow-xl hover:-translate-y-1 hover:shadow-2xl transition duration-300">
-          Book a Free Strategy Call
-        </a>
-        <a href="#projects" class="border-2 border-white text-white font-semibold py-3 px-9 rounded-full hover:bg-white hover:text-purple-700 transition duration-300">
-          View Automation Demo Builds
-        </a>
-      </div>
-      <!-- Certifications -->
-      <div>
-        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Certifications</h2>
-        <div class="flex items-center gap-8 flex-wrap">
-          <!-- Repeat per badge -->
-          <a href="https://directory.gohighlevel.com/philippines/san-miguel/certified-admins/justine-seguido?from=badge" target="_blank" class="transition hover:scale-105">
-            <img src="https://directory.gohighlevel.com/images/BD_Certified_Admin_Main_Badge.png" class="w-28 md:w-32 inline-block" alt="HighLevel Certified Admin Badge"/>
+        <!-- Desktop Actions -->
+        <div class="hidden md:flex items-center space-x-4">
+          <a
+            href="#contact"
+            class="bg-gradient-to-r from-pink-500 to-purple-800 text-white px-6 py-2 rounded-full shadow hover:shadow-lg font-semibold transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-pink-400"
+          >
+            Get Started
           </a>
-          <!-- ...other badges here as in your markup (same code) ... -->
-          <div class="transition hover:scale-105 text-center inline-block">
-            <img src="assets/a2pbadge.png" class="w-24 md:w-28 rounded-full bg-white/20 p-2 backdrop-blur inline-block" alt="A2P 10DLC"/>
-            <p class="text-sm text-white/90 mt-1">A2P 10DLC Compliance</p>
+          <button id="theme-toggle" class="p-2 rounded-full bg-gray-100 dark:bg-gray-800 transition" title="Toggle theme" type="button">
+            <i class="fas fa-moon text-gray-800 dark:text-yellow-400"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Hamburger + Theme -->
+        <div class="md:hidden flex items-center gap-2">
+          <button
+            id="theme-toggle-mobile"
+            class="p-2 rounded-full bg-gray-100 dark:bg-gray-800 transition"
+            title="Toggle theme"
+            type="button"
+          >
+            <i class="fas fa-moon text-gray-800 dark:text-yellow-400"></i>
+          </button>
+          <button
+            type="button"
+            id="mobile-menu-button"
+            class="p-2 rounded-lg focus:outline-none hover:bg-pink-100/40 transition text-2xl text-pink-600"
+            aria-label="Open navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile Nav -->
+      <div id="mobile-menu" class="hidden md:hidden transition-all duration-300 bg-white/95 dark:bg-gray-900/95 px-6 border-t">
+        <ul class="flex flex-col space-y-4 py-6 text-lg font-semibold">
+          <li><a href="#services" class="hover:text-blue-500 transition">Services</a></li>
+          <li><a href="#projects" class="hover:text-blue-500 transition">Projects</a></li>
+          <li><a href="#about" class="hover:text-blue-500 transition">About</a></li>
+          <li><a href="#contact" class="hover:text-blue-500 transition">Contact</a></li>
+          <li>
+            <a
+              href="#contact"
+              class="bg-gradient-to-r from-pink-500 to-purple-800 text-white px-6 py-2 rounded-full shadow hover:shadow-lg font-semibold text-center transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-pink-400 inline-block w-full mt-3"
+            >
+              Get Started
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-purple-700 via-fuchsia-700 to-pink-600 text-white overflow-hidden pb-10">
+      <!-- Decorative blur balls -->
+      <div class="absolute -top-36 -left-24 w-[420px] h-[420px] bg-white/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-0 w-[380px] h-[380px] bg-pink-400/20 rounded-full blur-3xl"></div>
+
+      <div class="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center px-6 md:px-12 lg:px-20 pt-32 pb-16">
+        <!-- Text/CTA -->
+        <div class="space-y-8" data-aos="fade-right">
+          <span class="inline-block bg-yellow-400 text-gray-900 font-bold py-2 px-7 rounded-full shadow-lg mb-5 text-base">
+            🔥 3 Client Spots Available • HighLevel Automation Buildouts
+          </span>
+
+          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
+            Automations Built For You That
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-purple-200">Save 10–20 Hours Every Week</span>
+          </h1>
+
+          <p class="text-lg md:text-xl opacity-90 leading-relaxed max-w-xl">
+            I design and build <strong>custom GoHighLevel automation systems</strong> that remove repetitive tasks, streamline your operations, and free up your time—so you can focus on growth instead of busywork.<br /><br />
+            I take on <strong>only 3 automation buildouts per month</strong> to ensure premium quality, speed, and performance.
+          </p>
+
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a href="#contact" class="bg-white text-purple-700 font-semibold py-3 px-9 rounded-full shadow-xl hover:-translate-y-1 hover:shadow-2xl transition duration-300">
+              Book a Free Strategy Call
+            </a>
+            <a href="#projects" class="border-2 border-white text-white font-semibold py-3 px-9 rounded-full hover:bg-white hover:text-purple-700 transition duration-300">
+              View Automation Demo Builds
+            </a>
           </div>
-          <!-- ...repeat as needed... -->
-          <div class="transition hover:scale-105 text-center inline-block">
-            <img src="assets/agencyhipaabadge.png" class="w-24 md:w-28 rounded-full bg-white/20 p-2 backdrop-blur inline-block" alt="HIPAA COMPLIANCE"/>
-            <p class="text-sm text-white/90 mt-1">HIPAA Compliance</p>
+
+          <!-- Certifications -->
+          <div>
+            <h2 class="text-2xl font-bold text-white mt-10 mb-4">Certifications</h2>
+            <div class="flex items-center gap-8 flex-wrap">
+              <a
+                href="https://directory.gohighlevel.com/philippines/san-miguel/certified-admins/justine-seguido?from=badge"
+                target="_blank"
+                rel="noopener"
+                class="transition hover:scale-105"
+              >
+                <img
+                  src="https://directory.gohighlevel.com/images/BD_Certified_Admin_Main_Badge.png"
+                  class="w-28 md:w-32 inline-block"
+                  alt="HighLevel Certified Admin Badge"
+                  loading="lazy"
+                />
+              </a>
+
+              <div class="transition hover:scale-105 text-center inline-block">
+                <img src="assets/a2pbadge.png" class="w-24 md:w-28 rounded-full bg-white/20 p-2 backdrop-blur inline-block" alt="A2P 10DLC" loading="lazy" />
+                <p class="text-sm text-white/90 mt-1">A2P 10DLC Compliance</p>
+              </div>
+
+              <div class="transition hover:scale-105 text-center inline-block">
+                <img src="assets/agencyhipaabadge.png" class="w-24 md:w-28 rounded-full bg-white/20 p-2 backdrop-blur inline-block" alt="HIPAA COMPLIANCE" loading="lazy" />
+                <p class="text-sm text-white/90 mt-1">HIPAA Compliance</p>
+              </div>
+
+              <div class="transition hover:scale-105 text-center inline-block">
+                <img src="assets/funnel_builder.png" class="w-24 md:w-28 rounded-full bg-white/20 p-2 backdrop-blur inline-block" alt="Funnel Builder" loading="lazy" />
+                <p class="text-sm text-white/90 mt-1">Funnel Builder</p>
+              </div>
+
+              <div class="transition hover:scale-105 text-center inline-block">
+                <img src="assets/paidadsbadge.png" class="w-24 md:w-28 rounded-full bg-white/20 p-2 backdrop-blur inline-block" alt="Paid Ads" loading="lazy" />
+                <p class="text-sm text-white/90 mt-1">Paid Ads</p>
+              </div>
+
+              <div class="transition hover:scale-105 text-center inline-block">
+                <img src="assets/quickads.png" class="w-24 md:w-28 rounded-full bg-white/20 p-2 backdrop-blur inline-block" alt="Quick Wins" loading="lazy" />
+                <p class="text-sm text-white/90 mt-1">Quick Wins</p>
+              </div>
+
+              <div class="transition hover:scale-105 text-center inline-block">
+                <img src="assets/socialmediamanagerbadge.png" class="w-24 md:w-28 rounded-full bg-white/20 p-2 backdrop-blur inline-block" alt="Social Media Manager" loading="lazy" />
+                <p class="text-sm text-white/90 mt-1">Social Media Manager</p>
+              </div>
+
+              <div class="transition hover:scale-105 text-center inline-block">
+                <img src="assets/whatsapp1.png" class="w-24 md:w-28 rounded-full bg-white/20 p-2 backdrop-blur inline-block" alt="WhatsApp Integration" loading="lazy" />
+                <p class="text-sm text-white/90 mt-1">WhatsApp Integration</p>
+              </div>
+            </div>
           </div>
-          <div class="transition hover:scale-105 text-center inline-block">
-            <img src="assets/funnel_builder.png" class="w-24 md:w-28 rounded-full bg-white/20 p-2 backdrop-blur inline-block" alt="Funnel Builder"/>
-            <p class="text-sm text-white/90 mt-1">Funnel Builder</p>
-          </div>
-          <div class="transition hover:scale-105 text-center inline-block">
-            <img src="assets/paidadsbadge.png" class="w-24 md:w-28 rounded-full bg-white/20 p-2 backdrop-blur inline-block" alt="Paid Ads"/>
-            <p class="text-sm text-white/90 mt-1">Paid Ads</p>
-          </div>
-          <div class="transition hover:scale-105 text-center inline-block">
-            <img src="assets/quickads.png" class="w-24 md:w-28 rounded-full bg-white/20 p-2 backdrop-blur inline-block" alt="Quick Wins"/>
-            <p class="text-sm text-white/90 mt-1">Quick Wins</p>
-          </div>
-          <div class="transition hover:scale-105 text-center inline-block">
-            <img src="assets/socialmediamanagerbadge.png" class="w-24 md:w-28 rounded-full bg-white/20 p-2 backdrop-blur inline-block" alt="Social Media Manager"/>
-            <p class="text-sm text-white/90 mt-1">Social Media Manager</p>
-          </div>
-          <div class="transition hover:scale-105 text-center inline-block">
-            <img src="assets/whatsapp1.png" class="w-24 md:w-28 rounded-full bg-white/20 p-2 backdrop-blur inline-block" alt="WhatsApp Integration"/>
-            <p class="text-sm text-white/90 mt-1">WhatsApp Integration</p>
+        </div>
+
+        <!-- Right/Video -->
+        <div class="relative flex justify-center lg:justify-end" data-aos="fade-left">
+          <div class="relative w-full max-w-lg p-1.5 rounded-3xl bg-gradient-to-r from-white/20 via-fuchsia-400/30 to-purple-600/30 backdrop-blur-md shadow-[0_0_40px_rgba(0,0,0,0.35)] overflow-hidden">
+            <iframe
+              id="hero-yt"
+              class="w-full h-64 md:h-80 rounded-2xl shadow-2xl"
+              src="https://www.youtube.com/embed/E47P3It0nF8?enablejsapi=1&mute=1&controls=0&modestbranding=1&playsinline=1"
+              title="Automation Builder Preview"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
           </div>
         </div>
       </div>
-    </div>
-    <!-- Right/Video -->
-    <div class="relative flex justify-center lg:justify-end" data-aos="fade-left">
-      <div class="relative w-full max-w-lg p-1.5 rounded-3xl bg-gradient-to-r from-white/20 via-fuchsia-400/30 to-purple-600/30 backdrop-blur-md shadow-[0_0_40px_rgba(0,0,0,0.35)] overflow-hidden">
-        <iframe
-          id="hero-yt"
-          class="w-full h-64 md:h-80 rounded-2xl shadow-2xl"
-          src="https://www.youtube.com/embed/E47P3It0nF8?enablejsapi=1&mute=1&controls=0&modestbranding=1&playsinline=1"
-          title="Automation Builder Preview"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-          loading="lazy"
-        ></iframe>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Mobile Menu Script -->
-<script>
-  // Mobile menu toggle
-  document.getElementById('mobile-menu-button').onclick = function() {
-    const menu = document.getElementById('mobile-menu');
-    menu.classList.toggle('hidden');
-    // Animate
-    menu.classList.toggle('animate-fade-in');
-  };
-</script>
-
-<!-- YouTube Auto Play/Pause -->
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const tag = document.createElement("script");
-    tag.src = "https://www.youtube.com/iframe_api";
-    document.body.appendChild(tag);
-
-    let player;
-
-    window.onYouTubeIframeAPIReady = function () {
-      player = new YT.Player("hero-yt", {
-        events: { onReady: setupObserver }
-      });
-    };
-
-    function setupObserver() {
-      const iframe = document.getElementById("hero-yt");
-      if (!iframe || !window.IntersectionObserver) { player.playVideo(); return; }
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          entry.isIntersecting ? player.playVideo() : player.pauseVideo();
-        });
-      }, { threshold: 0.5 });
-      observer.observe(iframe);
-    }
-  });
-</script>
-<style>
-/* Example transition for mobile dropdown */
-@media (max-width: 767px) {
-  #mobile-menu.animate-fade-in {
-    animation: fadein 0.35s;
-  }
-  @keyframes fadein {
-    from { opacity: 0; transform: translateY(-16px);}
-    to   { opacity: 1; transform: none;}
-  }
-}
-</style>
-
-
+    </section>
 
     <!-- Stats Section -->
     <section class="py-20 relative overflow-hidden bg-white dark:bg-gray-900">
@@ -370,7 +374,8 @@
       <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
         <div class="text-center mb-16" data-aos="fade-up">
           <h2 class="text-4xl md:text-5xl font-bold mb-4">
-            What I <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">Build</span>
+            What I
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">Build</span>
           </h2>
           <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Proven GoHighLevel solutions that save time, increase conversions, and streamline your business operations.
@@ -380,170 +385,155 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           <div class="bg-white/60 dark:bg-gray-800/60 rounded-xl p-8 shadow-md transition transform hover:-translate-y-2 backdrop-blur-xl" data-aos="fade-up" data-aos-delay="100">
             <div class="w-full h-40 overflow-hidden rounded-xl mb-4">
-          <img src="assets/high_converting_funnel.jpg" alt="high converting funnel" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" loading="lazy" />
-        </div>
+              <img src="assets/high_converting_funnel.jpg" alt="high converting funnel" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" loading="lazy" />
+            </div>
             <h3 class="text-xl font-semibold mb-3">High-Converting Funnels</h3>
             <p class="text-gray-600 dark:text-gray-300 text-sm">Lead generation, sales, and onboarding funnels that convert visitors into paying customers.</p>
           </div>
 
           <div class="bg-white/60 dark:bg-gray-800/60 rounded-xl p-8 shadow-md transition transform hover:-translate-y-2 backdrop-blur-xl" data-aos="fade-up" data-aos-delay="200">
             <div class="w-full h-40 overflow-hidden rounded-xl mb-4">
-          <img src="assets/smart automation.jpg" alt="smart automation" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" loading="lazy" />
-        </div>
+              <img src="assets/smart automation.jpg" alt="smart automation" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" loading="lazy" />
+            </div>
             <h3 class="text-xl font-semibold mb-3">Smart Automation</h3>
             <p class="text-gray-600 dark:text-gray-300 text-sm">Automated follow-ups, nurture sequences, and client management that run on autopilot.</p>
           </div>
 
           <div class="bg-white/60 dark:bg-gray-800/60 rounded-xl p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-2 backdrop-blur-xl" data-aos="fade-up" data-aos-delay="300">
             <div class="w-full h-40 overflow-hidden rounded-xl mb-4">
-          <img src="assets/lead_generation.jpg" alt="lead generation" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" loading="lazy" />
-        </div>
+              <img src="assets/lead_generation.jpg" alt="lead generation" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" loading="lazy" />
+            </div>
             <h3 class="text-xl font-semibold mb-3">Lead Generation Systems</h3>
             <p class="text-gray-600 dark:text-gray-300 text-sm">Optimized campaigns designed to capture quality leads and maximize your ROI.</p>
           </div>
 
           <div class="bg-white/60 dark:bg-gray-800/60 rounded-xl p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-2 backdrop-blur-xl" data-aos="fade-up" data-aos-delay="400">
             <div class="w-full h-40 overflow-hidden rounded-xl mb-4">
-          <img src="assets/analytics&dashboard.jpg" alt="analytics & dashboard" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" loading="lazy" />
-        </div>
+              <img src="assets/analytics&dashboard.jpg" alt="analytics & dashboard" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" loading="lazy" />
+            </div>
             <h3 class="text-xl font-semibold mb-3">Analytics & Dashboards</h3>
             <p class="text-gray-600 dark:text-gray-300 text-sm">Custom reporting dashboards to track performance and make data-driven decisions.</p>
           </div>
 
           <div class="bg-white/60 dark:bg-gray-800/60 rounded-xl p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-2 backdrop-blur-xl" data-aos="fade-up" data-aos-delay="500">
-           <div class="w-full h-40 overflow-hidden rounded-xl mb-4">
-          <img src="assets/custom_integration.jpg" alt="custom integration" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" loading="lazy" />
-        </div>
+            <div class="w-full h-40 overflow-hidden rounded-xl mb-4">
+              <img src="assets/custom_integration.jpg" alt="custom integration" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" loading="lazy" />
+            </div>
             <h3 class="text-xl font-semibold mb-3">Custom Integrations</h3>
             <p class="text-gray-600 dark:text-gray-300 text-sm">Seamless integrations with your existing tools and workflows.</p>
           </div>
 
           <div class="bg-white/60 dark:bg-gray-800/60 rounded-xl p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-2 backdrop-blur-xl" data-aos="fade-up" data-aos-delay="600">
             <div class="w-full h-40 overflow-hidden rounded-xl mb-4">
-          <img src="assets/CRM.jpg" alt="crm & lead tracker" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" loading="lazy" />
-        </div>
+              <img src="assets/CRM.jpg" alt="crm & lead tracker" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" loading="lazy" />
+            </div>
             <h3 class="text-xl font-semibold mb-3">CRM & Lead Tracker</h3>
             <p class="text-gray-600 dark:text-gray-300 text-sm">Complete client management system with automated syncing, pipeline tracking, and real-time insights.</p>
           </div>
         </div>
       </div>
     </section>
-    
- <!-- Project section  -->
-   <section id="projects" class="py-20 relative overflow-hidden bg-gray-50/70 dark:bg-gray-900/70 backdrop-blur-xl">
-  <div class="absolute inset-0 -z-10">
-    <div class="absolute top-20 left-10 w-64 h-64 bg-blue-300 dark:bg-blue-800 rounded-full blur-3xl opacity-30"></div>
-    <div class="absolute bottom-10 right-10 w-72 h-72 bg-indigo-300 dark:bg-indigo-800 rounded-full blur-3xl opacity-30"></div>
-  </div>
 
-  <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
-    <div class="text-center mb-16" data-aos="fade-up">
-      <h2 class="text-4xl md:text-5xl font-bold mb-4">
-        Demo <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">Projects</span>
-      </h2>
-      <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-        Functional demonstrations across multiple industries. Each project showcases real automation workflows you can implement in your business.
-      </p>
-    </div>
-
-    <!-- ✅ FIXED: Added missing CSS for project-badge and other styles -->
-    <style>
-      .project-badge {
-        @apply absolute -top-2 -right-2 bg-gradient-to-r from-blue-500 to-indigo-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg;
-      }
-      .project-card {
-        @apply bg-white/80 dark:bg-gray-800/60 backdrop-blur-xl border border-gray-200/50 dark:border-gray-700/50;
-      }
-      .gradient-bg {
-        background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
-      }
-    </style>
-
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Project 1 -->
-      <div class="project-card relative bg-white/60 dark:bg-gray-800/60 p-6 rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105" data-aos="fade-up" data-aos-delay="100">
-        <span class="project-badge">Demo</span>
-        <div class="w-full h-40 overflow-hidden rounded-xl mb-4">
-          <img src="assets/RealEstate.jpg" alt="Real Estate Funnel Preview" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" loading="lazy" />
-        </div>
-        <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-white">Real Estate Funnel</h4>
-        <p class="text-sm text-gray-600 dark:text-gray-300 mb-3">Complete funnel with calendar booking, automated reminders, and lead tracking system.</p>
-        <div class="mb-4 text-xs text-gray-500 dark:text-gray-400"><strong>Potential ROI:</strong> Save 5+ hours/week on follow-ups</div>
-        <a href="https://realstate.sapphirecarwash.com" target="_blank" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">View Live Demo</a>
+    <!-- Project section -->
+    <section id="projects" class="py-20 relative overflow-hidden bg-gray-50/70 dark:bg-gray-900/70 backdrop-blur-xl">
+      <div class="absolute inset-0 -z-10">
+        <div class="absolute top-20 left-10 w-64 h-64 bg-blue-300 dark:bg-blue-800 rounded-full blur-3xl opacity-30"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-indigo-300 dark:bg-indigo-800 rounded-full blur-3xl opacity-30"></div>
       </div>
 
-      <!-- Project 2 -->
-      <div class="project-card relative bg-white/60 dark:bg-gray-800/60 p-6 rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105" data-aos="fade-up" data-aos-delay="150">
-        <span class="project-badge">Demo</span>
-        <div class="w-full h-40 overflow-hidden rounded-xl mb-4">
-          <img src="assets/Carwash.jpg" alt="Sapphire Carwash" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" loading="lazy" />
+      <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            Demo
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">Projects</span>
+          </h2>
+          <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Functional demonstrations across multiple industries. Each project showcases real automation workflows you can implement in your business.
+          </p>
         </div>
-        <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-white">Car Wash Website</h4>
-        <p class="text-sm text-gray-600 dark:text-gray-300 mb-3">Responsive website with online booking, service showcase, and SEO optimization.</p>
-        <div class="mb-4 text-xs text-gray-500 dark:text-gray-400"><strong>Potential ROI:</strong> Increase bookings by 30-40%</div>
-        <a href="https://www.sapphirecarwash.com" target="_blank" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">View Live Demo</a>
-      </div>
 
-      <!-- Project 3 -->
-      <div class="project-card relative bg-white/60 dark:bg-gray-800/60 p-6 rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105" data-aos="fade-up" data-aos-delay="200">
-        <span class="project-badge">Demo</span>
-        <div class="w-full h-40 overflow-hidden rounded-xl mb-4">
-          <img src="assets/Pin-on-Crossfit addiction.jpg" alt="Gym Booking Funnel" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" loading="lazy" />
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div class="project-card relative bg-white/60 dark:bg-gray-800/60 p-6 rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105" data-aos="fade-up" data-aos-delay="100">
+            <span class="project-badge">Demo</span>
+            <div class="w-full h-40 overflow-hidden rounded-xl mb-4">
+              <img src="assets/RealEstate.jpg" alt="Real Estate Funnel Preview" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" loading="lazy" />
+            </div>
+            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-white">Real Estate Funnel</h4>
+            <p class="text-sm text-gray-600 dark:text-gray-300 mb-3">Complete funnel with calendar booking, automated reminders, and lead tracking system.</p>
+            <div class="mb-4 text-xs text-gray-500 dark:text-gray-400"><strong>Potential ROI:</strong> Save 5+ hours/week on follow-ups</div>
+            <a href="https://realstate.sapphirecarwash.com" target="_blank" rel="noopener" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">View Live Demo</a>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card relative bg-white/60 dark:bg-gray-800/60 p-6 rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105" data-aos="fade-up" data-aos-delay="150">
+            <span class="project-badge">Demo</span>
+            <div class="w-full h-40 overflow-hidden rounded-xl mb-4">
+              <img src="assets/Carwash.jpg" alt="Sapphire Carwash" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" loading="lazy" />
+            </div>
+            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-white">Car Wash Website</h4>
+            <p class="text-sm text-gray-600 dark:text-gray-300 mb-3">Responsive website with online booking, service showcase, and SEO optimization.</p>
+            <div class="mb-4 text-xs text-gray-500 dark:text-gray-400"><strong>Potential ROI:</strong> Increase bookings by 30-40%</div>
+            <a href="https://www.sapphirecarwash.com" target="_blank" rel="noopener" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">View Live Demo</a>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card relative bg-white/60 dark:bg-gray-800/60 p-6 rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105" data-aos="fade-up" data-aos-delay="200">
+            <span class="project-badge">Demo</span>
+            <div class="w-full h-40 overflow-hidden rounded-xl mb-4">
+              <img src="assets/Pin-on-Crossfit addiction.jpg" alt="Gym Booking Funnel" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" loading="lazy" />
+            </div>
+            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-white">Gym Booking Funnel</h4>
+            <p class="text-sm text-gray-600 dark:text-gray-300 mb-3">Streamlined booking with recurring sessions, automated reminders, and upsells.</p>
+            <div class="mb-4 text-xs text-gray-500 dark:text-gray-400"><strong>Potential ROI:</strong> Reduce no-shows by 60%</div>
+            <a href="https://gymbooking.sapphirecarwash.com" target="_blank" rel="noopener" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">View Live Demo</a>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card relative bg-white/60 dark:bg-gray-800/60 p-6 rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105" data-aos="fade-up" data-aos-delay="250">
+            <span class="project-badge">Demo</span>
+            <div class="w-full h-40 overflow-hidden rounded-xl mb-4">
+              <img src="assets/image.jpg" alt="Pressure Washing" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" loading="lazy" />
+            </div>
+            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-white">Pressure Washing Platform</h4>
+            <p class="text-sm text-gray-600 dark:text-gray-300 mb-3">Residential & commercial job tracking platform for managing estimates and appointments</p>
+            <div class="mb-4 text-xs text-gray-500 dark:text-gray-400"><strong>Potential ROI:</strong> Automate quote delivery & appointment booking</div>
+            <a href="https://pressureguy.sapphirecarwash.com/offer" target="_blank" rel="noopener" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">View Live Demo</a>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="project-card relative bg-white/60 dark:bg-gray-800/60 p-6 rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105" data-aos="fade-up" data-aos-delay="300">
+            <span class="project-badge">Demo</span>
+            <div class="w-full h-40 overflow-hidden rounded-xl mb-4">
+              <img src="assets/ai_chat.jpg" alt="AI Chat Widget" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" loading="lazy" />
+            </div>
+            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-white">AI Chat Widget</h4>
+            <p class="text-sm text-gray-600 dark:text-gray-300 mb-3">AI-powered chat to capture and qualify leads 24/7 automatically.</p>
+            <div class="mb-4 text-xs text-gray-500 dark:text-gray-400"><strong>Potential ROI:</strong> Never miss a lead again</div>
+            <a href="https://aiassistant.sapphirecarwash.com" target="_blank" rel="noopener" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">View Live Demo</a>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="project-card relative bg-white/60 dark:bg-gray-800/60 p-6 rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105" data-aos="fade-up" data-aos-delay="350">
+            <span class="project-badge">Demo</span>
+            <div class="w-full h-40 overflow-hidden rounded-xl mb-4">
+              <img src="assets/crm_lead_tracker.jpg" alt="CRM & Lead Tracker" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" loading="lazy" />
+            </div>
+            <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-white">CRM & Lead Tracker</h4>
+            <p class="text-sm text-gray-600 dark:text-gray-300 mb-3">Airtable + GoHighLevel integration with automated syncing and KPI dashboards.</p>
+            <div class="mb-4 text-xs text-gray-500 dark:text-gray-400"><strong>Potential ROI:</strong> Save 10+ hours/week on CRM tasks</div>
+            <a href="https://airtable.com/appJrX1Z1H2mvWHHg/pagDVSZa63ctQAo1K" target="_blank" rel="noopener" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">View Live Demo</a>
+          </div>
         </div>
-        <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-white">Gym Booking Funnel</h4>
-        <p class="text-sm text-gray-600 dark:text-gray-300 mb-3">Streamlined booking with recurring sessions, automated reminders, and upsells.</p>
-        <div class="mb-4 text-xs text-gray-500 dark:text-gray-400"><strong>Potential ROI:</strong> Reduce no-shows by 60%</div>
-        <a href="https://gymbooking.sapphirecarwash.com" target="_blank" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">View Live Demo</a>
-      </div>
 
-      <!-- Project 4 -->
-      <div class="project-card relative bg-white/60 dark:bg-gray-800/60 p-6 rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105" data-aos="fade-up" data-aos-delay="250">
-        <span class="project-badge">Demo</span>
-        <div class="w-full h-40 overflow-hidden rounded-xl mb-4">
-          <img src="assets/image.jpg" alt="Pressure Washing" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" loading="lazy" />
+        <div class="mt-12 text-center" data-aos="fade-up">
+          <p class="text-gray-600 dark:text-gray-300 mb-6">These aren't just mockups — they're fully functional systems you can explore and implement in your business.</p>
+          <a href="#contact" class="inline-block gradient-bg text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition duration-300">
+            Get Your Custom Solution →
+          </a>
         </div>
-        <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-white">Pressure Washing Platform</h4>
-        <p class="text-sm text-gray-600 dark:text-gray-300 mb-3">Residential & commercial job tracking platform for managing estimates and appointments</p>
-        <div class="mb-4 text-xs text-gray-500 dark:text-gray-400"><strong>Potential ROI:</strong>  Automate quote delivery & appointment booking</div>
-        <a href="https://pressureguy.sapphirecarwash.com/offer" target="_blank" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">View Live Demo</a>
       </div>
-
-      <!-- Project 5 -->
-      <div class="project-card relative bg-white/60 dark:bg-gray-800/60 p-6 rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105" data-aos="fade-up" data-aos-delay="300">
-        <span class="project-badge">Demo</span>
-        <div class="w-full h-40 overflow-hidden rounded-xl mb-4">
-          <img src="assets/ai_chat.jpg" alt="AI Chat Widget" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" loading="lazy" />
-        </div>
-        <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-white">AI Chat Widget</h4>
-        <p class="text-sm text-gray-600 dark:text-gray-300 mb-3">AI-powered chat to capture and qualify leads 24/7 automatically.</p>
-        <div class="mb-4 text-xs text-gray-500 dark:text-gray-400"><strong>Potential ROI:</strong> Never miss a lead again</div>
-        <a href="https://aiassistant.sapphirecarwash.com" target="_blank" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">View Live Demo</a>
-      </div>
-
-      <!-- Project 6 -->
-      <div class="project-card relative bg-white/60 dark:bg-gray-800/60 p-6 rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105" data-aos="fade-up" data-aos-delay="350">
-        <span class="project-badge">Demo</span>
-        <div class="w-full h-40 overflow-hidden rounded-xl mb-4">
-          <img src="assets/crm_lead_tracker.jpg" alt="CRM & Lead Tracker" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" loading="lazy" />
-        </div>
-        <h4 class="font-semibold text-lg mb-2 text-gray-800 dark:text-white">CRM & Lead Tracker</h4>
-        <p class="text-sm text-gray-600 dark:text-gray-300 mb-3">Airtable + GoHighLevel integration with automated syncing and KPI dashboards.</p>
-        <div class="mb-4 text-xs text-gray-500 dark:text-gray-400"><strong>Potential ROI:</strong> Save 10+ hours/week on CRM tasks</div>
-        <a href="https://airtable.com/appJrX1Z1H2mvWHHg/pagDVSZa63ctQAo1K" target="_blank" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">View Live Demo</a>
-      </div>
-    </div>
-
-    <div class="mt-12 text-center" data-aos="fade-up">
-      <p class="text-gray-600 dark:text-gray-300 mb-6">
-        These aren't just mockups — they're fully functional systems you can explore and implement in your business.
-      </p>
-      <a href="#contact" class="inline-block gradient-bg text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition duration-300">
-        Get Your Custom Solution →
-      </a>
-    </div>
-  </div>
-</section>
-
+    </section>
 
     <!-- About Section -->
     <section class="py-16 md:py-24 relative overflow-hidden" id="about">
@@ -557,7 +547,7 @@
           <div class="lg:w-2/5 flex justify-center" data-aos="fade-right">
             <div class="relative">
               <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-8 border-white shadow-2xl">
-                <img src="https://storage.googleapis.com/msgsndr/F7EP0WrjfbsiGA8XQf9i/media/689cb1241f951e183c7122bd.png" alt="Justine Seguido" class="w-full h-full object-cover">
+                <img src="https://storage.googleapis.com/msgsndr/F7EP0WrjfbsiGA8XQf9i/media/689cb1241f951e183c7122bd.png" alt="Justine Seguido" class="w-full h-full object-cover" loading="lazy" />
               </div>
               <div class="absolute -bottom-4 -right-4 gradient-bg text-white py-2 px-6 rounded-full shadow-lg animate-bounce">
                 <span class="font-semibold">GHL Specialist</span>
@@ -582,21 +572,21 @@
                     <span class="font-medium">Funnel Design & Development</span>
                     <span class="text-blue-600 font-semibold">95%</span>
                   </div>
-                  <div class="skill-bar"><div class="skill-progress animate-skill" data-width="95%"></div></div>
+                  <div class="skill-bar"><div class="skill-progress" data-width="95%"></div></div>
                 </div>
                 <div>
                   <div class="flex justify-between mb-2">
                     <span class="font-medium">Workflow Automation</span>
                     <span class="text-blue-600 font-semibold">90%</span>
                   </div>
-                  <div class="skill-bar"><div class="skill-progress animate-skill" data-width="90%"></div></div>
+                  <div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
                 </div>
                 <div>
                   <div class="flex justify-between mb-2">
                     <span class="font-medium">GoHighLevel Integration</span>
                     <span class="text-blue-600 font-semibold">92%</span>
                   </div>
-                  <div class="skill-bar"><div class="skill-progress animate-skill" data-width="92%"></div></div>
+                  <div class="skill-bar"><div class="skill-progress" data-width="92%"></div></div>
                 </div>
               </div>
             </div>
@@ -618,26 +608,26 @@
           <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div class="reveal bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md text-center hover:scale-105 hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="100">
               <div class="w-full h-40 overflow-hidden rounded-xl mb-4">
-          <img src="assets/real_estate.jpg" alt="real estate" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" loading="lazy" />
-        </div>
+                <img src="assets/real_estate.jpg" alt="real estate" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" loading="lazy" />
+              </div>
               <p class="font-semibold">Real Estate</p>
             </div>
             <div class="reveal bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md text-center hover:scale-105 hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="200">
               <div class="w-full h-40 overflow-hidden rounded-xl mb-4">
-          <img src="assets/fitness.jpg" alt="fitness" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" loading="lazy" />
-        </div>
+                <img src="assets/fitness.jpg" alt="fitness" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" loading="lazy" />
+              </div>
               <p class="font-semibold">Fitness</p>
             </div>
             <div class="reveal bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md text-center hover:scale-105 hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="300">
               <div class="w-full h-40 overflow-hidden rounded-xl mb-4">
-          <img src="assets/automotive.jpg" alt="automotive" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" loading="lazy" />
-        </div>
+                <img src="assets/automotive.jpg" alt="automotive" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" loading="lazy" />
+              </div>
               <p class="font-semibold">Automotive</p>
             </div>
             <div class="reveal bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md text-center hover:scale-105 hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="400">
-               <div class="w-full h-40 overflow-hidden rounded-xl mb-4">
-          <img src="assets/business.jpg" alt="business" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" loading="lazy" />
-        </div>
+              <div class="w-full h-40 overflow-hidden rounded-xl mb-4">
+                <img src="assets/business.jpg" alt="business" class="w-full h-full object-cover rounded-xl transition-transform duration-300 hover:scale-110" loading="lazy" />
+              </div>
               <p class="font-semibold">Business</p>
             </div>
           </div>
@@ -658,6 +648,7 @@
                   <p class="text-gray-600 dark:text-gray-300">Deep-dived into automation, funnels, and CRM integrations. Built 10+ functional demo systems across multiple industries.</p>
                 </div>
               </div>
+
               <div class="relative pl-16 reveal" data-aos="fade-right" data-aos-delay="100">
                 <div class="absolute left-0 top-0 w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white shadow-lg">
                   <i class="fas fa-tools"></i>
@@ -667,6 +658,7 @@
                   <p class="text-gray-600 dark:text-gray-300">Accepting 3 clients per month at 50% off rates. Fast turnaround, personalized attention, and proven systems ready to implement.</p>
                 </div>
               </div>
+
               <div class="relative pl-16 reveal" data-aos="fade-right" data-aos-delay="200">
                 <div class="absolute left-0 top-0 w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white shadow-lg">
                   <i class="fas fa-bullseye"></i>
@@ -714,328 +706,255 @@
     </section>
 
     <!-- Case Study Section -->
-<section id="case-study" class="relative py-20 bg-white dark:bg-gray-900 overflow-hidden">
-  <!-- Background Accent -->
-  <div class="absolute top-0 right-0 w-80 h-80 bg-blue-200 dark:bg-blue-900 rounded-full blur-3xl opacity-30 translate-x-1/3 -translate-y-1/3"></div>
+    <section id="case-study" class="relative py-20 bg-white dark:bg-gray-900 overflow-hidden">
+      <div class="absolute top-0 right-0 w-80 h-80 bg-blue-200 dark:bg-blue-900 rounded-full blur-3xl opacity-30 translate-x-1/3 -translate-y-1/3"></div>
 
-  <div class="container mx-auto px-6 md:px-12 lg:px-20 relative z-10">
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-extrabold text-gray-900 dark:text-white mb-4">
-        🏡 Real Estate Automation Case Study
-      </h2>
-      <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-        How <span class="font-semibold text-blue-600">Manila Properties</span> streamlined lead follow-ups, boosted tour bookings, and saved 10+ hours weekly with a custom GoHighLevel automation system.
-      </p>
-    </div>
+      <div class="container mx-auto px-6 md:px-12 lg:px-20 relative z-10">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-extrabold text-gray-900 dark:text-white mb-4">🏡 Real Estate Automation Case Study</h2>
+          <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            How <span class="font-semibold text-blue-600">Manila Properties</span> streamlined lead follow-ups, boosted tour bookings, and saved 10+ hours weekly with a custom GoHighLevel automation system.
+          </p>
+        </div>
 
-    <!-- Case Study Content -->
-    <div class="bg-white/70 dark:bg-gray-800/70 backdrop-blur-lg rounded-3xl shadow-2xl p-8 md:p-12 space-y-10">
-      
-      <!-- Overview -->
-      <div>
-        <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-3">Client Overview</h3>
-        <p class="text-gray-700 dark:text-gray-300">
-          <strong>Manila Properties</strong> is a real estate agency based in Metro Manila that helps homebuyers, investors, and sellers find premium properties. 
-          They needed a centralized CRM to automate inquiries, streamline scheduling, and boost conversion rates.
-        </p>
+        <div class="bg-white/70 dark:bg-gray-800/70 backdrop-blur-lg rounded-3xl shadow-2xl p-8 md:p-12 space-y-10">
+          <div>
+            <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-3">Client Overview</h3>
+            <p class="text-gray-700 dark:text-gray-300">
+              <strong>Manila Properties</strong> is a real estate agency based in Metro Manila that helps homebuyers, investors, and sellers find premium properties.
+              They needed a centralized CRM to automate inquiries, streamline scheduling, and boost conversion rates.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-3">The Challenge</h3>
+            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-1">
+              <li>Manual lead tracking and slow follow-up times.</li>
+              <li>Inconsistent communication between agents and prospects.</li>
+              <li>Low tour booking rates and missed opportunities.</li>
+              <li>No automation or segmentation in client handling.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-3">The Solution</h3>
+            <p class="text-gray-700 dark:text-gray-300 mb-3">
+              A tailored <strong>GoHighLevel automation system</strong> and website funnel were built to simplify the client journey and maximize agent productivity.
+            </p>
+            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-1">
+              <li><strong>Automated Lead Capture & Segmentation:</strong> Forms sync directly into CRM and tag leads by type (buyer, seller, investor).</li>
+              <li><strong>Smart Follow-Up Sequences:</strong> Instant replies, reminders, and re-engagement campaigns.</li>
+              <li><strong>Calendar-Based Tour Booking:</strong> Self-service booking with automated confirmations.</li>
+              <li><strong>Exclusive Listings:</strong> Premium property previews with gated access for qualified leads.</li>
+              <li><strong>Feedback Automation:</strong> Post-tour surveys collect testimonials automatically.</li>
+            </ul>
+          </div>
+
+          <!-- Visual Preview Carousel (Swiper Instance #1) -->
+          <div class="mt-10">
+            <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Visual Preview</h3>
+            <p class="text-gray-700 dark:text-gray-300 mb-6">
+              A glimpse of the automation setup — from property tour booking pages to CRM workflows and follow-up sequences.
+            </p>
+
+            <div class="swiper mySwiper rounded-2xl shadow-lg overflow-hidden">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="assets/real.png" alt="Property Tour Booking Page" class="w-full h-72 md:h-96 object-cover" loading="lazy" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/real1.png" alt="CRM Workflow Dashboard" class="w-full h-72 md:h-96 object-cover" loading="lazy" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/real2.png" alt="Automation Flow in GoHighLevel" class="w-full h-72 md:h-96 object-cover" loading="lazy" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/real3.png" alt="Lead Follow-Up Sequence" class="w-full h-72 md:h-96 object-cover" loading="lazy" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/real4.png" alt="Lead Follow-Up Sequence" class="w-full h-72 md:h-96 object-cover" loading="lazy" />
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-3">Results</h3>
+            <div class="overflow-x-auto">
+              <table class="w-full border border-gray-200 dark:border-gray-700 rounded-xl text-left text-gray-700 dark:text-gray-300">
+                <thead class="bg-gray-100 dark:bg-gray-800">
+                  <tr>
+                    <th class="py-3 px-4 font-semibold">Metric</th>
+                    <th class="py-3 px-4 font-semibold">Before</th>
+                    <th class="py-3 px-4 font-semibold">After Automation</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-t border-gray-200 dark:border-gray-700">
+                    <td class="py-3 px-4">Lead Response Time</td>
+                    <td class="py-3 px-4">6–12 hours</td>
+                    <td class="py-3 px-4 text-blue-600 font-semibold">Under 10 minutes</td>
+                  </tr>
+                  <tr class="border-t border-gray-200 dark:border-gray-700">
+                    <td class="py-3 px-4">Property Tour Bookings</td>
+                    <td class="py-3 px-4">15–20/month</td>
+                    <td class="py-3 px-4 text-blue-600 font-semibold">+60% increase</td>
+                  </tr>
+                  <tr class="border-t border-gray-200 dark:border-gray-700">
+                    <td class="py-3 px-4">Missed Follow-Ups</td>
+                    <td class="py-3 px-4">Frequent</td>
+                    <td class="py-3 px-4 text-blue-600 font-semibold">Near zero</td>
+                  </tr>
+                  <tr class="border-t border-gray-200 dark:border-gray-700">
+                    <td class="py-3 px-4">Client Satisfaction</td>
+                    <td class="py-3 px-4">7.5/10</td>
+                    <td class="py-3 px-4 text-blue-600 font-semibold">9.3/10</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <blockquote class="border-l-4 border-blue-500 pl-6 italic text-gray-700 dark:text-gray-300">
+            “The automation setup completely changed how we handle inquiries. Clients get instant replies, and our agents spend more time closing deals instead of chasing leads.”
+            <br />
+            <span class="font-semibold text-blue-600">— Ana D., Marketing Manager, Manila Properties</span>
+          </blockquote>
+
+          <div class="text-center mt-12">
+            <h4 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Want to automate your real estate business like this?</h4>
+            <div class="flex flex-wrap justify-center gap-4">
+              <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-semibold transition-all">
+                🚀 Book Free Consultation
+              </a>
+              <a href="https://realstate.sapphirecarwash.com" target="_blank" rel="noopener" class="border border-blue-500 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 px-6 py-3 rounded-full font-semibold transition-all">
+                💼 View Demo Projects
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <!-- Challenge -->
-      <div>
-        <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-3">The Challenge</h3>
-        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-1">
-          <li>Manual lead tracking and slow follow-up times.</li>
-          <li>Inconsistent communication between agents and prospects.</li>
-          <li>Low tour booking rates and missed opportunities.</li>
-          <li>No automation or segmentation in client handling.</li>
-        </ul>
-      </div>
+    <!-- Sapphire Carwash Case Study Section -->
+    <section id="sapphire-carwash" class="py-24 bg-white dark:bg-gray-900 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+        <div data-aos="fade-up" class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4">🧼 Sapphire Carwash Case Study</h2>
+          <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Elevating the auto care experience through modern branding, seamless customer experience, and digital transformation.
+          </p>
+        </div>
 
-      <!-- Solution -->
-      <div>
-        <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-3">The Solution</h3>
-        <p class="text-gray-700 dark:text-gray-300 mb-3">
-          A tailored <strong>GoHighLevel automation system</strong> and website funnel were built to simplify the client journey and maximize agent productivity.
-        </p>
-        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-1">
-          <li><strong>Automated Lead Capture & Segmentation:</strong> Forms sync directly into CRM and tag leads by type (buyer, seller, investor).</li>
-          <li><strong>Smart Follow-Up Sequences:</strong> Instant replies, reminders, and re-engagement campaigns.</li>
-          <li><strong>Calendar-Based Tour Booking:</strong> Self-service booking with automated confirmations.</li>
-          <li><strong>Exclusive Listings:</strong> Premium property previews with gated access for qualified leads.</li>
-          <li><strong>Feedback Automation:</strong> Post-tour surveys collect testimonials automatically.</li>
-        </ul>
-      </div>
+        <div data-aos="fade-up" class="space-y-6 mb-16">
+          <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400">🏢 Overview</h3>
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+            <strong>Sapphire Carwash</strong> is a premium car care service based in Leyte, Philippines, focused on providing high-quality and eco-friendly car washing.
+            The brand aimed to modernize its customer experience, streamline operations, and highlight its premium services with a strong digital presence.
+          </p>
+        </div>
 
-     <!-- Visual Preview Carousel -->
-<div class="mt-10">
-  <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Visual Preview</h3>
-  <p class="text-gray-700 dark:text-gray-300 mb-6">
-    A glimpse of the automation setup — from property tour booking pages to CRM workflows and follow-up sequences.
-  </p>
+        <div data-aos="fade-up" class="space-y-6 mb-16">
+          <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400">🚧 The Challenge</h3>
+          <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
+            <li>Long customer wait times during peak hours.</li>
+            <li>Limited differentiation between basic and premium services.</li>
+            <li>Low online visibility and lack of social proof.</li>
+            <li>Manual booking process that slowed customer flow.</li>
+          </ul>
+        </div>
 
-  <!-- Swiper Container -->
-  <div class="swiper mySwiper rounded-2xl shadow-lg overflow-hidden">
-    <div class="swiper-wrapper">
-      <!-- Slide 1 -->
-      <div class="swiper-slide">
-        <img src="assets/real.png" alt="Property Tour Booking Page" 
-             class="w-full h-72 md:h-96 object-cover" />
-      </div>
+        <div data-aos="fade-up" class="space-y-6 mb-16">
+          <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400">💡 The Solution</h3>
+          <ul class="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
+            <li><strong>Service Tier Redesign:</strong> Highlighted clear differences between packages to encourage premium upgrades.</li>
+            <li><strong>Digital Optimization:</strong> Created a responsive, modern website with integrated booking and inquiry features.</li>
+            <li><strong>Social Proof & Testimonials:</strong> Added verified customer reviews to boost trust and authority.</li>
+            <li><strong>Brand Identity & Positioning:</strong> Reinforced “Premium & Eco-Friendly” values with consistent design language.</li>
+            <li><strong>Operational Enhancements:</strong> Suggested CRM-based booking automation for better queue management.</li>
+          </ul>
+        </div>
 
-      <!-- Slide 2 -->
-      <div class="swiper-slide">
-        <img src="assets/real1.png" alt="CRM Workflow Dashboard" 
-             class="w-full h-72 md:h-96 object-cover" />
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="swiper-slide">
-        <img src="assets/real2.png" alt="Automation Flow in GoHighLevel" 
-             class="w-full h-72 md:h-96 object-cover" />
-      </div>
-
-      <!-- Slide 4 -->
-      <div class="swiper-slide">
-        <img src="assets/real3.png" alt="Lead Follow-Up Sequence" 
-             class="w-full h-72 md:h-96 object-cover" />
-      </div>
-      
-       <!-- Slide 5 -->
-      <div class="swiper-slide">
-        <img src="assets/real4.png" alt="Lead Follow-Up Sequence" 
-             class="w-full h-72 md:h-96 object-cover" />
-      </div>
-    </div>
-
-    <!-- Pagination Dots -->
-    <div class="swiper-pagination"></div>
-  </div>
-</div>
-
-
-
-      <!-- Results -->
-      <div>
-        <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-3">Results</h3>
-        <div class="overflow-x-auto">
-          <table class="w-full border border-gray-200 dark:border-gray-700 rounded-xl text-left text-gray-700 dark:text-gray-300">
+        <div data-aos="fade-up" class="overflow-x-auto mb-16">
+          <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-4">📊 Results</h3>
+          <table class="w-full border-collapse border border-gray-300 dark:border-gray-700">
             <thead class="bg-gray-100 dark:bg-gray-800">
               <tr>
-                <th class="py-3 px-4 font-semibold">Metric</th>
-                <th class="py-3 px-4 font-semibold">Before</th>
-                <th class="py-3 px-4 font-semibold">After Automation</th>
+                <th class="p-3 text-left text-gray-800 dark:text-gray-200">Metric</th>
+                <th class="p-3 text-left text-gray-800 dark:text-gray-200">Before</th>
+                <th class="p-3 text-left text-gray-800 dark:text-gray-200">After</th>
               </tr>
             </thead>
             <tbody>
-              <tr class="border-t border-gray-200 dark:border-gray-700">
-                <td class="py-3 px-4">Lead Response Time</td>
-                <td class="py-3 px-4">6–12 hours</td>
-                <td class="py-3 px-4 text-blue-600 font-semibold">Under 10 minutes</td>
+              <tr class="border-t border-gray-300 dark:border-gray-700">
+                <td class="p-3 text-gray-700 dark:text-gray-300">Weekly Customers</td>
+                <td class="p-3">~450</td>
+                <td class="p-3 font-bold text-green-600">500+</td>
               </tr>
-              <tr class="border-t border-gray-200 dark:border-gray-700">
-                <td class="py-3 px-4">Property Tour Bookings</td>
-                <td class="py-3 px-4">15–20/month</td>
-                <td class="py-3 px-4 text-blue-600 font-semibold">+60% increase</td>
+              <tr class="border-t border-gray-300 dark:border-gray-700">
+                <td class="p-3">Premium Package Uptake</td>
+                <td class="p-3">20%</td>
+                <td class="p-3 font-bold text-green-600">40%+</td>
               </tr>
-              <tr class="border-t border-gray-200 dark:border-gray-700">
-                <td class="py-3 px-4">Missed Follow-Ups</td>
-                <td class="py-3 px-4">Frequent</td>
-                <td class="py-3 px-4 text-blue-600 font-semibold">Near zero</td>
+              <tr class="border-t border-gray-300 dark:border-gray-700">
+                <td class="p-3">Average Wait Time</td>
+                <td class="p-3">25 mins</td>
+                <td class="p-3 font-bold text-green-600">15 mins</td>
               </tr>
-              <tr class="border-t border-gray-200 dark:border-gray-700">
-                <td class="py-3 px-4">Client Satisfaction</td>
-                <td class="py-3 px-4">7.5/10</td>
-                <td class="py-3 px-4 text-blue-600 font-semibold">9.3/10</td>
+              <tr class="border-t border-gray-300 dark:border-gray-700">
+                <td class="p-3">Customer Satisfaction</td>
+                <td class="p-3">90%</td>
+                <td class="p-3 font-bold text-green-600">98%</td>
               </tr>
             </tbody>
           </table>
         </div>
-      </div>
 
-      <!-- Quote -->
-      <blockquote class="border-l-4 border-blue-500 pl-6 italic text-gray-700 dark:text-gray-300">
-        “The automation setup completely changed how we handle inquiries. Clients get instant replies, 
-        and our agents spend more time closing deals instead of chasing leads.”  
-        <br>
-        <span class="font-semibold text-blue-600">— Ana D., Marketing Manager, Manila Properties</span>
-      </blockquote>
+        <!-- Visual Preview (Swiper Instance #2) -->
+        <div data-aos="fade-up" class="mb-16">
+          <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-6">📸 Visual Preview</h3>
+          <div class="swiper mySwiper rounded-2xl overflow-hidden shadow-xl">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="assets/sapphire.png" alt="Sapphire Carwash Premium Service" class="w-full h-96 object-cover" loading="lazy" /></div>
+              <div class="swiper-slide"><img src="assets/sapphire1.png" alt="Before and After" class="w-full h-96 object-cover" loading="lazy" /></div>
+              <div class="swiper-slide"><img src="assets/sapphire2.png" alt="On-site Customer Experience" class="w-full h-96 object-cover" loading="lazy" /></div>
+              <div class="swiper-slide"><img src="assets/sapphire3.png" alt="On-site Customer Experience" class="w-full h-96 object-cover" loading="lazy" /></div>
+              <div class="swiper-slide"><img src="assets/sapphire4.png" alt="On-site Customer Experience" class="w-full h-96 object-cover" loading="lazy" /></div>
+              <div class="swiper-slide"><img src="assets/sapphire5.png" alt="On-site Customer Experience" class="w-full h-96 object-cover" loading="lazy" /></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
 
-      <!-- CTA -->
-      <div class="text-center mt-12">
-        <h4 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-          Want to automate your real estate business like this?
-        </h4>
-        <div class="flex flex-wrap justify-center gap-4">
-          <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-semibold transition-all">
-            🚀 Book Free Consultation
-          </a>
-          <a href="https://realstate.sapphirecarwash.com" class="border border-blue-500 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 px-6 py-3 rounded-full font-semibold transition-all">
-            💼 View Demo Projects
+        <div data-aos="fade-up" class="space-y-6 mb-16">
+          <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400">💬 Client Feedback</h3>
+          <blockquote class="text-gray-700 dark:text-gray-300 italic border-l-4 border-blue-500 pl-4">
+            “Sapphire Carwash made my car look brand new again! Fast, friendly, and professional.”
+            <span class="block text-sm text-gray-500 dark:text-gray-400 mt-1">— Jane De Guzman</span>
+          </blockquote>
+          <blockquote class="text-gray-700 dark:text-gray-300 italic border-l-4 border-blue-500 pl-4">
+            “Their premium service is truly worth it — my car’s shine lasted for weeks!”
+            <span class="block text-sm text-gray-500 dark:text-gray-400 mt-1">— John Swan</span>
+          </blockquote>
+        </div>
+
+        <div data-aos="fade-up" class="text-center mt-20">
+          <h3 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">🚀 Want to create a digital presence like this?</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+            Let’s bring your business story to life with a modern website and brand experience that converts.
+          </p>
+          <a href="#contact" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-full shadow-lg hover:bg-blue-700 transition-all">
+            Let’s Build Yours
           </a>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-    <!-- Sapphire Carwash Case Study Section -->
-<section id="sapphire-carwash" class="py-24 bg-white dark:bg-gray-900 relative overflow-hidden">
-  <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
-    
-    <!-- Header -->
-    <div data-aos="fade-up" class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4">
-        🧼 Sapphire Carwash Case Study
-      </h2>
-      <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-        Elevating the auto care experience through modern branding, seamless customer experience, and digital transformation.
-      </p>
-    </div>
-
-    <!-- Overview -->
-    <div data-aos="fade-up" class="space-y-6 mb-16">
-      <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400">🏢 Overview</h3>
-      <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-        <strong>Sapphire Carwash</strong> is a premium car care service based in Leyte, Philippines, focused on providing high-quality and eco-friendly car washing. 
-        The brand aimed to modernize its customer experience, streamline operations, and highlight its premium services with a strong digital presence.
-      </p>
-    </div>
-
-    <!-- Challenge -->
-    <div data-aos="fade-up" class="space-y-6 mb-16">
-      <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400">🚧 The Challenge</h3>
-      <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
-        <li>Long customer wait times during peak hours.</li>
-        <li>Limited differentiation between basic and premium services.</li>
-        <li>Low online visibility and lack of social proof.</li>
-        <li>Manual booking process that slowed customer flow.</li>
-      </ul>
-    </div>
-
-    <!-- Solution -->
-    <div data-aos="fade-up" class="space-y-6 mb-16">
-      <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400">💡 The Solution</h3>
-      <ul class="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
-        <li><strong>Service Tier Redesign:</strong> Highlighted clear differences between packages to encourage premium upgrades.</li>
-        <li><strong>Digital Optimization:</strong> Created a responsive, modern website with integrated booking and inquiry features.</li>
-        <li><strong>Social Proof & Testimonials:</strong> Added verified customer reviews to boost trust and authority.</li>
-        <li><strong>Brand Identity & Positioning:</strong> Reinforced “Premium & Eco-Friendly” values with consistent design language.</li>
-        <li><strong>Operational Enhancements:</strong> Suggested CRM-based booking automation for better queue management.</li>
-      </ul>
-    </div>
-
-    <!-- Results Table -->
-    <div data-aos="fade-up" class="overflow-x-auto mb-16">
-      <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-4">📊 Results</h3>
-      <table class="w-full border-collapse border border-gray-300 dark:border-gray-700">
-        <thead class="bg-gray-100 dark:bg-gray-800">
-          <tr>
-            <th class="p-3 text-left text-gray-800 dark:text-gray-200">Metric</th>
-            <th class="p-3 text-left text-gray-800 dark:text-gray-200">Before</th>
-            <th class="p-3 text-left text-gray-800 dark:text-gray-200">After</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="border-t border-gray-300 dark:border-gray-700">
-            <td class="p-3 text-gray-700 dark:text-gray-300">Weekly Customers</td>
-            <td class="p-3">~450</td>
-            <td class="p-3 font-bold text-green-600">500+</td>
-          </tr>
-          <tr class="border-t border-gray-300 dark:border-gray-700">
-            <td class="p-3">Premium Package Uptake</td>
-            <td class="p-3">20%</td>
-            <td class="p-3 font-bold text-green-600">40%+</td>
-          </tr>
-          <tr class="border-t border-gray-300 dark:border-gray-700">
-            <td class="p-3">Average Wait Time</td>
-            <td class="p-3">25 mins</td>
-            <td class="p-3 font-bold text-green-600">15 mins</td>
-          </tr>
-          <tr class="border-t border-gray-300 dark:border-gray-700">
-            <td class="p-3">Customer Satisfaction</td>
-            <td class="p-3">90%</td>
-            <td class="p-3 font-bold text-green-600">98%</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- Images -->
-    <div data-aos="fade-up" class="mb-16">
-      <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-6">📸 Visual Preview</h3>
-      <div class="swiper mySwiper rounded-2xl overflow-hidden shadow-xl">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="assets/sapphire.png" alt="Sapphire Carwash Premium Service" class="w-full h-96 object-cover" />
-          </div>
-          <div class="swiper-slide">
-            <img src="assets/sapphire1.png" alt="Before and After" class="w-full h-96 object-cover" />
-          </div>
-          <div class="swiper-slide">
-            <img src="assets/sapphire2.png" alt="On-site Customer Experience" class="w-full h-96 object-cover" />
-          </div>
-          <div class="swiper-slide">
-            <img src="assets/sapphire3.png" alt="On-site Customer Experience" class="w-full h-96 object-cover" />
-          </div>
-          <div class="swiper-slide">
-            <img src="assets/sapphire4.png" alt="On-site Customer Experience" class="w-full h-96 object-cover" />
-          </div>
-          <div class="swiper-slide">
-            <img src="assets/sapphire5.png" alt="On-site Customer Experience" class="w-full h-96 object-cover" />
-          </div>
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </div>
-
-    <!-- Testimonials -->
-    <div data-aos="fade-up" class="space-y-6 mb-16">
-      <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400">💬 Client Feedback</h3>
-      <blockquote class="text-gray-700 dark:text-gray-300 italic border-l-4 border-blue-500 pl-4">
-        “Sapphire Carwash made my car look brand new again! Fast, friendly, and professional.”  
-        <span class="block text-sm text-gray-500 dark:text-gray-400 mt-1">— Jane De Guzman</span>
-      </blockquote>
-      <blockquote class="text-gray-700 dark:text-gray-300 italic border-l-4 border-blue-500 pl-4">
-        “Their premium service is truly worth it — my car’s shine lasted for weeks!”  
-        <span class="block text-sm text-gray-500 dark:text-gray-400 mt-1">— John Swan</span>
-      </blockquote>
-    </div>
-
-    <!-- CTA -->
-    <div data-aos="fade-up" class="text-center mt-20">
-      <h3 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-        🚀 Want to create a digital presence like this?
-      </h3>
-      <p class="text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-        Let’s bring your business story to life with a modern website and brand experience that converts.
-      </p>
-      <a href="#contact" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-full shadow-lg hover:bg-blue-700 transition-all">
-        Let’s Build Yours
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<!-- SwiperJS Script -->
-<script>
-  const swiper = new Swiper(".mySwiper", {
-    loop: true,
-    effect: "fade",
-    fadeEffect: { crossFade: true },
-    autoplay: { delay: 4000, disableOnInteraction: false },
-    pagination: { el: ".swiper-pagination", clickable: true },
-  });
-</script>
-
-
-
-  <!-- Social Proof / Value Proposition -->
+    <!-- Social Proof / Value Proposition -->
     <section class="py-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
       <div class="max-w-5xl mx-auto px-6 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">
-          Why Work With Me During Portfolio Building Phase?
-        </h2>
+        <h2 class="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">Why Work With Me During Portfolio Building Phase?</h2>
         <div class="grid md:grid-cols-3 gap-8 mt-12">
           <div class="bg-white/10 backdrop-blur-lg p-6 rounded-xl" data-aos="fade-up" data-aos-delay="100">
             <i class="fas fa-tag text-4xl mb-4"></i>
@@ -1072,7 +991,8 @@
       <div class="max-w-4xl mx-auto px-6 md:px-12">
         <div class="text-center mb-16" data-aos="fade-up">
           <h2 class="text-4xl md:text-5xl font-bold mb-4">
-            Frequently Asked <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">Questions</span>
+            Frequently Asked
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">Questions</span>
           </h2>
           <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Got questions? Here are answers to the most common ones. Don't see yours? Feel free to reach out!
@@ -1080,98 +1000,106 @@
         </div>
 
         <div class="space-y-4">
+          <!-- FAQ 1 -->
           <div class="faq-item bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-2xl shadow-md overflow-hidden transition hover:shadow-lg" data-aos="fade-up" data-aos-delay="100">
-            <button class="faq-question w-full text-left p-6 flex justify-between items-center">
+            <button class="faq-question w-full text-left p-6 flex justify-between items-center" type="button">
               <span class="font-semibold text-lg pr-4">What exactly do you mean by "portfolio-building rates"?</span>
               <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
             </button>
             <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
               <div class="p-6 pt-0 text-gray-600 dark:text-gray-300">
-                I'm offering 50% off my standard rates for the first 3 clients. This allows me to build real-world case studies and testimonials while you get premium GoHighLevel automation at a fraction of the usual cost. You get the same quality work, faster turnaround, and more personalized attention.
+                I'm offering 50% off my standard rates for the first 3 clients. This allows me to build real-world case studies and testimonials while you get premium GoHighLevel automation at a fraction of the usual cost.
               </div>
             </div>
           </div>
 
+          <!-- FAQ 2 -->
           <div class="faq-item bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-2xl shadow-md overflow-hidden transition hover:shadow-lg" data-aos="fade-up" data-aos-delay="150">
-            <button class="faq-question w-full text-left p-6 flex justify-between items-center">
+            <button class="faq-question w-full text-left p-6 flex justify-between items-center" type="button">
               <span class="font-semibold text-lg pr-4">How long does a typical project take?</span>
               <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
             </button>
             <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
               <div class="p-6 pt-0 text-gray-600 dark:text-gray-300">
-                Most projects take 1-3 weeks depending on complexity. Simple funnels or automation workflows can be done in 3-7 days. More complex CRM integrations or multi-funnel systems may take 2-3 weeks. During our consultation, I'll give you a specific timeline based on your needs.
+                Most projects take 1-3 weeks depending on complexity. Simple funnels or automation workflows can be done in 3-7 days.
               </div>
             </div>
           </div>
 
+          <!-- FAQ 3 -->
           <div class="faq-item bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-2xl shadow-md overflow-hidden transition hover:shadow-lg" data-aos="fade-up" data-aos-delay="200">
-            <button class="faq-question w-full text-left p-6 flex justify-between items-center">
+            <button class="faq-question w-full text-left p-6 flex justify-between items-center" type="button">
               <span class="font-semibold text-lg pr-4">Do I need to have GoHighLevel already?</span>
               <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
             </button>
             <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
               <div class="p-6 pt-0 text-gray-600 dark:text-gray-300">
-                No worries if you don't! I can help you get set up with the right GoHighLevel plan for your needs. If you already have an account, great — I'll work within your existing setup. Either way, I'll guide you through the entire process.
+                No worries if you don't! I can help you get set up with the right GoHighLevel plan for your needs.
               </div>
             </div>
           </div>
 
+          <!-- FAQ 4 -->
           <div class="faq-item bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-2xl shadow-md overflow-hidden transition hover:shadow-lg" data-aos="fade-up" data-aos-delay="250">
-            <button class="faq-question w-full text-left p-6 flex justify-between items-center">
+            <button class="faq-question w-full text-left p-6 flex justify-between items-center" type="button">
               <span class="font-semibold text-lg pr-4">What kind of support do you provide after the project is done?</span>
               <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
             </button>
             <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
               <div class="p-6 pt-0 text-gray-600 dark:text-gray-300">
-                Every project includes 2 weeks of post-launch support to handle any bugs, questions, or tweaks. After that, I offer ongoing support packages or hourly rates for maintenance, updates, and optimization. I'll make sure you're comfortable using your new system before we wrap up.
+                Every project includes 2 weeks of post-launch support to handle any bugs, questions, or tweaks.
               </div>
             </div>
           </div>
 
+          <!-- FAQ 5 -->
           <div class="faq-item bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-2xl shadow-md overflow-hidden transition hover:shadow-lg" data-aos="fade-up" data-aos-delay="300">
-            <button class="faq-question w-full text-left p-6 flex justify-between items-center">
+            <button class="faq-question w-full text-left p-6 flex justify-between items-center" type="button">
               <span class="font-semibold text-lg pr-4">Can you work with my existing tools and systems?</span>
               <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
             </button>
             <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
               <div class="p-6 pt-0 text-gray-600 dark:text-gray-300">
-                Absolutely! I specialize in integrations with popular tools like Zapier, Airtable, Calendly, Make, and more. If you're using CRMs, payment processors, or other software, I can connect them seamlessly to GoHighLevel to create a unified automation system.
+                Absolutely! I specialize in integrations with popular tools like Zapier, Airtable, Calendly, Make, and more.
               </div>
             </div>
           </div>
 
+          <!-- FAQ 6 -->
           <div class="faq-item bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-2xl shadow-md overflow-hidden transition hover:shadow-lg" data-aos="fade-up" data-aos-delay="350">
-            <button class="faq-question w-full text-left p-6 flex justify-between items-center">
+            <button class="faq-question w-full text-left p-6 flex justify-between items-center" type="button">
               <span class="font-semibold text-lg pr-4">What industries do you work with?</span>
               <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
             </button>
             <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
               <div class="p-6 pt-0 text-gray-600 dark:text-gray-300">
-                I've built demo systems for real estate, fitness/gyms, automotive (car wash), coaching, and business services. However, GoHighLevel automation works for virtually any service-based business. During our consultation, we'll discuss how my expertise can be applied to your specific industry.
+                I've built demo systems for real estate, fitness/gyms, automotive (car wash), coaching, and business services.
               </div>
             </div>
           </div>
 
+          <!-- FAQ 7 -->
           <div class="faq-item bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-2xl shadow-md overflow-hidden transition hover:shadow-lg" data-aos="fade-up" data-aos-delay="400">
-            <button class="faq-question w-full text-left p-6 flex justify-between items-center">
+            <button class="faq-question w-full text-left p-6 flex justify-between items-center" type="button">
               <span class="font-semibold text-lg pr-4">What's included in the free consultation?</span>
               <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
             </button>
             <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
               <div class="p-6 pt-0 text-gray-600 dark:text-gray-300">
-                It's a 30-minute discovery call where we'll discuss your business goals, current challenges, and what you're looking to achieve with automation. I'll ask questions to understand your workflow, and provide initial recommendations on what solutions would work best. There's zero pressure to commit — it's purely to see if we're a good fit.
+                It's a 30-minute discovery call where we'll discuss your business goals, current challenges, and what you're looking to achieve with automation.
               </div>
             </div>
           </div>
 
+          <!-- FAQ 8 -->
           <div class="faq-item bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-2xl shadow-md overflow-hidden transition hover:shadow-lg" data-aos="fade-up" data-aos-delay="450">
-            <button class="faq-question w-full text-left p-6 flex justify-between items-center">
+            <button class="faq-question w-full text-left p-6 flex justify-between items-center" type="button">
               <span class="font-semibold text-lg pr-4">How do payments work?</span>
               <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
             </button>
             <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
               <div class="p-6 pt-0 text-gray-600 dark:text-gray-300">
-                I typically work with a 50% deposit upfront and 50% upon completion. For larger projects, we can discuss milestone-based payments. I accept bank transfers, PayPal, and other payment methods. We'll agree on everything before starting work.
+                I typically work with a 50% deposit upfront and 50% upon completion. For larger projects, we can discuss milestone-based payments.
               </div>
             </div>
           </div>
@@ -1187,334 +1115,196 @@
       </div>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 min-h-screen bg-gray-50 dark:bg-gray-950">
+      <div class="max-w-4xl mx-auto px-6 md:px-12">
+        <div class="text-center mb-14">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">Book Your Free <span class="text-gradient">Consultation</span></h2>
+          <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">Tell me about your project and schedule a time to chat. Simple 2-step process.</p>
+        </div>
 
-  
-
-
-  <!-- Contact Section -->
-  <section id="contact" class="py-24 min-h-screen bg-gray-50 dark:bg-gray-950">
-    <div class="max-w-4xl mx-auto px-6 md:px-12">
-      <div class="text-center mb-14">
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">
-          Book Your Free <span class="text-gradient">Consultation</span>
-        </h2>
-        <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          Tell me about your project and schedule a time to chat. Simple 2-step process.
-        </p>
-      </div>
-
-      <!-- Progress Steps -->
-      <div class="flex justify-center items-center mb-12">
-        <div class="flex items-center space-x-4">
-          <div id="step1-indicator" class="flex items-center">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center text-white font-bold shadow-lg">
-              1
+        <!-- Progress Steps -->
+        <div class="flex justify-center items-center mb-12">
+          <div class="flex items-center space-x-4">
+            <div id="step1-indicator" class="flex items-center">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center text-white font-bold shadow-lg">1</div>
+              <span class="ml-3 font-semibold text-gray-700 dark:text-gray-300">Fill Details</span>
             </div>
-            <span class="ml-3 font-semibold text-gray-700 dark:text-gray-300">Fill Details</span>
-          </div>
-          <div class="w-16 h-1 bg-gray-300 dark:bg-gray-700"></div>
-          <div id="step2-indicator" class="flex items-center opacity-50">
-            <div class="w-10 h-10 rounded-full bg-gray-300 dark:bg-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-400 font-bold">
-              2
+            <div class="w-16 h-1 bg-gray-300 dark:bg-gray-700"></div>
+            <div id="step2-indicator" class="flex items-center opacity-50">
+              <div class="w-10 h-10 rounded-full bg-gray-300 dark:bg-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-400 font-bold">2</div>
+              <span class="ml-3 font-semibold text-gray-500">Pick Time</span>
             </div>
-            <span class="ml-3 font-semibold text-gray-500">Pick Time</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Step 1: Contact Form -->
-      <div id="step1-form" class="backdrop-blur-lg bg-white/70 dark:bg-gray-900/70 rounded-3xl shadow-2xl p-8 md:p-12">
-        <div class="mb-8 text-center">
-          <div class="inline-block bg-blue-100 dark:bg-blue-900/30 rounded-full px-4 py-2 mb-4">
-            <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm">Step 1 of 2</span>
-          </div>
-          <h3 class="text-2xl font-bold mb-2">Tell Me About Your Project</h3>
-          <p class="text-gray-600 dark:text-gray-300 text-sm">Just a few quick details so I can prepare for our call</p>
-        </div>
-
-        <form id="bookingForm" class="space-y-6">
-          <div class="relative">
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name *</label>
-            <input type="text" id="userName" name="name" placeholder="Your full name" required
-              class="w-full rounded-2xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 pl-12 pr-4 py-3 focus:border-indigo-500 focus:ring focus:ring-indigo-200 transition shadow-sm">
-            <i class="fas fa-user absolute left-4 top-11 text-gray-400"></i>
-          </div>
-          
-          <div class="relative">
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email *</label>
-            <input type="email" id="userEmail" name="email" placeholder="you@example.com" required
-              class="w-full rounded-2xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 pl-12 pr-4 py-3 focus:border-indigo-500 focus:ring focus:ring-indigo-200 transition shadow-sm">
-            <i class="fas fa-envelope absolute left-4 top-11 text-gray-400"></i>
-          </div>
-
-          <div class="relative">
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Phone *</label>
-            <input type="tel" id="userPhone" name="phone" placeholder="+63 XXX XXX XXXX" required
-              class="w-full rounded-2xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 pl-12 pr-4 py-3 focus:border-indigo-500 focus:ring focus:ring-indigo-200 transition shadow-sm">
-            <i class="fas fa-phone absolute left-4 top-11 text-gray-400"></i>
-          </div>
-
-          <div class="relative">
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">What do you need help with? *</label>
-            <select id="projectType" name="projectType" required
-              class="w-full rounded-2xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 pl-12 pr-4 py-3 focus:border-indigo-500 focus:ring focus:ring-indigo-200 transition shadow-sm">
-              <option value="">Select a service...</option>
-              <option value="funnel">Sales/Lead Generation Funnel</option>
-              <option value="automation">Workflow Automation</option>
-              <option value="crm">CRM & Lead Tracking</option>
-              <option value="website">Website Setup</option>
-              <option value="integration">Custom Integration</option>
-              <option value="other">Other / Not Sure Yet</option>
-            </select>
-            <i class="fas fa-briefcase absolute left-4 top-11 text-gray-400"></i>
-          </div>
-          
-          <div class="relative">
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Brief description of your project *</label>
-            <textarea id="userMessage" name="message" rows="4" placeholder="Tell me what you're looking to accomplish..." required
-              class="w-full rounded-2xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 pl-12 pr-4 py-3 focus:border-indigo-500 focus:ring focus:ring-indigo-200 transition shadow-sm"></textarea>
-            <i class="fas fa-comment-dots absolute left-4 top-12 text-gray-400"></i>
-          </div>
-
-          <button type="submit" 
-            class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold py-4 px-8 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition duration-300 pulse-glow">
-            <i class="fas fa-calendar-check mr-2"></i> Continue to Schedule Appointment
-          </button>
-        </form>
-
-        <div class="mt-8 pt-8 border-t border-gray-300 dark:border-gray-700">
-          <p class="text-center text-sm text-gray-600 dark:text-gray-300 mb-4">Or connect with me directly:</p>
-          <div class="flex justify-center gap-4">
-            <a href="https://www.linkedin.com/in/justine-seguido-1ba3b4132" target="_blank"
-               class="w-10 h-10 rounded-full bg-[#0077B5] flex items-center justify-center shadow hover:scale-110 transition">
-              <i class="fab fa-linkedin-in text-white"></i>
-            </a>
-            <a href="https://web.facebook.com/justin.babiano" target="_blank"
-               class="w-10 h-10 rounded-full bg-[#1877F2] flex items-center justify-center shadow hover:scale-110 transition">
-              <i class="fab fa-facebook-f text-white"></i>
-            </a>
-            <a href="mailto:jbseguido@gmail.com"
-               class="w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center shadow hover:scale-110 transition">
-              <i class="fas fa-envelope text-white"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Step 2: Calendar -->
-      <div id="step2-calendar" class="hidden backdrop-blur-lg bg-white/70 dark:bg-gray-900/70 rounded-3xl shadow-2xl p-8 md:p-12">
-        <div class="mb-8 text-center">
-          <div class="inline-block bg-green-100 dark:bg-green-900/30 rounded-full px-4 py-2 mb-4">
-            <span class="text-green-600 dark:text-green-400 font-semibold text-sm">Step 2 of 2</span>
-          </div>
-          <h3 class="text-2xl font-bold mb-2">Pick Your Preferred Time</h3>
-          <p class="text-gray-600 dark:text-gray-300 text-sm">Choose a convenient time for our 30-minute consultation</p>
-          
-          <div class="mt-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl p-4 max-w-md mx-auto">
-            <p class="text-sm text-gray-700 dark:text-gray-300">
-              <strong class="text-blue-600 dark:text-blue-400" id="displayName"></strong> — Thanks! Now select a time below:
-            </p>
           </div>
         </div>
 
-        <!-- Calendly Embed -->
-        <div class="calendly-inline-widget" data-url="https://calendly.com/jbseguido/30min" style="min-width:320px;height:700px;"></div>
+        <!-- Step 1 -->
+        <div id="step1-form" class="backdrop-blur-lg bg-white/70 dark:bg-gray-900/70 rounded-3xl shadow-2xl p-8 md:p-12">
+          <div class="mb-8 text-center">
+            <div class="inline-block bg-blue-100 dark:bg-blue-900/30 rounded-full px-4 py-2 mb-4">
+              <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm">Step 1 of 2</span>
+            </div>
+            <h3 class="text-2xl font-bold mb-2">Tell Me About Your Project</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm">Just a few quick details so I can prepare for our call</p>
+          </div>
 
-         <!-- Continue Button -->
-        <div class="mt-8 text-center">
-          <div class="bg-green-50 dark:bg-green-900/20 rounded-xl p-6 mb-4">
-            <p class="text-gray-700 dark:text-gray-300 mb-4">
-              <i class="fas fa-check-circle text-green-500 mr-2"></i>
-              <strong>Booking Complete?</strong> Click below to continue
-            </p>
-            <button id="continueButton" class="bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition duration-300">
-              <i class="fas fa-arrow-right mr-2"></i> Continue to Confirmation
+          <form id="bookingForm" class="space-y-6">
+            <div class="relative">
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name *</label>
+              <input type="text" id="userName" name="name" placeholder="Your full name" required class="w-full rounded-2xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 pl-12 pr-4 py-3 focus:border-indigo-500 focus:ring focus:ring-indigo-200 transition shadow-sm" />
+              <i class="fas fa-user absolute left-4 top-11 text-gray-400"></i>
+            </div>
+
+            <div class="relative">
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email *</label>
+              <input type="email" id="userEmail" name="email" placeholder="you@example.com" required class="w-full rounded-2xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 pl-12 pr-4 py-3 focus:border-indigo-500 focus:ring focus:ring-indigo-200 transition shadow-sm" />
+              <i class="fas fa-envelope absolute left-4 top-11 text-gray-400"></i>
+            </div>
+
+            <div class="relative">
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Phone *</label>
+              <input type="tel" id="userPhone" name="phone" placeholder="+63 XXX XXX XXXX" required class="w-full rounded-2xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 pl-12 pr-4 py-3 focus:border-indigo-500 focus:ring focus:ring-indigo-200 transition shadow-sm" />
+              <i class="fas fa-phone absolute left-4 top-11 text-gray-400"></i>
+            </div>
+
+            <div class="relative">
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">What do you need help with? *</label>
+              <select id="projectType" name="projectType" required class="w-full rounded-2xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 pl-12 pr-4 py-3 focus:border-indigo-500 focus:ring focus:ring-indigo-200 transition shadow-sm">
+                <option value="">Select a service...</option>
+                <option value="funnel">Sales/Lead Generation Funnel</option>
+                <option value="automation">Workflow Automation</option>
+                <option value="crm">CRM & Lead Tracking</option>
+                <option value="website">Website Setup</option>
+                <option value="integration">Custom Integration</option>
+                <option value="other">Other / Not Sure Yet</option>
+              </select>
+              <i class="fas fa-briefcase absolute left-4 top-11 text-gray-400"></i>
+            </div>
+
+            <div class="relative">
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Brief description of your project *</label>
+              <textarea id="userMessage" name="message" rows="4" placeholder="Tell me what you're looking to accomplish..." required class="w-full rounded-2xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 pl-12 pr-4 py-3 focus:border-indigo-500 focus:ring focus:ring-indigo-200 transition shadow-sm"></textarea>
+              <i class="fas fa-comment-dots absolute left-4 top-12 text-gray-400"></i>
+            </div>
+
+            <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold py-4 px-8 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition duration-300 pulse-glow">
+              <i class="fas fa-calendar-check mr-2"></i> Continue to Schedule Appointment
+            </button>
+          </form>
+
+          <div class="mt-8 pt-8 border-t border-gray-300 dark:border-gray-700">
+            <p class="text-center text-sm text-gray-600 dark:text-gray-300 mb-4">Or connect with me directly:</p>
+            <div class="flex justify-center gap-4">
+              <a href="https://www.linkedin.com/in/justine-seguido-1ba3b4132" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-[#0077B5] flex items-center justify-center shadow hover:scale-110 transition">
+                <i class="fab fa-linkedin-in text-white"></i>
+              </a>
+              <a href="https://web.facebook.com/justin.babiano" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-[#1877F2] flex items-center justify-center shadow hover:scale-110 transition">
+                <i class="fab fa-facebook-f text-white"></i>
+              </a>
+              <a href="mailto:jbseguido@gmail.com" class="w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center shadow hover:scale-110 transition">
+                <i class="fas fa-envelope text-white"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div id="step2-calendar" class="hidden backdrop-blur-lg bg-white/70 dark:bg-gray-900/70 rounded-3xl shadow-2xl p-8 md:p-12">
+          <div class="mb-8 text-center">
+            <div class="inline-block bg-green-100 dark:bg-green-900/30 rounded-full px-4 py-2 mb-4">
+              <span class="text-green-600 dark:text-green-400 font-semibold text-sm">Step 2 of 2</span>
+            </div>
+            <h3 class="text-2xl font-bold mb-2">Pick Your Preferred Time</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm">Choose a convenient time for our 30-minute consultation</p>
+
+            <div class="mt-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl p-4 max-w-md mx-auto">
+              <p class="text-sm text-gray-700 dark:text-gray-300">
+                <strong class="text-blue-600 dark:text-blue-400" id="displayName"></strong> — Thanks! Now select a time below:
+              </p>
+            </div>
+          </div>
+
+          <div class="calendly-inline-widget" data-url="https://calendly.com/jbseguido/30min" style="min-width: 320px; height: 700px;"></div>
+
+          <div class="mt-8 text-center">
+            <div class="bg-green-50 dark:bg-green-900/20 rounded-xl p-6 mb-4">
+              <p class="text-gray-700 dark:text-gray-300 mb-4">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                <strong>Booking Complete?</strong> Click below to continue
+              </p>
+              <button id="continueButton" type="button" class="bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                <i class="fas fa-arrow-right mr-2"></i> Continue to Confirmation
+              </button>
+            </div>
+          </div>
+
+          <div class="mt-6 text-center">
+            <button id="backButton" type="button" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 transition">
+              <i class="fas fa-arrow-left mr-2"></i> Go Back to Edit Details
             </button>
           </div>
         </div>
-       
-        
-        <!-- Back Button -->
-        <div class="mt-6 text-center">
-          <button id="backButton" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 transition">
-            <i class="fas fa-arrow-left mr-2"></i> Go Back to Edit Details
-          </button>
+
+        <!-- Thank You -->
+        <div id="thankYouPage" class="hidden backdrop-blur-lg bg-white/70 dark:bg-gray-900/70 rounded-3xl shadow-2xl p-8 md:p-12 text-center">
+          <div class="mb-8">
+            <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-r from-green-400 to-emerald-500 flex items-center justify-center shadow-lg animate-bounce">
+              <i class="fas fa-check text-white text-4xl"></i>
+            </div>
+
+            <div class="inline-block bg-green-100 dark:bg-green-900/30 rounded-full px-4 py-2 mb-4">
+              <span class="text-green-600 dark:text-green-400 font-semibold text-sm">✓ Booking Confirmed</span>
+            </div>
+
+            <h3 class="text-3xl md:text-4xl font-bold mb-4">You're All Set!</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-lg max-w-2xl mx-auto mb-8">
+              Thanks for booking, <strong class="text-blue-600 dark:text-blue-400" id="thankYouName"></strong>! I've received your consultation request and sent a confirmation to <strong id="thankYouEmail"></strong>.
+            </p>
+          </div>
+
+          <div class="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl p-6 mb-8 max-w-2xl mx-auto">
+            <h4 class="font-bold text-xl mb-4 text-gray-800 dark:text-gray-200">What Happens Next?</h4>
+            <div class="space-y-4 text-left">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center flex-shrink-0">
+                  <span class="text-white font-bold">1</span>
+                </div>
+                <div>
+                  <p class="font-semibold text-gray-800 dark:text-gray-200">Check Your Email</p>
+                  <p class="text-sm text-gray-600 dark:text-gray-300">You'll receive a calendar invite with meeting details and a Zoom link.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center flex-shrink-0">
+                  <span class="text-white font-bold">2</span>
+                </div>
+                <div>
+                  <p class="font-semibold text-gray-800 dark:text-gray-200">I'll Review Your Project</p>
+                  <p class="text-sm text-gray-600 dark:text-gray-300">Before our call, I'll look over the details you shared to prepare specific recommendations.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center flex-shrink-0">
+                  <span class="text-white font-bold">3</span>
+                </div>
+                <div>
+                  <p class="font-semibold text-gray-800 dark:text-gray-200">30-Minute Discovery Call</p>
+                  <p class="text-sm text-gray-600 dark:text-gray-300">We'll discuss your needs, explore solutions, and see if we're a good fit to work together.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <button id="bookAnotherButton" type="button" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 transition text-sm">
+              <i class="fas fa-arrow-left mr-2"></i> Book Another Time Slot
+            </button>
+          </div>
         </div>
       </div>
-
-      <!-- Thank You Page -->
-      <div id="thankYouPage" class="hidden backdrop-blur-lg bg-white/70 dark:bg-gray-900/70 rounded-3xl shadow-2xl p-8 md:p-12 text-center">
-        <div class="mb-8">
-          <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-r from-green-400 to-emerald-500 flex items-center justify-center shadow-lg animate-bounce">
-            <i class="fas fa-check text-white text-4xl"></i>
-          </div>
-          
-          <div class="inline-block bg-green-100 dark:bg-green-900/30 rounded-full px-4 py-2 mb-4">
-            <span class="text-green-600 dark:text-green-400 font-semibold text-sm">✓ Booking Confirmed</span>
-          </div>
-          
-          <h3 class="text-3xl md:text-4xl font-bold mb-4">You're All Set!</h3>
-          <p class="text-gray-600 dark:text-gray-300 text-lg max-w-2xl mx-auto mb-8">
-            Thanks for booking, <strong class="text-blue-600 dark:text-blue-400" id="thankYouName"></strong>! I've received your consultation request and sent a confirmation to <strong id="thankYouEmail"></strong>.
-          </p>
-        </div>
-
-        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl p-6 mb-8 max-w-2xl mx-auto">
-          <h4 class="font-bold text-xl mb-4 text-gray-800 dark:text-gray-200">What Happens Next?</h4>
-          <div class="space-y-4 text-left">
-            <div class="flex items-start gap-4">
-              <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center flex-shrink-0">
-                <span class="text-white font-bold">1</span>
-              </div>
-              <div>
-                <p class="font-semibold text-gray-800 dark:text-gray-200">Check Your Email</p>
-                <p class="text-sm text-gray-600 dark:text-gray-300">You'll receive a calendar invite with meeting details and a Zoom link.</p>
-              </div>
-            </div>
-            <div class="flex items-start gap-4">
-              <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center flex-shrink-0">
-                <span class="text-white font-bold">2</span>
-              </div>
-              <div>
-                <p class="font-semibold text-gray-800 dark:text-gray-200">I'll Review Your Project</p>
-                <p class="text-sm text-gray-600 dark:text-gray-300">Before our call, I'll look over the details you shared to prepare specific recommendations.</p>
-              </div>
-            </div>
-            <div class="flex items-start gap-4">
-              <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center flex-shrink-0">
-                <span class="text-white font-bold">3</span>
-              </div>
-              <div>
-                <p class="font-semibold text-gray-800 dark:text-gray-200">30-Minute Discovery Call</p>
-                <p class="text-sm text-gray-600 dark:text-gray-300">We'll discuss your needs, explore solutions, and see if we're a good fit to work together.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-8">
-          <button id="bookAnotherButton" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 transition text-sm">
-            <i class="fas fa-arrow-left mr-2"></i> Book Another Time Slot
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Calendly Script -->
-  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
-
-  <script>
-    // Store user data globally
-    let userData = {};
-
-    // Booking Form Handler
-    document.getElementById('bookingForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const name = document.getElementById('userName').value;
-      const email = document.getElementById('userEmail').value;
-      const phone = document.getElementById('userPhone').value;
-      const projectType = document.getElementById('projectType').value;
-      const message = document.getElementById('userMessage').value;
-      
-      userData = { name, email, phone, projectType, message, timestamp: new Date().toISOString() };
-      
-      // Send to Formspree
-      fetch('https://formspree.io/f/mvgbylry', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(userData)
-      }).catch(err => console.log('Form submission:', err));
-      
-      // Update progress indicators
-      document.getElementById('step1-indicator').classList.add('opacity-50');
-      document.getElementById('step2-indicator').classList.remove('opacity-50');
-      
-      const step2Circle = document.querySelector('#step2-indicator > div');
-      step2Circle.classList.remove('bg-gray-300', 'dark:bg-gray-700');
-      step2Circle.classList.add('bg-gradient-to-r', 'from-blue-600', 'to-indigo-600');
-      
-      const step2Text = step2Circle.nextElementSibling;
-      if (step2Text) {
-        step2Text.classList.remove('text-gray-500');
-        step2Text.classList.add('text-gray-700', 'dark:text-gray-300');
-      }
-      
-      // Display user's name
-      document.getElementById('displayName').textContent = name;
-      
-      // Update Calendly URL
-      const calendlyWidget = document.querySelector('.calendly-inline-widget');
-      const calendlyUrl = `https://calendly.com/jbseguido/30min?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&hide_gdpr_banner=1`;
-      calendlyWidget.setAttribute('data-url', calendlyUrl);
-      
-      // Hide form, show calendar
-      document.getElementById('step1-form').classList.add('hidden');
-      document.getElementById('step2-calendar').classList.remove('hidden');
-      
-      setTimeout(() => {
-        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    });
-    
-    // Back button
-    document.getElementById('backButton').addEventListener('click', function() {
-      document.getElementById('step1-form').classList.remove('hidden');
-      document.getElementById('step2-calendar').classList.add('hidden');
-      
-      document.getElementById('step1-indicator').classList.remove('opacity-50');
-      document.getElementById('step2-indicator').classList.add('opacity-50');
-      
-      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-    });
-
-    // Continue button
-    document.getElementById('continueButton').addEventListener('click', function() {
-      document.getElementById('step2-calendar').classList.add('hidden');
-      document.getElementById('thankYouPage').classList.remove('hidden');
-      
-      document.getElementById('thankYouName').textContent = userData.name || 'there';
-      document.getElementById('thankYouEmail').textContent = userData.email || 'your email';
-      
-      setTimeout(() => {
-        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    });
-
-    // Book another
-    document.getElementById('bookAnotherButton').addEventListener('click', function() {
-      document.getElementById('bookingForm').reset();
-      document.getElementById('thankYouPage').classList.add('hidden');
-      document.getElementById('step1-form').classList.remove('hidden');
-      
-      document.getElementById('step1-indicator').classList.remove('opacity-50');
-      document.getElementById('step2-indicator').classList.add('opacity-50');
-      
-      const step2Circle = document.querySelector('#step2-indicator > div');
-      step2Circle.classList.remove('bg-gradient-to-r', 'from-blue-600', 'to-indigo-600');
-      step2Circle.classList.add('bg-gray-300', 'dark:bg-gray-700');
-      
-      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-    });
-
-    // Automatic detection
-    window.addEventListener('message', function(e) {
-      if (e.data.event && e.data.event === 'calendly.event_scheduled') {
-        setTimeout(() => {
-          document.getElementById('continueButton').click();
-        }, 1000);
-      }
-    });
-  </script>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000, once: true });
-  </script>
-
-
-
+    </section>
 
     <!-- Footer -->
     <footer class="relative bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-700 text-white py-16 overflow-hidden">
@@ -1527,19 +1317,22 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16">
           <div>
             <h3 class="text-2xl font-bold mb-2">Justine Seguido</h3>
-            <p class="opacity-80 mb-6">GoHighLevel Specialist building automation systems that save time and increase revenue.</p>
+            <p class="opacity-80 mb-6">
+              GoHighLevel Specialist building automation systems that save time and increase revenue.
+            </p>
             <div class="flex space-x-4">
               <a href="https://web.facebook.com/justin.babiano" target="_blank"
-                 class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white transition shadow-lg">
-                <i class="fab fa-facebook-f text-white"></i>
+                 class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition shadow-lg">
+                <i class="fab fa-facebook-f"></i>
               </a>
               <a href="https://www.linkedin.com/in/justine-seguido-1ba3b4132" target="_blank"
-                 class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white transition shadow-lg">
-                <i class="fab fa-linkedin-in text-white"></i>
+                 class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition shadow-lg">
+                <i class="fab fa-linkedin-in"></i>
               </a>
             </div>
           </div>
 
+          <!-- Quick Links -->
           <div>
             <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
             <ul class="space-y-2 opacity-90">
@@ -1550,12 +1343,15 @@
             </ul>
           </div>
 
+          <!-- Contact Info -->
           <div>
             <h4 class="text-lg font-semibold mb-4">Get In Touch</h4>
             <ul class="space-y-3 opacity-90">
               <li class="flex items-center space-x-3">
                 <i class="fas fa-envelope text-yellow-300"></i>
-                <a href="mailto:jbseguido@gmail.com" class="hover:underline">jbseguido@gmail.com</a>
+                <a href="mailto:jbseguido@gmail.com" class="hover:underline">
+                  jbseguido@gmail.com
+                </a>
               </li>
               <li class="flex items-center space-x-3">
                 <i class="fas fa-phone-alt text-yellow-300"></i>
@@ -1569,117 +1365,89 @@
           </div>
         </div>
 
+        <!-- Footer Bottom -->
         <div class="mt-12 border-t border-white/20 pt-6 text-center text-sm opacity-80">
           © 2025 Justine Seguido. All Rights Reserved.
         </div>
       </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- =====================
+         Global Scripts
+    ====================== -->
+
+    <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({ duration: 1000, once: true });
 
-      // Mobile menu
-      const menuButton = document.getElementById("mobile-menu-button");
-      const menu = document.getElementById("mobile-menu");
-      menuButton.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-      });
+    <!-- Calendly -->
+    <script src="https://assets.calendly.com/assets/external/widget.js"></script>
 
-      // Dark mode
-      const themeToggles = [document.getElementById("theme-toggle"), document.getElementById("theme-toggle-mobile")];
-      themeToggles.forEach((btn) =>
-        btn.addEventListener("click", () => {
-          document.documentElement.classList.toggle("dark");
-          localStorage.setItem("theme", document.documentElement.classList.contains("dark") ? "dark" : "light");
-        })
-      );
-
-      if (localStorage.getItem("theme") === "dark") {
-        document.documentElement.classList.add("dark");
-      }
-
-      // Skill bars animation
-      const skillBars = document.querySelectorAll('.skill-progress');
-      const revealItems = document.querySelectorAll('.reveal');
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            if (entry.target.classList.contains('skill-progress')) {
-              const width = entry.target.getAttribute('data-width');
-              entry.target.style.width = width;
-            } else {
-              entry.target.classList.add('reveal-visible');
-            }
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.3 });
-
-      skillBars.forEach(bar => observer.observe(bar));
-      revealItems.forEach(item => observer.observe(item));
+    <!-- LeadConnector Chat Widget -->
+    <script
+      src="https://widgets.leadconnectorhq.com/loader.js"
+      data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+      data-widget-id="68f8eab96f32a5750b7f4ec0">
     </script>
+
+    <!-- =====================
+         Main App Script
+    ====================== -->
     <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const faqItems = document.querySelectorAll(".faq-item");
+      document.addEventListener("DOMContentLoaded", () => {
 
-    faqItems.forEach((item) => {
-      const button = item.querySelector(".faq-question");
-      const answer = item.querySelector(".faq-answer");
-      const icon = item.querySelector("i");
+        /* Theme Toggle */
+        ["theme-toggle", "theme-toggle-mobile"]
+          .map(id => document.getElementById(id))
+          .filter(Boolean)
+          .forEach(btn => {
+            btn.addEventListener("click", () => {
+              document.documentElement.classList.toggle("dark");
+              localStorage.setItem(
+                "theme",
+                document.documentElement.classList.contains("dark") ? "dark" : "light"
+              );
+            });
+          });
 
-      button.addEventListener("click", () => {
-        const isOpen = answer.classList.contains("open");
+        if (localStorage.getItem("theme") === "dark") {
+          document.documentElement.classList.add("dark");
+        }
 
-        // Close all other open FAQs
-        faqItems.forEach((i) => {
-          i.querySelector(".faq-answer").classList.remove("open");
-          i.querySelector(".faq-answer").style.maxHeight = null;
-          i.querySelector("i").style.transform = "rotate(0deg)";
+        /* Mobile Menu */
+        const menuBtn = document.getElementById("mobile-menu-button");
+        const menu = document.getElementById("mobile-menu");
+        menuBtn?.addEventListener("click", () => menu.classList.toggle("hidden"));
+
+        /* Swiper */
+        new Swiper(".mySwiper", {
+          loop: true,
+          effect: "fade",
+          speed: 1000,
+          autoplay: { delay: 4000, disableOnInteraction: false },
+          pagination: { el: ".swiper-pagination", clickable: true }
         });
 
-        // Toggle current one
-        if (!isOpen) {
-          answer.classList.add("open");
-          answer.style.maxHeight = answer.scrollHeight + "px";
-          icon.style.transform = "rotate(180deg)";
-        }
+        /* AOS */
+        AOS.init({ duration: 1000, once: true });
+
+        /* Intersection Observer */
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            if (entry.target.dataset.width) {
+              entry.target.style.width = entry.target.dataset.width;
+            }
+            entry.target.classList.add("reveal-visible");
+            observer.unobserve(entry.target);
+          });
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll(".skill-progress, .reveal")
+          .forEach(el => observer.observe(el));
+
       });
-    });
-  });
-</script>
+    </script>
 
-    <script>
-  const swiper = new Swiper(".mySwiper", {
-    effect: "fade",
-    fadeEffect: { crossFade: true },
-    loop: true,
-    grabCursor: true,
-    centeredSlides: true,
-    speed: 1000, // smoother transition
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
-
-  // Optional: Pause autoplay on hover
-  const swiperEl = document.querySelector(".mySwiper");
-  swiperEl.addEventListener("mouseenter", () => swiper.autoplay.stop());
-  swiperEl.addEventListener("mouseleave", () => swiper.autoplay.start());
-</script>
-    
-<script 
-  src="https://widgets.leadconnectorhq.com/loader.js"  
-  data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" 
- data-widget-id="68f8eab96f32a5750b7f4ec0"   > 
- </script>
-    
   </body>
 </html>
+
